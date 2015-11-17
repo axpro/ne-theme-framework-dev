@@ -1,0 +1,74 @@
+{
+  "name": "nexteuropa-theme-framework",
+  "version": "0.0.1",
+  "description": "NextEuropa Theme Framework",
+  "license": "EUPL",
+  "repository": "ec-europa/ne-theme-framework-dev",
+  "scripts": {
+    "lint": "xo; exit 0",
+    "test": "nyc ava ./test/unit/*.js",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "bin": {
+    "cli": "tools/cli.js"
+  },
+  "devDependencies": {
+    "async": "^1.5.0",
+    "ava": "^0.5.0",
+    "babel-core": "^6.1.21",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.1.20",
+    "babel-preset-es2015": "^6.1.18",
+    "bluebird": "^3.0.5",
+    "bower": "^1.6.5",
+    "browser-sync": "^2.9.0",
+    "browserify": "^12.0.1",
+    "commander": "^2.9.0",
+    "coveralls": "^2.11.4",
+    "del": "^2.0.2",
+    "fs-extra": "^0.26.2",
+    "globby": "^4.0.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.0",
+    "gulp-cache": "0.4.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.0.0",
+    "gulp-load-plugins": "^1.0.0",
+    "gulp-minify-css": "^1.1.6",
+    "gulp-minify-html": "1.0.4",
+    "gulp-newer": "^1.0.0",
+    "gulp-sass": "^2.0.0",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-uncss": "^1.0.0",
+    "gulp-useref": "^3.0.0",
+    "main-bower-files": "^2.9.0",
+    "node-sass": "^3.4.1",
+    "nyc": "^3.2.2",
+    "open": "0.0.5",
+    "psi": "^2.0.2",
+    "require-dir": "^0.3.0",
+    "rimraf": "^2.4.3",
+    "run-sequence": "^1.0.1",
+    "sc5-styleguide": "^0.3.37",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "xo": "^0.11.1"
+  },
+  "private": true,
+  "xo": {
+    "space": 2,
+    "ignores": [
+      "node_modules/**",
+      "bower_components/**",
+      "src/vendor/**",
+      "build/**",
+      "dist/**"
+    ],
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}

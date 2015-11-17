@@ -1,0 +1,20 @@
+# Ignore metadata from common editors and IDEs.
+*.sublime-project
+*.sublime-workspace
+.idea/
+nbproject/
+
+# Ignore some folders
+node_modules/
+.nyc_output/
+.tmp/
+bower_components/
+src/vendor/
+test/vendor/
+dist/
+
+# Ignore OS specific files
+.DS_Store
+
+# Other ignored files
+npm-debug.log
