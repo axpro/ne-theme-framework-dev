@@ -1,5 +1,5 @@
-import gulp from 'gulp';
-import del from 'del';
+const gulp = require('gulp');
+const del = require('del');
 
 const folders = [
   '.tmp',

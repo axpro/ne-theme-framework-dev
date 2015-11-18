@@ -1,5 +1,5 @@
-import gulp from 'gulp';
-import gulpLoadPlugins from 'gulp-load-plugins';
+const gulp = require('gulp');
+const gulpLoadPlugins = require('gulp-load-plugins');
 
 const $ = gulpLoadPlugins();
 const AUTOPREFIXER_BROWSERS = [
@@ -15,7 +15,7 @@ const AUTOPREFIXER_BROWSERS = [
 ];
 
 // Compile and automatically prefix stylesheets
-gulp.task('styles', () => {
+gulp.task('styles', function () {
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
     'src/styles/**/*.scss',

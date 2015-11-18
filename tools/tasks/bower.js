@@ -1,5 +1,5 @@
-import gulp from 'gulp';
-import mainBowerFiles from 'main-bower-files';
+const gulp = require('gulp');
+const mainBowerFiles = require('main-bower-files');
 
 gulp.task('bower', function () {
   return gulp.src(mainBowerFiles({includeDev: false}), {base: './bower_components'})

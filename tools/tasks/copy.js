@@ -1,5 +1,4 @@
-import gulp from 'gulp';
-
+const gulp = require('gulp');
 const patterns = [
   'src/{fonts,images}/**'
 ];
