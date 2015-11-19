@@ -1,7 +1,7 @@
 {
   "analytics": false,
   "scripts": {
-    "preinstall": "gulp clean:bower",
-    "postinstall": "gulp bower:main bower:dev"
+    "preinstall": "npm run gulp clean:bower",
+    "postinstall": "npm run gulp bower:main bower:dev"
   }
 }

@@ -6,9 +6,8 @@
 
 ## Requirements
 
-* Node.js
-* Bower
-* Gulp
+* Node.js >= v4
+* npm >= v3.3.x
 
 ## Install build system
 
@@ -16,13 +15,20 @@ Before we can build the NextEuropa theme framework we need to install the build 
 itself. This can be done using Node.js and npm:
 
 ```
-$ npm install -g gulp bower
 $ npm install
-$ bower install
+```
+
+This will install Bower and Gulp locally as this is the only so far to make it build correctly on ContinuousPHP.
+
+Note: if you have Phing installed globally, you can also simple use the command:
+
+```
+$ phing
 ```
 
 ## Building the theme
 
 ```
-$ gulp
+$ npm run bower install
+$ npm run gulp dist
 ```

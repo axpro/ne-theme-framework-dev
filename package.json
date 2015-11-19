@@ -7,7 +7,9 @@
   "scripts": {
     "lint": "xo; exit 0",
     "test": "nyc ava ./test/unit/*.js",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "gulp": "./node_modules/.bin/gulp",
+    "bower": "./node_modules/.bin/bower"
   },
   "devDependencies": {
     "ava": "^0.5.0",
