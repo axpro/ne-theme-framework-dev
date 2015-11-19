@@ -10,7 +10,7 @@ gulp.task('scripts:uglify', scriptsUglify);
 // See https://babeljs.io/docs/usage/options/ for more informations on Babel options
 // Note: "comments: false" is very heavy
 function scriptsBundle() {
-  return gulp.src(config.bundlesScriptsFiles, {read: false})
+  return gulp.src(config.bundlesScriptsFiles, {base: '', read: false})
     .pipe($.newer(config.buildScriptsDir))
     .pipe($.sourcemaps.init())
     .pipe($.rollup({
@@ -25,13 +25,15 @@ function scriptsBundle() {
         })
       ]
     }))
-    .pipe($.sourcemaps.write('./'))
+    .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '/src/scripts'}))
     .pipe(gulp.dest(config.buildScriptsDir));
 }
 
 // UglifyJS
 function scriptsUglify() {
-  return gulp.src(config.uglifyScriptsFiles)
+  return gulp.src(config.uglifyScriptsFiles, {base: ''})
+    .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.uglify())
+    .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '/src/scripts'}))
     .pipe(gulp.dest(config.distScriptsDir));
 }

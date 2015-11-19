@@ -23,6 +23,6 @@ $ bower install
 
 ## Building the theme
 
-``
+```
 $ gulp
 ```

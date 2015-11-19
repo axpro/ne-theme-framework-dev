@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project name="NextEuropa Theme Framework" default="dist">
+    <target name="dist" description="Phing target list">
+        <exec command="npm install" passthru="true" />
+        <exec command="bower install" passthru="true" />
+        <exec command="gulp dist" passthru="true" />
+    </target>
+</project>

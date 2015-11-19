@@ -28,5 +28,29 @@ module.exports = {
   ],
   uglifyScriptsFiles: [
     'build/scripts/**/*.js'
+  ],
+
+  // Styles
+  buildStylesDir: 'build/styles/',
+  distStylesDir: 'dist/styles/',
+  scssBaseFiles: [
+    'src/styles/**/*.scss',
+    '!src/styles/**/_*.scss',
+    'src/styles/**/*.css'
+  ],
+  minifyCssFiles: [
+    'build/styles/**/*.css'
+  ],
+
+  AUTOPREFIXER_BROWSERS: [
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4.4',
+    'bb >= 10'
   ]
 };
