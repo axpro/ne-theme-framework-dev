@@ -1,7 +1,6 @@
 const gulp = require('gulp');
-const gulpLoadPlugins = require('gulp-load-plugins');
+const $ = require('gulp-load-plugins')();
 
-const $ = gulpLoadPlugins();
 const AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
   'ie_mob >= 10',
@@ -14,23 +13,36 @@ const AUTOPREFIXER_BROWSERS = [
   'bb >= 10'
 ];
 
+gulp.task('styles:compile', stylesCompile);
+gulp.task('styles:minify', stylesMinify);
+
 // Compile and automatically prefix stylesheets
-gulp.task('styles', function () {
+//
+function stylesCompile() {
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
     'src/styles/**/*.scss',
     '!src/styles/**/_*.scss',
     'src/styles/**/*.css'
-  ])
-    .pipe($.newer('.tmp/styles'))
+  ], {base: ''})
+    .pipe($.newer('build/styles'))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       precision: 10
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
-    .pipe(gulp.dest('.tmp/styles'))
-    // Concatenate and minify styles
-    .pipe($.if('*.css', $.minifyCss()))
-    .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('dist/styles'));
-});
+    .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: ''}))
+    .pipe(gulp.dest('build/styles/'));
+}
+
+// Minify CSS
+function stylesMinify() {
+  return gulp.src([
+    'build/styles/**/*.css'
+  ], {base: ''})
+    .pipe($.sourcemaps.init({loadMaps: true}))
+   // Concatenate and minify styles
+   .pipe($.if('*.css', $.minifyCss()))
+   .pipe($.sourcemaps.write('./', {includeContent: true, sourceRoot: '/src/styles'}))
+    .pipe(gulp.dest('dist/styles/'));
+}

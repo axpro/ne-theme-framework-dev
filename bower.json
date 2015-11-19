@@ -17,7 +17,7 @@
       "main": [
         "assets/stylesheets/**/*",
         "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
+        "assets/javascripts/bootstrap/**.js"
       ]
     }
   }

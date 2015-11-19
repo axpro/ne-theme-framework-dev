@@ -7,7 +7,7 @@ nbproject/
 # Ignore some folders
 node_modules/
 .nyc_output/
-.tmp/
+build/
 bower_components/
 src/vendor/
 test/vendor/

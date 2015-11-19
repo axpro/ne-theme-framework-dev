@@ -1,0 +1,7 @@
+{
+  "analytics": false,
+  "scripts": {
+    "preinstall": "gulp clean:bower",
+    "postinstall": "gulp bower:main bower:dev"
+  }
+}

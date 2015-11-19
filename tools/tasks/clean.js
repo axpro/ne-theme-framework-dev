@@ -1,12 +1,22 @@
 const gulp = require('gulp');
 const del = require('del');
+const config = require('../config');
 
-const folders = [
-  '.tmp',
-  'dist/*',
-  'src/vendor',
-  'test/vendor'
-];
+gulp.task('clean:process', cleanProcess);
+gulp.task('clean:bower', cleanBower);
 
-// Clean directories
-gulp.task('clean', () => del(folders, {dot: true}));
+// Clean process directories
+function cleanProcess() {
+  return del([
+    config.buildDir,
+    config.distDir
+  ], {dot: true});
+}
+
+// Clean Bower directories
+function cleanBower() {
+  return () => del([
+    config.bowerMainDir,
+    config.bowerDevDir
+  ], {dot: true});
+}

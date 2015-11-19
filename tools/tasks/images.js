@@ -1,14 +1,15 @@
 const gulp = require('gulp');
-const gulpLoadPlugins = require('gulp-load-plugins');
+const $ = require('gulp-load-plugins')();
+const config = require('../config');
 
-const $ = gulpLoadPlugins();
+gulp.task('images', images);
 
 // Optimize images
-gulp.task('images', () =>
-  gulp.src('src/images/**/*')
+function images() {
+  return gulp.src(config.imageFiles)
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true
     })))
-    .pipe(gulp.dest('dist/images'))
-);
+    .pipe(gulp.dest(config.imageDir));
+}

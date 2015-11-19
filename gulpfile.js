@@ -4,10 +4,9 @@ var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
 // Build dev files, the default task
-gulp.task('default', ['clean'], cb =>
+gulp.task('default', ['clean:process'], cb =>
   runSequence(
-    ['bower', 'bower:dev'],
-    ['styles', 'scripts:bundle', 'images', 'copy'],
+    ['styles:compile', 'scripts:bundle', 'copy:build'],
     cb
   )
 );
@@ -15,7 +14,7 @@ gulp.task('default', ['clean'], cb =>
 // Build production files
 gulp.task('dist', ['default'], cb =>
   runSequence(
-    ['scripts:uglify'],
+    ['copy:dist', 'scripts:uglify', 'images', 'styles:minify'],
     cb
   )
 );

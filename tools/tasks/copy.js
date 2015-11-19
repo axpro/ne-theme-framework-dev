@@ -1,11 +1,17 @@
 const gulp = require('gulp');
-const patterns = [
-  'src/{fonts,images}/**'
-];
+const config = require('../config');
 
-// Copy all files at the root level
-gulp.task('copy', () =>
-  gulp.src(patterns, {
-    dot: true
-  }).pipe(gulp.dest('dist'))
-);
+gulp.task('copy:build', copyBuild);
+gulp.task('copy:dist', copyDist);
+
+// Copy files during build phase
+function copyBuild() {
+  return gulp.src(config.copyBuildFiles, {dot: true})
+    .pipe(gulp.dest(config.buildDir));
+}
+
+// Copy files during dist phase
+function copyDist() {
+  return gulp.src(config.copyDistFiles, {dot: true})
+    .pipe(gulp.dest(config.distDir));
+}

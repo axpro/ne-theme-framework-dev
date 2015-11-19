@@ -1,37 +1,37 @@
 const gulp = require('gulp');
-const gulpLoadPlugins = require('gulp-load-plugins');
+const $ = require('gulp-load-plugins')();
 const babel = require('rollup-plugin-babel');
+const config = require('../config');
 
-const $ = gulpLoadPlugins();
-const folder = '.tmp/scripts';
+gulp.task('scripts:bundle', scriptsBundle);
+gulp.task('scripts:uglify', scriptsUglify);
 
 // Concatenate and minify JavaScript. Transpiles ES2015 code to ES5.
 // See https://babeljs.io/docs/usage/options/ for more informations on Babel options
 // Note: "comments: false" is very heavy
-gulp.task('scripts:bundle', () =>
-    gulp.src([
-      './src/scripts/**/*.js'
-    ], {read: false})
-      .pipe($.newer('.tmp/scripts'))
-      .pipe($.sourcemaps.init())
-      .pipe($.rollup({
-        sourceMap: true,
-        format: 'iife',
-        plugins: [
-          babel({
-            only: 'src/**',
-            presets: ['es2015-rollup'],
-            compact: true
-          })
-        ]
-      }))
-      .pipe($.sourcemaps.write('./'))
-      .pipe(gulp.dest(folder))
-);
+function scriptsBundle() {
+  return gulp.src(config.bundlesScriptsFiles, {read: false})
+    .pipe($.newer(config.buildScriptsDir))
+    .pipe($.sourcemaps.init())
+    .pipe($.rollup({
+      sourceMap: true,
+      format: 'iife',
+      indent: false,
+      plugins: [
+        babel({
+          only: 'src/**',
+          presets: ['es2015-rollup'],
+          compact: true
+        })
+      ]
+    }))
+    .pipe($.sourcemaps.write('./'))
+    .pipe(gulp.dest(config.buildScriptsDir));
+}
 
-// Uglify JS
-gulp.task('scripts:uglify', function () {
-  return gulp.src(['./**.js'], {cwd: folder})
+// UglifyJS
+function scriptsUglify() {
+  return gulp.src(config.uglifyScriptsFiles)
     .pipe($.uglify())
-    .pipe(gulp.dest('./dist/scripts'));
-});
+    .pipe(gulp.dest(config.distScriptsDir));
+}

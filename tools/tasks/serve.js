@@ -1,13 +1,12 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
-
 const reload = browserSync.reload;
 
 // Watch files for changes & reload
 gulp.task('serve:dev', () => {
   browserSync({
     notify: false,
-    server: ['.tmp', 'test/visual'],
+    server: ['build', 'test/visual'],
     port: 3000
   });
 
