@@ -1,6 +1,6 @@
 # NextEuropa Theme Framework
 
-[![Build Status](https://travis-ci.org/ec-europa/ne-theme-framework-dev.svg?branch=master)](https://travis-ci.org/ec-europa/ne-theme-framework-dev)
+[![Build Status](https://status.continuousphp.com/git-hub/ec-europa/ne-theme-framework-dev?token=06b4cf3d-ad0e-40db-bdcf-bbbd1f187c93&branch=master)](https://continuousphp.com/git-hub/ec-europa/ne-theme-framework-dev)
 [![Coverage Status](https://coveralls.io/repos/ec-europa/ne-theme-framework-dev/badge.svg?branch=master&service=github)](https://coveralls.io/github/ec-europa/ne-theme-framework-dev?branch=master)
 [![Code Climate](https://codeclimate.com/github/ec-europa/ne-theme-framework-dev/badges/gpa.svg)](https://codeclimate.com/github/ec-europa/ne-theme-framework-dev)
 

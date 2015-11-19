@@ -1,19 +1,19 @@
 {
   "name": "nexteuropa-theme-framework",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "NextEuropa Theme Framework",
-  "license": "EUPL",
   "repository": "ec-europa/ne-theme-framework-dev",
+  "private": true,
+  "license": "EUPL",
   "scripts": {
-    "lint": "xo; exit 0",
+    "lint": "xo",
     "test": "nyc ava ./test/unit/*.js",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "gulp": "./node_modules/.bin/gulp",
-    "bower": "./node_modules/.bin/bower"
+    "gulp": "gulp",
+    "bower": "bower"
   },
   "devDependencies": {
     "ava": "^0.5.0",
-    "babel-core": "^6.1.21",
     "babel-preset-es2015-rollup": "^1.0.0",
     "bower": "^1.6.5",
     "browser-sync": "^2.9.0",
@@ -43,7 +43,6 @@
     "sc5-styleguide": "^0.3.37",
     "xo": "^0.11.1"
   },
-  "private": true,
   "xo": {
     "space": 2,
     "ignores": [
@@ -51,7 +50,7 @@
       "bower_components/**",
       "src/vendor/**",
       "test/vendor/**",
-      ".tmp/**",
+      "build/**",
       "dist/**"
     ],
     "envs": [
