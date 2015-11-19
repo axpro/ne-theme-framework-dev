@@ -2,13 +2,8 @@
 
 <project name="NextEuropa Theme Framework" default="dist">
     <target name="dist" description="Phing target list">
-        <exec command="npm -v" passthru="true" />
-        <exec command="node -v" passthru="true" />
-        <exec command="npm install npm -g" passthru="true" />
-        <exec command="npm -v" passthru="true" />
-        <exec command="npm install -g gulp bower" passthru="true" />
         <exec command="npm install" passthru="true" />
-        <exec command="bower install" passthru="true" />
-        <exec command="gulp dist" passthru="true" />
+        <exec command="./node_modules/.bin/bower install" passthru="true" />
+        <exec command="./node_modules/.bin/gulp dist" passthru="true" />
     </target>
 </project>
