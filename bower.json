@@ -1,7 +1,11 @@
 {
   "name": "nexteuropa-theme-framework",
   "description": "NextEuropa Theme Framework",
-  "license": "EUPL",
+  "main": [
+    "src/scripts/bootstrap.js",
+    "src/styles/theme.scss"
+  ],
+  "license": "EUPL-1.1",
   "private": true,
   "dependencies": {
     "jquery": "~2.1.4",
@@ -20,5 +24,11 @@
         "assets/javascripts/bootstrap/**.js"
       ]
     }
-  }
+  },
+  "ignore": [
+    "**/.*",
+    "docs",
+    "test",
+    "tools"
+  ]
 }

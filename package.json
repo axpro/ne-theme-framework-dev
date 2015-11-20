@@ -2,9 +2,13 @@
   "name": "nexteuropa-theme-framework",
   "version": "0.1.0",
   "description": "NextEuropa Theme Framework",
-  "repository": "ec-europa/ne-theme-framework-dev",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/ec-europa/ne-theme-framework-dev.git"
+  },
+  "homepage": "https://github.com/ec-europa/ne-theme-framework-dev",
   "private": true,
-  "license": "EUPL",
+  "license": "EUPL-1.1",
   "scripts": {
     "lint": "xo",
     "test": "nyc ava ./test/unit/*.js",
@@ -12,6 +16,7 @@
     "gulp": "gulp",
     "bower": "bower"
   },
+  "dependencies": {},
   "devDependencies": {
     "ava": "^0.5.0",
     "babel-preset-es2015-rollup": "^1.0.0",
