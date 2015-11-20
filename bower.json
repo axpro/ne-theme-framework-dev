@@ -16,15 +16,6 @@
     "mocha": "~2.3.3",
     "chai": "~3.4.0"
   },
-  "overrides": {
-    "bootstrap-sass": {
-      "main": [
-        "assets/stylesheets/**/*",
-        "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap/**.js"
-      ]
-    }
-  },
   "ignore": [
     "**/.*",
     "docs",

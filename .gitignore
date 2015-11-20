@@ -9,8 +9,6 @@ node_modules/
 .nyc_output/
 build/
 bower_components/
-src/vendor/
-test/vendor/
 dist/
 
 # Ignore OS specific files

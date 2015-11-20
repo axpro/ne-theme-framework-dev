@@ -1,7 +1,0 @@
-{
-  "analytics": false,
-  "scripts": {
-    "preinstall": "npm run gulp clean:bower",
-    "postinstall": "npm run gulp bower:main bower:dev"
-  }
-}

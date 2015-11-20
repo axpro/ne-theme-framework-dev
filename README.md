@@ -20,7 +20,7 @@ $ npm install
 
 This will install Bower and Gulp locally as this is the only so far to make it build correctly on ContinuousPHP.
 
-Note: if you have Phing installed globally, you can also simple use the command:
+Note: if you have Phing installed globally, you can also use the command:
 
 ```
 $ phing
@@ -31,4 +31,12 @@ $ phing
 ```
 $ npm run bower install
 $ npm run gulp dist
+```
+
+## Testing locally
+
+The theme comes with an integrated server which automatically reloads on each file modification. Furthermore, you can test the theme across multiple devices and navigators, thanks to BrowserSync!
+
+```
+$ npm run gulp serve:dist
 ```

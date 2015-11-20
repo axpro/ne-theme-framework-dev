@@ -4,21 +4,21 @@
  /* eslint no-unused-vars: 0 */
 
 // jQuery
-import '../vendor/jquery/dist/jquery.js';
+import '__BOWER__/jquery/dist/jquery.js';
 
 // Bootstrap
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/transition.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/alert.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/button.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/carousel.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/collapse.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/modal.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/popover.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/tab.js';
-import '../vendor/bootstrap-sass/assets/javascripts/bootstrap/affix.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/transition.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/alert.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/button.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/carousel.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/collapse.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/modal.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/popover.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/tab.js';
+import '__BOWER__/bootstrap-sass/assets/javascripts/bootstrap/affix.js';
 
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug
@@ -35,3 +35,5 @@ if (window.navigator.userAgent.match(/IEMobile\/10\.0/)) {
   );
   document.querySelector('head').appendChild(msViewportStyle);
 }
+
+console.log('hey hey');
