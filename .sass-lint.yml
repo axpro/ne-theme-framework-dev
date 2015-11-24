@@ -1,0 +1,50 @@
+#############################################################################################
+# SCSS Linter: https://github.com/sasstools/sass-lint
+# Default rules: https://github.com/sasstools/sass-lint/blob/master/lib/config/sass-lint.yml
+#############################################################################################
+
+# Options
+options:
+  merge-default-rules: true
+files:
+  include: 'src/styles/**/*.scss'
+  ignore:
+    - 'node_modules/**'
+
+# Rule Configuration
+rules:
+  # Line Spacing
+  one-declaration-per-line: 2
+  single-line-per-selector: 2
+
+  # Disallows
+  no-duplicate-properties: 2
+  no-empty-rulesets: 2
+  no-extends: 0
+  no-invalid-hex: 2
+  no-css-comments: 0
+
+  # Style Guide
+  hex-notation:
+    - 2
+    -
+      style: lowercase
+  indentation:
+    - 2
+    -
+      size: 2
+  leading-zero:
+    - 2
+    -
+      include: true
+  zero-unit: 2
+
+  # Inner Spacing
+  space-after-comma: 1
+  space-after-colon: 2
+  space-before-brace: 2
+  space-between-parens: 0
+
+  # Final Items
+  trailing-semicolon: 2
+  final-newline: 2
