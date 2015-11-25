@@ -1,7 +1,7 @@
 'use strict';
 
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
+const gulp = require('gulp');
+const runSequence = require('run-sequence');
 
 // Build dev files, the default task
 gulp.task('default', ['clean:process'], cb =>

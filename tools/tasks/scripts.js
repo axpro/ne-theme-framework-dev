@@ -1,9 +1,11 @@
+'use strict';
+
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const babel = require('rollup-plugin-babel');
 const config = require('../config');
-const bowerDir = require('path').resolve(process.cwd(), 'bower_components');
-const replace = require('rollup-plugin-replace');
+const path = require('path');
+const fs = require('fs');
 
 gulp.task('scripts:bundle', scriptsBundle);
 gulp.task('scripts:uglify', scriptsUglify);
@@ -20,9 +22,30 @@ function scriptsBundle() {
       format: 'iife',
       indent: false,
       plugins: [
-        replace({
-          __BOWER__: bowerDir
-        }),
+        {
+          resolveId: function (importee, importer) {
+            importee = importee.replace(/\.js$/, '') + '.js';
+            let resolvedFile = null;
+
+            if (isFile(importee)) {
+              // Absolute
+              resolvedFile = importee;
+            } else if (isFile(path.resolve(path.dirname(importer), importee))) {
+              // Relative to importer
+              resolvedFile = path.resolve(path.dirname(importer), importee);
+            } else if (isFile(path.resolve(process.cwd(), importee))) {
+              // Relative to process working directory
+              resolvedFile = path.resolve(process.cwd(), importee);
+            } else if (isFile(path.resolve(process.cwd(), 'bower_components', importee))) {
+              // Relative to bower_components
+              resolvedFile = path.resolve(process.cwd(), 'bower_components', importee);
+            } else if (isFile(path.resolve(process.cwd(), 'node_modules', importee))) {
+              // Relative to node_modules
+              resolvedFile = path.resolve(process.cwd(), 'node_modules', importee);
+            }
+            return resolvedFile;
+          }
+        },
         babel({
           presets: ['es2015-rollup'],
           compact: true
@@ -40,4 +63,13 @@ function scriptsUglify() {
     .pipe($.uglify())
     .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '../../src/scripts/'}))
     .pipe(gulp.dest(config.distScriptsDir));
+}
+
+function isFile(file) {
+  try {
+    const stats = fs.statSync(file);
+    return stats.isFile();
+  } catch (err) {
+    return false;
+  }
 }

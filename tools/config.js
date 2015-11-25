@@ -1,6 +1,8 @@
 // Put config here
 // Like https://github.com/angular/material/tree/master/gulp
 
+'use strict';
+
 module.exports = {
   // Main directories
   buildDir: 'build/',
@@ -24,7 +26,8 @@ module.exports = {
   buildScriptsDir: 'build/scripts/',
   distScriptsDir: 'dist/scripts/',
   bundlesScriptsFiles: [
-    'src/scripts/**/*.js'
+    'src/scripts/**/*.js',
+    '!src/scripts/**/_*.js'
   ],
   uglifyScriptsFiles: [
     'build/scripts/**/*.js'

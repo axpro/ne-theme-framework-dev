@@ -5,102 +5,102 @@
 /**
  * #SETTINGS
  */
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/variables';
-@import 'settings/colors';
-@import 'settings/scaffolding';
-@import 'settings/typography';
-@import 'settings/iconography';
-@import 'settings/components';
-@import 'settings/tables';
-@import 'settings/buttons';
-@import 'settings/forms';
-@import 'settings/dropdowns';
-@import 'settings/z-index';
-@import 'settings/grid';
-@import 'settings/navbar';
-@import 'settings/navs';
-@import 'settings/pagination';
-@import 'settings/pager';
-@import 'settings/jumbotron';
-@import 'settings/states';
-@import 'settings/tooltips';
-@import 'settings/popovers';
-@import 'settings/labels';
-@import 'settings/modals';
-@import 'settings/alerts';
-@import 'settings/progress-bars';
-@import 'settings/list-group';
-@import 'settings/panels';
-@import 'settings/thumbnails';
-@import 'settings/wells';
-@import 'settings/badges';
-@import 'settings/breadcrumbs';
-@import 'settings/carousel';
-@import 'settings/close';
-@import 'settings/code';
-@import 'settings/type';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import './settings/colors';
+@import './settings/scaffolding';
+@import './settings/typography';
+@import './settings/iconography';
+@import './settings/components';
+@import './settings/tables';
+@import './settings/buttons';
+@import './settings/forms';
+@import './settings/dropdowns';
+@import './settings/z-index';
+@import './settings/grid';
+@import './settings/navbar';
+@import './settings/navs';
+@import './settings/pagination';
+@import './settings/pager';
+@import './settings/jumbotron';
+@import './settings/states';
+@import './settings/tooltips';
+@import './settings/popovers';
+@import './settings/labels';
+@import './settings/modals';
+@import './settings/alerts';
+@import './settings/progress-bars';
+@import './settings/list-group';
+@import './settings/panels';
+@import './settings/thumbnails';
+@import './settings/wells';
+@import './settings/badges';
+@import './settings/breadcrumbs';
+@import './settings/carousel';
+@import './settings/close';
+@import './settings/code';
+@import './settings/type';
 
 /**
  * #TOOLS
  */
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/mixins';
 @import 'tools/mixins';
 
 /**
  * #GENERIC
  */
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/normalize';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/print';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/normalize';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/print';
 
 /**
  * #BASE
  */
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/type';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/code';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/grid';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/tables';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/glyphicons';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/scaffolding';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/type';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/code';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/grid';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/tables';
 
 /**
  * #OBJECTS
  */
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/forms';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/buttons';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/forms';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/buttons';
 
 /**
  * #COMPONENTS
  */
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/component-animations';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/button-groups';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/input-groups';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/navs';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/navbar';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/pagination';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/pager';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/labels';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/badges';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/alerts';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/progress-bars';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/media';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/list-group';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/panels';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/wells';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/close';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/component-animations';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/dropdowns';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/button-groups';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/input-groups';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/navs';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/navbar';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/pagination';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/pager';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/labels';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/badges';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/jumbotron';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/thumbnails';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/alerts';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/progress-bars';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/media';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/list-group';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/panels';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/wells';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/close';
 
 // Components w/ JavaScript
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/modals';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/tooltip';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/popovers';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/carousel';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/modals';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/tooltip';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/popovers';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/carousel';
 
 /**
  * #TRUMPS
  */
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/utilities';
-@import '__BOWER__/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/utilities';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';

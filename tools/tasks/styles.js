@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const config = require('../config');
@@ -13,6 +15,9 @@ function stylesCompile() {
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       precision: 10,
+      includePaths: [
+        bowerDir
+      ],
       importer: function (url) {
         return {
           file: url.replace(/__BOWER__/g, bowerDir)
