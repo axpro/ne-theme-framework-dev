@@ -1,0 +1,37 @@
+// Import custom settings
+@import './settings/colors';
+@import './settings/scaffolding';
+@import './settings/typography';
+@import './settings/iconography';
+@import './settings/components';
+@import './settings/tables';
+@import './settings/buttons';
+@import './settings/forms';
+@import './settings/dropdowns';
+@import './settings/z-index';
+@import './settings/grid';
+@import './settings/navbar';
+@import './settings/navs';
+@import './settings/pagination';
+@import './settings/pager';
+@import './settings/jumbotron';
+@import './settings/states';
+@import './settings/tooltips';
+@import './settings/popovers';
+@import './settings/labels';
+@import './settings/modals';
+@import './settings/alerts';
+@import './settings/progress-bars';
+@import './settings/list-group';
+@import './settings/panels';
+@import './settings/thumbnails';
+@import './settings/wells';
+@import './settings/badges';
+@import './settings/breadcrumbs';
+@import './settings/carousel';
+@import './settings/close';
+@import './settings/code';
+@import './settings/type';
+
+// To override Bootstrap's defaults variables
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/variables';

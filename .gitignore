@@ -1,15 +1,9 @@
-# Ignore metadata from common editors and IDEs.
-*.sublime-project
-*.sublime-workspace
-.idea/
-nbproject/
-
 # Ignore some folders
-node_modules/
-.nyc_output/
-build/
-bower_components/
-dist/
+node_modules
+bower_components
+.nyc_output
+build
+dist
 
 # Ignore OS specific files
 .DS_Store

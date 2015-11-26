@@ -21,7 +21,7 @@ gulp.task('dist', ['default'], cb =>
 
 // Load custom tasks from the `tasks` directory
 try {
-  require('require-dir')('./tools/tasks');
+  require('require-dir')('./tasks');
 } catch (err) {
   console.error(err);
 }

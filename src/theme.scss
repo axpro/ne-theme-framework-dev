@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    #THEME
+\*------------------------------------*/
+
+/**
+ * #SETTINGS
+ */
+@import './dependencies/bootstrap/styles/settings';
+
+/**
+ * #TOOLS
+ */
+@import './dependencies/bootstrap/styles/tools';
+@import './core/styles/tools/mixins';
+
+/**
+ * #GENERIC
+ */
+@import './dependencies/bootstrap/styles/generic';
+
+/**
+ * #BASE
+ */
+@import './dependencies/bootstrap/styles/base';
+
+/**
+ * #OBJECTS
+ */
+@import './dependencies/bootstrap/styles/objects';
+
+/**
+ * #COMPONENTS
+ */
+@import './dependencies/bootstrap/styles/components';
+
+/**
+ * #TRUMPS
+ */
+@import './dependencies/bootstrap/styles/trumps';
