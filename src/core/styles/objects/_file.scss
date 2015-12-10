@@ -1,15 +1,13 @@
-/*
-File
-
-File component used to show info about the file that can be downloaded
-by clicking on the component
-
-Markup: html/file.html
-
-.file--widebar  - Full width download box
-
-Styleguide file
-*/
+// File
+//
+// File component used to show info about the file that can be downloaded
+// by clicking on the component
+//
+// Markup: ../../templates/file.html
+//
+// .file--widebar  - Full width download box
+//
+// Styleguide 1.2.12
 
 .file {
   @extend .paragraph;

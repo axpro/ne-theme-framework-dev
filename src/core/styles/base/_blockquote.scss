@@ -1,10 +1,8 @@
-/*
-Blockquote
-
-Markup: html/blockquote.html
-
-Styleguide text.blockquote
-*/
+// Blockquote
+//
+// Markup: ../../templates/blockquote.html
+//
+// Styleguide 1.1.1
 
 $small-quote-size: 1em;
 $small-quote-width: 0.5em;
@@ -39,10 +37,10 @@ blockquote,
 }
 
 .blockquote--small {
-  padding-left: 0;
-  font-size: $font-size-little;
-  font-style: normal;
   color: $text-color;
   font-family: $font-family-base;
+  font-size: $font-size-little;
+  font-style: normal;
   margin-bottom: 0;
+  padding-left: 0;
 }

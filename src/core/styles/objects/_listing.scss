@@ -1,12 +1,11 @@
-/*
-Listing
+// Listing
+//
+// Listing components
+//
+// Markup: ../../templates/listing.html
+//
+// Styleguide 1.2.22
 
-Listing components
-
-Markup: html/listing.html
-
-Styleguide listing
-*/
 $spacing-top-listing__title: 0.9em;
 $spacing-bottom-listing__title: 0.7em;
 
@@ -30,9 +29,10 @@ $spacing-bottom-listing__title: 0.7em;
 .listing__date {
   float: left;
 }
+
 .listing__column-main {
   .listing__with {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -52,8 +52,9 @@ $spacing-bottom-listing__title: 0.7em;
   border-bottom: 1px solid $grey-light;
   list-style: none;
   list-style-image: none;
-  padding-top: 0;
   padding-bottom: 0;
+  padding-top: 0;
+
   &:first-child {
     border-top: 1px solid $grey-light;
   }
@@ -86,7 +87,7 @@ $spacing-bottom-listing__title: 0.7em;
     text-decoration: none;
   }
 
-  &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+  &[href^="http"]:not(.is-internal) {
     &:after {
       display: none !important;
     }

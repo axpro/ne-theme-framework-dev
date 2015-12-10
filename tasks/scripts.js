@@ -15,7 +15,7 @@ gulp.task('scripts:uglify', scriptsUglify);
 // Note: "comments: false" is very heavy
 function scriptsBundle() {
   return gulp.src(config.scripts.entry, {base: './src/', read: false})
-    .pipe($.newer('build/scripts'))
+    .pipe($.newer('build'))
     .pipe($.sourcemaps.init())
     .pipe($.rollup({
       sourceMap: true,
@@ -32,16 +32,16 @@ function scriptsBundle() {
       ]
     }))
     .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '../src/'}))
-    .pipe(gulp.dest('build/scripts'));
+    .pipe(gulp.dest('build'));
 }
 
 // UglifyJS
 function scriptsUglify() {
-  return gulp.src('build/scripts/**/*.js', {base: 'build/scripts'})
+  return gulp.src('build/**/*.js', {base: 'build'})
     .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.uglify())
     .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '../src/'}))
-    .pipe(gulp.dest('dist/scripts'));
+    .pipe(gulp.dest('dist'));
 }
 
 // Helpers

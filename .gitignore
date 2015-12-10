@@ -4,6 +4,8 @@ bower_components
 .nyc_output
 build
 dist
+docs/styleguide
+!docs/styleguide/overview.md
 
 # Ignore OS specific files
 .DS_Store

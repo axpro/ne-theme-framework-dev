@@ -9,5 +9,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis nu
 This styleguide is auto-generated.
 
 ```
-$ npm run styleguide
+$ npm run gulp styleguide
 ```

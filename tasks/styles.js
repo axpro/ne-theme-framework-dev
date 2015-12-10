@@ -11,7 +11,7 @@ gulp.task('styles:minify', stylesMinify);
 // Compile and automatically prefix stylesheets
 function stylesCompile() {
   return gulp.src(config.styles.entry, {base: './src/'})
-    .pipe($.newer('build/styles'))
+    .pipe($.newer('build'))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       precision: 10,
@@ -21,14 +21,14 @@ function stylesCompile() {
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer(config.styles.autoprefixer))
     .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '../src/'}))
-    .pipe(gulp.dest('build/styles'));
+    .pipe(gulp.dest('build'));
 }
 
 // Minify CSS
 function stylesMinify() {
-  return gulp.src('build/styles/**/*.css', {base: ''})
+  return gulp.src('build/**/*.css', {base: ''})
     .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.if('*.css', $.minifyCss()))
     .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '/src/'}))
-    .pipe(gulp.dest('dist/styles'));
+    .pipe(gulp.dest('dist'));
 }

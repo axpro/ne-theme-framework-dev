@@ -1,17 +1,14 @@
-/*
-Page header
+// Page header
+//
+// Page header component
+//
+// .page-header--featured - Featured Page Header
+// .page-header--image - Header with a background image
+//
+// Markup: ../../templates/page-header.html
+//
+// Styleguide 1.2.27
 
-Page header component
-
-Markup: html/page-header.html
-
-.page-header--featured - Featured Page Header
-
-.page-header--image - Header with a background image
-
-
-Styleguide page-header
-*/
 .page-header {
   background: $brand-primary;
   margin: 0;
@@ -76,7 +73,7 @@ Styleguide page-header
       color:$yellow-light;
     }
 
-    &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+    &[href^="http"]:not(.is-internal) {
       padding-right: 1.1em;
       display: inline-block;
       &:after {

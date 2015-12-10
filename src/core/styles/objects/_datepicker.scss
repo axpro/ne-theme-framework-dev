@@ -1,14 +1,12 @@
-/*
-Datepicker
-
-This example is based on jQuery Datepicker widget. It requires both jQuery and jQuery UI libraries.<br/>
-Also, it assumes that the default CSS styles from jQuery UI are included as well.<br/>
-The CSS applied from styleguide is an override over the default CSS of jQuery UI.<br/>
-
-Markup: html/datepicker.html
-
-Styleguide datepicker
-*/
+// Datepicker
+//
+// This example is based on jQuery Datepicker widget. It requires both jQuery and jQuery UI libraries.<br/>
+// Also, it assumes that the default CSS styles from jQuery UI are included as well.<br/>
+// The CSS applied from styleguide is an override over the default CSS of jQuery UI.<br/>
+//
+// Markup: ../../templates/datepicker.html
+//
+// Styleguide 1.2.6
 
 // Local Variables
 $datepicker-color-header: #393939;
@@ -163,7 +161,7 @@ $datepicker-color-background: #eaeaea;
   #ui-datepicker-div {
     width: auto;
   }
-  
+
   .ui-datepicker {
     table.ui-datepicker-calendar {
       width: auto !important;

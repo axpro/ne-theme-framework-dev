@@ -1,27 +1,22 @@
-/*
-Banner
+// Banner
+//
+// The banner itself is not a standalone component, the banner subcomponents should
+// always be used.
+//
+// Styleguide 1.2.1
 
-The banner itself is not a standalone component, the banner subcomponents should
-always be used.
 
-Styleguide banner
-*/
+// Quote Banner
+//
+// Markup: ../../templates/banner-quote.html
+//
+// Styleguide 1.2.1.1
 
-/*
-Quote Banner
-
-Markup: html/banner-quote.html
-
-Styleguide banner.quote
-*/
-
-/*
-Video Banner
-
-Markup: html/banner-video.html
-
-Styleguide banner.video
-*/
+// Video Banner
+//
+// Markup: ../../templates/banner-video.html
+//
+// Styleguide 1.2.1.2
 
 $quote_border_offset: 0.556em;
 

@@ -1,14 +1,11 @@
-/*
+// Notification
+//
+// Notification that appears at the top of the site
+//
+// Markup: ../../templates/notification.html
+//
+// Styleguide 1.2.26
 
-Notification
-
-Notification that appears at the top of the site
-
-Markup: html/notification.html
-
-Styleguide notification
-
-*/
 .notification {
   background: $yellow-light;
   padding: 10px 0 6px;
@@ -73,7 +70,7 @@ Styleguide notification
 .notification {
   a {
     padding-right: 1.1em;
-    &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+    &[href^="http"]:not(.is-internal) {
       &:after {
         position: absolute;
         line-height: 2.2;

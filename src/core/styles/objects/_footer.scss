@@ -1,12 +1,10 @@
-/*
-Footer
-
-Site-wide footer component
-
-Markup: html/footer.html
-
-Styleguide footer
-*/
+// Footer
+//
+// Site-wide footer component
+//
+// Markup: ../../templates/footer.html
+//
+// Styleguide 1.2.14
 
 .footer {
   background: $brand-primary;
@@ -181,7 +179,7 @@ a.footer__site-switcher {
 .footer {
   a {
     padding-right: 1.1em !important;
-    &#{"[" + $external_link_pattern + "]"}:not(.is-internal) {
+    &[href^="http"]:not(.is-internal) {
       &:after {
         position: absolute;
         line-height: 2.2;

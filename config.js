@@ -10,25 +10,25 @@ module.exports = {
       },
       {
         src: 'bower_components/bootstrap-sass/assets/fonts/bootstrap/**',
-        dest: 'build/fonts/'
+        dest: 'build/core/fonts/'
       }
     ],
     dist: [
       {
-        src: 'build/fonts/**',
-        dest: 'dist/fonts'
+        src: 'build/**/fonts/**',
+        dest: 'dist'
       }
     ]
   },
   // Scripts to process
   scripts: {
     entry: [
-      'src/theme.js'
+      'src/core/scripts/theme.js'
     ]
   },
   // Styles to process
   styles: {
-    entry: ['src/theme.scss'],
+    entry: ['src/core/styles/theme.scss'],
     autoprefixer: [
       'ie >= 10',
       'ie_mob >= 10',
