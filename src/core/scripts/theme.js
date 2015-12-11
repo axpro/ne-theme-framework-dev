@@ -1,6 +1,6 @@
 // jQuery & Bootstrap
-import '../vendor/bootstrap/scripts/bootstrap';
+import '../../vendor/bootstrap/scripts/bootstrap';
 
-// Import test
-import {test} from './test';
-test();
+// Import custom code
+import './europa';
+import './selectify';

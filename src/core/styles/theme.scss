@@ -11,16 +11,17 @@
 // styleguide:ignore:start
 
 // Core settings come first then you can import dependecies' or components'
+@import '../../shared/styles/variables';
 @import './settings/colors';
-@import '../vendor/bootstrap/styles/settings';
+@import '../../vendor/bootstrap/styles/settings';
 
 // No particular order unless one needs another
-@import '../vendor/bootstrap/styles/tools' ;
+@import '../../vendor/bootstrap/styles/tools' ;
 @import './tools/mixins';
 
 // Prefer importing dependencies first thus you can override them if needed
 @import './generic/font';
-@import '../vendor/bootstrap/styles/generic';
+@import '../../vendor/bootstrap/styles/generic';
 // styleguide:ignore:end
 
 // Content
@@ -30,7 +31,7 @@
 //
 // Styleguide 1.1
 // styleguide:ignore:start
-@import '../vendor/bootstrap/styles/base';
+@import '../../vendor/bootstrap/styles/base';
 @import './base/blockquote';
 @import './base/body';
 @import './base/headings';
@@ -49,10 +50,9 @@
 //
 // Styleguide 1.2
 // styleguide:ignore:start
-@import '../vendor/bootstrap/styles/objects';
+@import '../../vendor/bootstrap/styles/objects';
 @import './objects/banner';
 @import './objects/block';
-@import './objects/breadcrumb';
 @import './objects/checkbox';
 @import './objects/comments-counter';
 @import './objects/container-fluid';
@@ -66,7 +66,6 @@
 @import './objects/feedback-message';
 @import './objects/field';
 @import './objects/file';
-@import './objects/filters';
 @import './objects/footer-top';
 @import './objects/footer';
 @import './objects/header-top';
@@ -75,8 +74,6 @@
 @import './objects/icon';
 @import './objects/inpage-nav';
 @import './objects/labels';
-@import './objects/lang-select-page';
-@import './objects/lang-select-site';
 @import './objects/listing';
 @import './objects/logo';
 @import './objects/messages';
@@ -87,7 +84,6 @@
 @import './objects/page-content';
 @import './objects/page-header';
 @import './objects/page-navigation';
-@import './objects/pager';
 @import './objects/radio';
 @import './objects/row';
 @import './objects/rss-link';
@@ -107,6 +103,13 @@
 @import './objects/timeline';
 @import './objects/top-bar';
 @import './objects/top-image';
+
+@import '../../components/breadcrumb/styles/objects.breadcrumb';
+@import '../../components/filters/styles/objects.filters';
+@import '../../components/lang-select-page/styles/objects.lang-select-page';
+@import '../../components/lang-select-site/styles/objects.lang-select-site';
+@import '../../components/pager/styles/objects.pager';
+
 // styleguide:ignore:end
 
 // Trumps
@@ -115,7 +118,7 @@
 //
 // Styleguide 1.3
 // styleguide:ignore:start
-@import '../vendor/bootstrap/styles/trumps';
+@import '../../vendor/bootstrap/styles/trumps';
 @import './trumps/animations';
 @import './trumps/padding';
 // styleguide:ignore:end
