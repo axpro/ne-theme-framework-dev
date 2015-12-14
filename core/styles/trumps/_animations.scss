@@ -1,0 +1,4 @@
+// States
+.is-not-animating {
+  @include transition(none);
+}

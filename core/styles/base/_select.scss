@@ -1,0 +1,29 @@
+/*
+Select
+
+Markup: html/select.html
+
+Styleguide form.select
+*/
+
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+
+  // Hover state.
+  &:hover,
+  &.is-hovered {
+    border-color: $form-control-border-select-color-hover;
+  }
+
+  // Down state.
+  &.is-down {
+    border-color: $form-control-border-select-color-down;
+  }
+}
+
+select {
+  @extend .select;
+}
