@@ -2,13 +2,12 @@
   env:
     browser: true
     node: true
-  extends: standard
+  extends: xo
   rules:
     semi:
       - 2
       - always
-    space-before-function-paren:
+    indent:
       - 2
-      -
-        anonymous: always
-        named: never
+      - 2
+    no-case-declarations: 0

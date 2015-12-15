@@ -1,3 +1,5 @@
+'use strict';
+
 const nightmare = require('nightmare');
 const vo = require('vo');
 const mkdirp = require('mkdirp');
