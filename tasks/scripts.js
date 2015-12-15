@@ -3,7 +3,7 @@
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const babel = require('rollup-plugin-babel');
-const config = require('../config');
+const config = require('../src/theme/config');
 const path = require('path');
 const fs = require('fs');
 

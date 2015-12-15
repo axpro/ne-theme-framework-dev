@@ -10,23 +10,27 @@
   "private": true,
   "license": "EUPL-1.1",
   "scripts": {
-    "lint": "xo -f compact && sass-lint -f stylish -v; exit 0",
+    "eslint": "eslint -f stylish src/** tasks/** test/**; exit 0",
+    "sass-lint": "sass-lint -f stylish -v; exit 0",
+    "lint": "npm run eslint  && npm run sass-lint",
     "test": "nyc ava ./test/unit/*.js",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "gulp": "gulp",
     "bower": "bower",
     "nightmare": "gulp nightmare",
-    "nightwatch": "nightwatch --test test/visual/selenium.js",
     "visureg": "node test/visual/nightmare.js",
     "pixelmatch": "pixelmatch bug.png bug2.png output.png 0 true"
   },
   "devDependencies": {
-    "ava": "^0.7.0",
+    "ava": "^0.8.0",
     "babel-preset-es2015-rollup": "^1.0.0",
-    "bower": "^1.7.0",
+    "bower": "^1.7.1",
     "browser-sync": "^2.10.0",
     "coveralls": "^2.11.6",
     "del": "^2.2.0",
+    "eslint": "^1.10.3",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-standard": "^1.3.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "0.4.1",
@@ -53,21 +57,7 @@
     "run-sequence": "^1.1.5",
     "sass-lint": "^1.4.0",
     "sc5-styleguide": "^0.3.41",
-    "vo": "^1.0.3",
-    "xo": "^0.11.2"
-  },
-  "xo": {
-    "space": 2,
-    "ignores": [
-      "node_modules/**",
-      "bower_components/**",
-      "build/**",
-      "dist/**"
-    ],
-    "envs": [
-      "node",
-      "browser"
-    ]
+    "vo": "^1.0.3"
   },
   "engines": {
     "node": ">=5.0",

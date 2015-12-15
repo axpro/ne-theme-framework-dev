@@ -2,7 +2,7 @@
 
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
-const config = require('../config');
+const config = require('../src/theme/config');
 const bowerDir = require('path').resolve(process.cwd(), 'bower_components');
 
 gulp.task('styles:compile', stylesCompile);

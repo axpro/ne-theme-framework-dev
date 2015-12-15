@@ -6,8 +6,7 @@
 (function ($) {
   Drupal.behaviors.europa_breadcrumb = {
     attach: function (context) {
-      $('#breadcrumb').once('breadcrumb', function(){
-
+      $('#breadcrumb').once('breadcrumb', function () {
         // Add collapsible class for js mobile behavior.
         var $breadcrumbWrapper = $('#breadcrumb');
         $breadcrumbWrapper.addClass('breadcrumb--collapsible');

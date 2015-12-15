@@ -2,7 +2,7 @@
 
 const gulp = require('gulp');
 const merge = require('merge-stream');
-const config = require('../config');
+const config = require('../src/theme/config');
 
 gulp.task('copy:build', copyBuild);
 gulp.task('copy:dist', copyDist);

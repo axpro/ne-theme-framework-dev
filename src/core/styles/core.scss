@@ -11,7 +11,7 @@
 // styleguide:ignore:start
 
 // Core settings come first then you can import dependecies' or components'
-@import '../../shared/styles/variables';
+@import '../../theme/styles/variables';
 @import './settings/colors';
 @import '../../vendor/bootstrap/styles/settings';
 
@@ -104,7 +104,7 @@
 @import './objects/top-bar';
 @import './objects/top-image';
 
-@import '../../components/breadcrumb/styles/objects.breadcrumb';
+@import '../../components/breadcrumb/styles/main';
 @import '../../components/filters/styles/objects.filters';
 @import '../../components/lang-select-page/styles/objects.lang-select-page';
 @import '../../components/lang-select-site/styles/objects.lang-select-site';

@@ -5,7 +5,7 @@ module.exports = {
   copy: {
     build: [
       {
-        src: 'src/{core,components,dependencies}/{fonts,images}/**',
+        src: 'src/{core,components,vendor}/**/{fonts,images}/**',
         dest: 'build'
       },
       {
@@ -23,12 +23,15 @@ module.exports = {
   // Scripts to process
   scripts: {
     entry: [
-      'src/core/scripts/theme.js'
+      'src/core/scripts/core.js'
     ]
   },
   // Styles to process
   styles: {
-    entry: ['src/core/styles/theme.scss'],
+    entry: [
+      'src/core/styles/core.scss',
+      'src/components/breadcrumb/styles/main.scss'
+    ],
     autoprefixer: [
       'ie >= 10',
       'ie_mob >= 10',
