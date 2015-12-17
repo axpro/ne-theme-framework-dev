@@ -46,3 +46,13 @@ rules:
   # Final Items
   trailing-semicolon: 2
   final-newline: 2
+
+  property-sort-order:
+    - 1
+    -
+      order: concentric
+
+  class-name-format:
+    - 1
+    -
+      convention: hyphenatedbem

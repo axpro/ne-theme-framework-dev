@@ -23,14 +23,24 @@ module.exports = {
   // Scripts to process
   scripts: {
     entry: [
-      'src/core/scripts/core.js'
+      'src/core/scripts/core.js',
+      'src/components/breadcrumb/scripts/breadcrumb.js',
+      'src/components/filters/scripts/filters.js',
+      'src/components/lang-select-page/scripts/lang-select-page.js',
+      'src/components/lang-select-site/scripts/lang-select-site.js',
+      'src/components/pager/scripts/pager.js'
+
     ]
   },
   // Styles to process
   styles: {
     entry: [
       'src/core/styles/core.scss',
-      'src/components/breadcrumb/styles/main.scss'
+      'src/components/breadcrumb/styles/breadcrumb.scss',
+      'src/components/filters/styles/filters.scss',
+      'src/components/lang-select-page/styles/lang-select-page.scss',
+      'src/components/lang-select-site/styles/lang-select-site.scss',
+      'src/components/pager/styles/pager.scss'
     ],
     autoprefixer: [
       'ie >= 10',

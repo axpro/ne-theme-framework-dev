@@ -1,5 +1,5 @@
 // jQuery & Bootstrap
-import '../../vendor/bootstrap/scripts/bootstrap';
+import 'vendor/bootstrap/scripts/bootstrap';
 
 // Import custom code
 import './europa';

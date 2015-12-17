@@ -3,21 +3,21 @@
  */
 
 // jQuery
-import 'jquery/dist/jquery';
+import 'bower_components/jquery/dist/jquery';
 
 // Bootstrap
-import 'bootstrap-sass/assets/javascripts/bootstrap/transition';
-import 'bootstrap-sass/assets/javascripts/bootstrap/alert';
-import 'bootstrap-sass/assets/javascripts/bootstrap/button';
-import 'bootstrap-sass/assets/javascripts/bootstrap/carousel';
-import 'bootstrap-sass/assets/javascripts/bootstrap/collapse';
-import 'bootstrap-sass/assets/javascripts/bootstrap/dropdown';
-import 'bootstrap-sass/assets/javascripts/bootstrap/modal';
-import 'bootstrap-sass/assets/javascripts/bootstrap/tooltip';
-import 'bootstrap-sass/assets/javascripts/bootstrap/popover';
-import 'bootstrap-sass/assets/javascripts/bootstrap/scrollspy';
-import 'bootstrap-sass/assets/javascripts/bootstrap/tab';
-import 'bootstrap-sass/assets/javascripts/bootstrap/affix';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/button';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab';
+import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix';
 
 /*!
  * IE10 viewport hack for Surface/desktop Windows 8 bug

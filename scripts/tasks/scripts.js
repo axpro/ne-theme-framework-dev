@@ -3,18 +3,22 @@
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const babel = require('rollup-plugin-babel');
-const config = require('../src/theme/config');
+const config = require('../../src/theme/config');
 const path = require('path');
 const fs = require('fs');
 
-gulp.task('scripts:bundle', scriptsBundle);
-gulp.task('scripts:uglify', scriptsUglify);
+module.exports = {
+  bundle: scriptsBundle,
+  uglify: scriptsUglify
+};
 
 // Concatenate and minify JavaScript. Transpiles ES2015 code to ES5.
 // See https://babeljs.io/docs/usage/options/ for more informations on Babel options
 // Note: "comments: false" is very heavy
-function scriptsBundle() {
-  return gulp.src(config.scripts.entry, {base: './src/', read: false})
+function scriptsBundle(done) {
+  const startTime = Date.now();
+  console.log('Bundle JS: started');
+  gulp.src(config.scripts.entry, {base: './src/', read: false})
     .pipe($.newer('build'))
     .pipe($.sourcemaps.init())
     .pipe($.rollup({
@@ -32,16 +36,28 @@ function scriptsBundle() {
       ]
     }))
     .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '../src/'}))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build'))
+    .on('end', () => {
+      const diff = Date.now() - startTime;
+      console.log('Bundle JS: done (' + diff + 'ms)');
+      done();
+    });
 }
 
 // UglifyJS
-function scriptsUglify() {
+function scriptsUglify(done) {
+  const startTime = Date.now();
+  console.log('Uglify JS: started');
   return gulp.src('build/**/*.js', {base: 'build'})
     .pipe($.sourcemaps.init({loadMaps: true}))
     .pipe($.uglify())
     .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '../src/'}))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .on('end', () => {
+      const diff = Date.now() - startTime;
+      console.log('Uglify JS: done (' + diff + 'ms)');
+      done();
+    });
 }
 
 // Helpers
@@ -58,13 +74,14 @@ function resolver(importee, importer) {
   } else if (isFile(path.resolve(process.cwd(), importee))) {
     // Relative to process working directory
     resolvedFile = path.resolve(process.cwd(), importee);
-  } else if (isFile(path.resolve(process.cwd(), 'bower_components', importee))) {
+  } else if (isFile(path.resolve(process.cwd(), 'src', importee))) {
+    // Relative to src
+    resolvedFile = path.resolve(process.cwd(), 'src', importee);
+  } else if (isFile(path.resolve(process.cwd(), importee))) {
     // Relative to bower_components
-    resolvedFile = path.resolve(process.cwd(), 'bower_components', importee);
-  } else if (isFile(path.resolve(process.cwd(), 'node_modules', importee))) {
-    // Relative to node_modules
-    resolvedFile = path.resolve(process.cwd(), 'node_modules', importee);
+    resolvedFile = path.resolve(process.cwd(), importee);
   }
+
   return resolvedFile;
 }
 

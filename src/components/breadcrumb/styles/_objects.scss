@@ -1,14 +1,13 @@
 // Breadcrumb
 //
-// Markup: ../../templates/breadcrumb.html
+// Markup: ../templates/breadcrumb.html
 //
-// Styleguide 1.2.2
-
+// Styleguide 2.1
 .breadcrumb {
   border-bottom: 1px solid #fff;
   background: none;
   padding: 0;
-  margin:0;
+  margin: 0;
   font-size: 0.833em;
   font-weight: 600;
   position: relative;
@@ -119,14 +118,11 @@
   }
 }
 
-/*
-Breadcrumb collapsible
-
-Markup: html/breadcrumb--collapsible.html
-
-Styleguide breadcrumb.collapsible
-*/
-
+// Breadcrumb collapsible
+//
+// Markup: ../templates/breadcrumb--collapsible.html
+//
+// Styleguide 2.1.1
 .breadcrumb--collapsible {
   .breadcrumb__btn-separator {
     background: $blue-darkest;
@@ -134,8 +130,8 @@ Styleguide breadcrumb.collapsible
     display: inline-block;
     padding: 0 10px;
     position: absolute;
-    bottom:0;
-    left:0;
+    bottom: 0;
+    left: 0;
     cursor: pointer;
     color: #fff;
 

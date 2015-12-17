@@ -8,35 +8,51 @@
 
 * Node.js >= v4
 * npm >= v3.3.x
+* Python 2.7
 
 ## Install build system
 
 Before we can build the NextEuropa theme framework we need to install the build system
 itself. This can be done using Node.js and npm:
 
-```
-$ npm install
+```bash
+npm install
+npm run bower update
 ```
 
 This will install Bower and Gulp locally as this is the only so far to make it build correctly on ContinuousPHP.
 
 Note: if you have Phing installed globally, you can also use the command:
 
-```
-$ phing
+```bash
+phing
 ```
 
 ## Building the theme
 
-```
-$ npm run bower install
-$ npm run gulp dist
+```bash
+npm run dist
 ```
 
-## Testing locally
+## Linting
 
-The theme comes with an integrated server which automatically reloads on each file modification. Furthermore, you can test the theme across multiple devices and navigators, thanks to BrowserSync!
-
+```bash
+# Run ESLint
+npm run eslint
+# Run Sass-Lint
+npm run sass-lint
+# Run both linters
+npm run lint
 ```
-$ npm run gulp serve:dist
+
+## Developing
+
+```bash
+npm run dev
+```
+
+## Testing
+
+```bash
+npm test
 ```
