@@ -9,7 +9,7 @@
     attach: function (context, settings) {
       var $filters        = $('.filters'),
           $filtersSubmit  = $('.filters__btn-submit', $filters),
-          filtersFormId   = $filters.find('form').attr('id');
+          filtersFormId   = $filters.find('form').attr('id'),
           refineText      = Drupal.t('Refine'),
           hideText        = Drupal.t('Hide'),
           clearAll        = Drupal.t('Clear all'),
@@ -56,7 +56,7 @@
       // Runs only once.
       // Add throbber next to content type and items count text.
       $filters.once('filters', function() {
-        throbber = '<div class="ajax-progress ajax-progress-throbber"><i class="icon icon--spinner is-spinning"></i></div>';
+        var throbber = '<div class="ajax-progress ajax-progress-throbber"><i class="icon icon--spinner is-spinning"></i></div>';
         $(document)
           .ajaxStart(function(e) {
             if (e.currentTarget.activeElement.form == 'undefined' && e.currentTarget.activeElement.form.id === filtersFormId) {
@@ -70,7 +70,7 @@
           enquire.register('screen and (min-width: 992px)', {
             // Desktop.
             match : function() {
-                $filtersWrapper = $(".filters__wrapper");
+              var $filtersWrapper = $(".filters__wrapper");
 
               $filtersSubmit.addClass('ctools-auto-submit-click');
 
