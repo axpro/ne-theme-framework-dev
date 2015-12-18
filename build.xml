@@ -4,6 +4,6 @@
     <target name="dist" description="Phing target list">
         <exec command="npm install" passthru="true" />
         <exec command="npm run bower install" passthru="true" />
-        <exec command="npm run gulp dist" passthru="true" />
+        <exec command="npm run dist" passthru="true" />
     </target>
 </project>
