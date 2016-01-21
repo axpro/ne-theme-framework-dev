@@ -3,7 +3,7 @@
 module.exports = {
   meta: {
     styles: ['./styles/meta.scss'],
-    templates: ['./templates/meta.html'],
+    templates: ['./templates/*.html'],
     dependencies: ['core']
   }
 };

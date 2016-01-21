@@ -9,7 +9,7 @@ module.exports = {
       src: './images/**',
       dest: 'images'
     }],
-    templates: ['./templates/lang-select-page.html'],
+    templates: ['./templates/*.html'],
     dependencies: ['core']
   }
 };

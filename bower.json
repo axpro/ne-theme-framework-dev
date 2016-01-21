@@ -1,27 +1,13 @@
 {
   "name": "nexteuropa-theme-framework",
-  "description": "NextEuropa Theme Framework",
-  "main": [
-    "src/scripts/bootstrap.js",
-    "src/styles/theme.scss"
-  ],
+  "description": "Next EUROPA Theme Framework",
   "license": "EUPL-1.1",
   "private": true,
   "dependencies": {
     "jquery": "~2.2.0",
-    "bootstrap-sass": "~3.3.5",
-    "modernizr": "~3.3.1",
-    "iframe-resizer": "~3.5.1"
+    "bootstrap-sass": "~3.3.5"
   },
   "devDependencies": {
-    "mocha": "~2.3.3",
-    "chai": "~3.4.0",
-    "lazysizes": "~1.4.0"
-  },
-  "ignore": [
-    "**/.*",
-    "docs",
-    "test",
-    "tools"
-  ]
+    "iframe-resizer": "~3.5.1"
+  }
 }

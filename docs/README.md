@@ -1,4 +1,4 @@
-# NextEuropa Frontend Documentation
+# Next EUROPA Frontend Documentation
 
 
 ## Purpose

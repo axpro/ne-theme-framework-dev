@@ -15,24 +15,10 @@
 // Prefer importing dependencies first thus you can override them if needed
 //
 // Styleguide 1.1
-// styleguide:ignore:start
 @import './base';
-// styleguide:ignore:end
 
 // Objects
-//
-// Objects
-//
-// Styleguide 1.2
-// styleguide:ignore:start
-// @import './objects';
-// styleguide:ignore:end
+@import './objects';
 
 // Trumps
-//
-// Trumps
-//
-// Styleguide 1.3
-// styleguide:ignore:start
 // @import './trumps';
-// styleguide:ignore:end

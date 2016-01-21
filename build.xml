@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<project name="NextEuropa Theme Framework" default="dist">
-    <target name="dist" description="Phing target list">
+<project name="Next EUROPA Theme Framework" default="install">
+    <target name="install" description="Install the development environment">
         <exec command="npm install" passthru="true" />
         <exec command="npm run bower install" passthru="true" />
-        <exec command="npm run dist" passthru="true" />
+    </target>
+    <target name="dev" description="Start building the theme">
+        <exec command="npm run dev" passthru="true" />
+    </target>
+    <target name="build" description="Build the theme">
+        <exec command="npm run lint" passthru="true" />
+        <exec command="npm run build" passthru="true" />
     </target>
 </project>

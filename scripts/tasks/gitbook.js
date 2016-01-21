@@ -77,7 +77,7 @@ function build(done) {
 }
 
 function watch() {
-  gulp.watch('src/{components,core,vendor,utilities}/**/*.md', event => {
+  gulp.watch('src/{components,core,vendor,utilities}/**/*.{md,scss,html,js}', event => {
     console.log('File ' + path.relative(process.cwd(), event.path) + ' was ' + event.type);
     prepare(() => {
       if (global.browserSyncServer && global.browserSyncServer.active === true) {

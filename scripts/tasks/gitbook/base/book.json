@@ -1,5 +1,5 @@
 {
-  "title": "NextEuropa Frontend Documentation",
+  "title": "Next EUROPA Frontend Documentation",
   "description": "This is such a great thing!",
   "language": "en",
   "plugins": [
@@ -10,7 +10,7 @@
   ],
   "links": {
     "sidebar" : {
-      "NextEuropa": "http://beta.ec.europa.eu/"
+      "Next EUROPA": "http://beta.ec.europa.eu/"
     }
   }
 }
