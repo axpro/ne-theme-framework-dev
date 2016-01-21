@@ -3,12 +3,55 @@
 
 ## Purpose
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis nulla et metus auctor, in sollicitudin est posuere. Nam vestibulum lacus id neque viverra, ac tristique lectus malesuada. Fusce quis diam et tellus volutpat sodales. Duis a diam erat. Donec ullamcorper lectus urna, a vestibulum nulla mattis at. Maecenas vestibulum, sapien pharetra fringilla euismod, lectus ipsum pharetra mi, sed tristique leo tellus quis nibh. Aliquam ut nisl libero. Phasellus mollis, orci id condimentum pretium, massa velit egestas velit, id tristique odio libero nec felis. Integer dignissim, nunc et convallis gravida, ante nibh tempor odio, ac condimentum tortor lacus id massa. Donec in lorem vulputate, tincidunt libero a, tempus massa. Quisque scelerisque nisi ac leo semper, dapibus lacinia dui vestibulum. Integer nec elementum elit. Cras pellentesque dui in luctus laoreet. Maecenas mi tellus, viverra in libero id, sodales dictum sem.
+_Explain the purpose of the style guide._
 
 ## Generate
 
-This styleguide is auto-generated.
+### Requirements
 
+* Node.js >= v4
+* npm >= v3.3.x
+* Python 2.7
+
+### Install build system
+
+Before we can build the NextEurop a theme framework we need to install the build system
+itself. This can be done using Node.js and npm:
+
+```bash
+npm install
+npm run bower update
 ```
-$ npm run gulp styleguide
+
+This will install Bower and Gulp locally as this is the only so far to make it build correctly on ContinuousPHP.
+
+Note: if you have Phing installed globally, you can also use the command:
+
+```bash
+phing
+```
+
+### Live Style Guide
+
+```bash
+npm run dev
+```
+
+Phing alias:
+
+```bash
+phing dev
+```
+
+### Build
+
+_Not implemented yet_
+
+```bash
+npm run build
+```
+
+Phing alias
+```bash
+phing build
 ```
