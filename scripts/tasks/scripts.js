@@ -3,13 +3,15 @@
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const babel = require('rollup-plugin-babel');
-const config = require('../../src/theme/config');
 const path = require('path');
 const fs = require('fs');
 
+let config = global.config;
+
 module.exports = {
   bundle: scriptsBundle,
-  uglify: scriptsUglify
+  uglify: scriptsUglify,
+  watch: watch
 };
 
 // Concatenate and minify JavaScript. Transpiles ES2015 code to ES5.
@@ -18,8 +20,8 @@ module.exports = {
 function scriptsBundle(done) {
   const startTime = Date.now();
   console.log('Bundle JS: started');
-  gulp.src(config.scripts.entry, {base: './src/', read: false})
-    .pipe($.newer('build'))
+  gulp.src(config.scripts, {read: false})
+    .pipe($.newer('build/'))
     .pipe($.sourcemaps.init())
     .pipe($.rollup({
       sourceMap: true,
@@ -30,13 +32,12 @@ function scriptsBundle(done) {
           resolveId: resolver
         },
         babel({
-          presets: ['es2015-rollup'],
           compact: true
         })
       ]
     }))
     .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '../src/'}))
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build/scripts'))
     .on('end', () => {
       const diff = Date.now() - startTime;
       console.log('Bundle JS: done (' + diff + 'ms)');
@@ -58,6 +59,13 @@ function scriptsUglify(done) {
       console.log('Uglify JS: done (' + diff + 'ms)');
       done();
     });
+}
+
+function watch() {
+  gulp.watch('./src/**/*.js', event => {
+    console.log('File ' + path.relative(process.cwd(), event.path) + ' was ' + event.type);
+    scriptsBundle(() => console.log('Waiting for changes...'));
+  });
 }
 
 // Helpers

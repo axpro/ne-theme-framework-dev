@@ -1,13 +1,14 @@
 ---
-  env:
-    browser: true
-    node: true
-  extends: xo
-  rules:
-    semi:
-      - 2
-      - always
-    indent:
-      - 2
-      - 2
-    no-case-declarations: 0
+env:
+  browser: true
+  node: true
+extends: xo
+root: true
+rules:
+  indent:
+    - 2
+    - 2
+  no-case-declarations: 0
+  semi:
+    - 2
+    - always

@@ -1,10 +1,4 @@
-// Components
-//
-// Components are parts of a theme that can be enabled if needed.
-//
-// Styleguide 2.0
-// styleguide:ignore:start
 @import './settings';
-@import './tools';
+@import 'core/styles/settings';
+@import 'core/styles/tools';
 @import './objects';
-// styleguide:ignore:end

@@ -2,7 +2,8 @@
 
 const async = require('async');
 const gulp = require('gulp');
-const config = require('../../src/theme/config');
+
+let config = global.config;
 
 module.exports = {
   build: copyBuild,
@@ -13,7 +14,8 @@ module.exports = {
 function copyBuild(done) {
   const startTime = Date.now();
   console.log('Copy `build`: started');
-  return extractTasks(config.copy.build, res => {
+
+  return extractTasks(config.assets, res => {
     const diff = Date.now() - startTime;
     console.log('Copy `build`: done (' + diff + 'ms)');
     return done(res);

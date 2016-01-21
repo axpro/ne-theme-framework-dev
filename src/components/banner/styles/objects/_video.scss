@@ -1,0 +1,18 @@
+// Video Banner
+
+.banner--video {
+  @extend.row;
+}
+
+.banner__video {
+  & .file {
+    margin-bottom: 0;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  & iframe {
+    display: block;
+    width: 100%;
+  }
+}

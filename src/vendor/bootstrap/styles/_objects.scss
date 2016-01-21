@@ -29,5 +29,10 @@
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/popovers';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/carousel';
 
-@import './objects/btn';
+// Override
 @import './objects/bootstrap-reset';
+@import './objects/btn';
+@import './objects/container-fluid';
+@import './objects/help-block';
+@import './objects/navbar';
+@import './objects/row';
