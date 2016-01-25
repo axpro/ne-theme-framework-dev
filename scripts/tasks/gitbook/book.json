@@ -1,6 +1,6 @@
 {
   "title": "Next EUROPA Frontend Documentation",
-  "description": "This is such a great thing!",
+  "description": "Common documentation for all frontend related development",
   "language": "en",
   "plugins": [
     "prism",

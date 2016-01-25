@@ -41,7 +41,7 @@ function prepareBase(done) {
   const startTime = Date.now();
   console.log('Prepare styleguide: started');
 
-  return gulp.src(['scripts/tasks/gitbook/base/**', 'docs/**'])
+  return gulp.src(['scripts/tasks/gitbook/**', 'docs/**'])
     .pipe(gulp.dest('build/_tmp'))
     .on('end', res => {
       const diff = Date.now() - startTime;
@@ -87,7 +87,7 @@ function watch() {
     });
   });
 
-  gulp.watch(['scripts/tasks/gitbook/base/**', 'docs/**'], event => {
+  gulp.watch(['scripts/tasks/gitbook/**', 'docs/**'], event => {
     console.log('File ' + path.relative(process.cwd(), event.path) + ' was ' + event.type);
     prepareBase(() => {
       if (global.browserSyncServer && global.browserSyncServer.active === true) {

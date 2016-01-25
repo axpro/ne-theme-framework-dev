@@ -1,6 +1,6 @@
 {
   "name": "nexteuropa-theme-framework",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Next EUROPA Theme Framework",
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "async": "^1.5.2",
-    "ava": "^0.10.0",
+    "ava": "^0.11.0",
     "babel-preset-es2015-rollup": "^1.1.1",
     "bower": "^1.7.2",
     "browser-sync": "^2.11.1",
@@ -35,7 +35,7 @@
     "gitbook": "^2.6.7",
     "gitbook-plugin-expandable-chapters": "^0.1.6",
     "gitbook-plugin-prism": "^1.0.0",
-    "gitbook-plugin-styleguide": "file:./scripts/tasks/gitbook/gitbook-plugin-styleguide",
+    "gitbook-plugin-styleguide": "git://github.com/yhuard/gitbook-plugin-styleguide.git",
     "glob": "^6.0.4",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
@@ -68,8 +68,8 @@
     "pixelmatch": "^4.0.1",
     "rollup-plugin-babel": "^2.3.9",
     "rollup-plugin-replace": "^1.1.0",
-    "stylelint": "^4.0.0",
-    "stylelint-config-standard": "^1.0.0",
+    "stylelint": "^4.1.0",
+    "stylelint-config-standard": "^2.0.0",
     "through2": "^2.0.0",
     "vo": "^1.0.3"
   },
