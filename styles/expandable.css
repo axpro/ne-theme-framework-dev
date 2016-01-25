@@ -1,0 +1,19 @@
+.expandable__content {
+  float: left;
+  width: 100%;
+  background-color: #f2f2f2; }
+
+.expandable__toggle {
+  float: left;
+  width: 100%;
+  background: #ffd617; }
+  .expandable__toggle.collapsed {
+    background: none; }
+  .expandable__toggle .icon {
+    margin-right: 0.833em; }
+  .expandable__toggle h3 {
+    font-size: 1.222em; }
+  .expandable__toggle:hover {
+    background: #ffd617; }
+
+/*# sourceMappingURL=expandable.css.map */

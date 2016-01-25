@@ -1,0 +1,19 @@
+/* Header top
+
+  Placeholder for adding a background on the .header-top
+*/
+.header-top {
+  background: #f2f2f2; }
+  .header-top .container-fluid {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0; }
+  @media (min-width: 510px) {
+    .header-top .container-fluid {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px; } }
+
+/*# sourceMappingURL=header-top.css.map */

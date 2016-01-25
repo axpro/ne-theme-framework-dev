@@ -1,0 +1,21 @@
+.banner {
+  margin-top: 1.667em; }
+
+.banner__author {
+  font-size: 0.778em;
+  font-weight: 600;
+  padding-bottom: 0.6em; }
+  .banner__author:before {
+    content: ' - '; }
+
+.banner__caption {
+  background: #ececec;
+  font-size: 0.778em;
+  padding: 0.5em 1em;
+  width: 100%;
+  max-width: 100%; }
+
+.banner__paragraph {
+  font-size: 0.889em; }
+
+/*# sourceMappingURL=banner.css.map */
