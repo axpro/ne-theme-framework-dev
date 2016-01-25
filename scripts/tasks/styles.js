@@ -4,13 +4,7 @@ const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const path = require('path');
 
-let config = global.config || {};
-
-module.exports = {
-  compile: stylesCompile,
-  minify: stylesMinify,
-  watch: watch
-};
+const config = global.config || {};
 
 // Compile and automatically prefix stylesheets
 function stylesCompile(done) {
@@ -25,7 +19,7 @@ function stylesCompile(done) {
 
   if (config.theme) {
     src = config.styles.entry;
-    build = 'build/' + config.theme;
+    build = `build/${config.theme}`;
   } else {
     src = config.styles;
   }
@@ -51,34 +45,18 @@ function stylesCompile(done) {
       'android >= 4.4',
       'bb >= 10'
     ]))
-    .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '../src/'}))
+    .pipe($.sourcemaps.write('.', { includeContent: true, sourceRoot: '../src/' }))
     .pipe(gulp.dest(build))
     .on('end', () => {
       const diff = Date.now() - startTime;
-      console.log('Compile SCSS: done (' + diff + 'ms)');
-      done();
-    });
-}
-
-// Minify CSS
-function stylesMinify(done) {
-  const startTime = Date.now();
-  console.log('Minify SCSS: started');
-  return gulp.src('build/**/*.css', {base: ''})
-    .pipe($.sourcemaps.init({loadMaps: true}))
-    .pipe($.if('*.css', $.minifyCss()))
-    .pipe($.sourcemaps.write('.', {includeContent: true, sourceRoot: '/src/'}))
-    .pipe(gulp.dest('dist'))
-    .on('end', () => {
-      const diff = Date.now() - startTime;
-      console.log('Minify SCSS: done (' + diff + 'ms)');
+      console.log(`Compile SCSS: done (${diff}ms)`);
       done();
     });
 }
 
 function watch() {
   gulp.watch('./src/**/*.scss', event => {
-    console.log('File ' + path.relative(process.cwd(), event.path) + ' was ' + event.type);
+    console.log(`File ${path.relative(process.cwd(), event.path)} was ${event.type}`);
     stylesCompile(() => {
       if (global.browserSyncServer && global.browserSyncServer.active === true) {
         global.browserSyncServer.reload('*.css');
@@ -87,3 +65,8 @@ function watch() {
     });
   });
 }
+
+module.exports = {
+  compile: stylesCompile,
+  watch
+};

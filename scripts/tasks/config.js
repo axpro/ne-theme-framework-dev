@@ -3,17 +3,18 @@
 const path = require('path');
 const glob = require('glob');
 
-module.exports = function (theme) {
-  let config = {};
-  if (theme) {
-    config = require('../../src/theme/' + theme + '/theme.config.js');
-    config.theme = config.theme || theme;
-  } else {
-    config = parseFrameworkConfig();
-  }
+function rebase(baseFile) {
+  return relativeFile => {
+    if (typeof relativeFile === 'string') {
+      return path.resolve(path.dirname(baseFile), relativeFile);
+    }
 
-  return config;
-};
+    return {
+      src: path.resolve(path.dirname(baseFile), relativeFile.src),
+      dest: path.resolve('build', relativeFile.dest)
+    };
+  };
+}
 
 function parseFrameworkConfig() {
   let stylesSrc = [];
@@ -28,9 +29,9 @@ function parseFrameworkConfig() {
   files.push('./src/core/core.config.js');
 
   files.forEach(file => {
-    let conf = require(path.resolve(process.cwd(), file));
+    const conf = require(path.resolve(process.cwd(), file));
     if (conf) {
-      for (let variant in conf) {
+      for (const variant in conf) {
         if ({}.hasOwnProperty.call(conf, variant)) {
           // Styles
           if (conf[variant].styles) {
@@ -80,15 +81,15 @@ function parseFrameworkConfig() {
   };
 }
 
-function rebase(baseFile) {
-  return relativeFile => {
-    if (typeof relativeFile === 'string') {
-      return path.resolve(path.dirname(baseFile), relativeFile);
-    }
 
-    return {
-      src: path.resolve(path.dirname(baseFile), relativeFile.src),
-      dest: path.resolve('build', relativeFile.dest)
-    };
-  };
-}
+module.exports = (theme) => {
+  let config = {};
+  if (theme) {
+    config = require(`../../src/theme/${theme}/theme.config.js`);
+    config.theme = config.theme || theme;
+  } else {
+    config = parseFrameworkConfig();
+  }
+
+  return config;
+};

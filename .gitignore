@@ -1,10 +1,9 @@
 # Ignore some folders
-node_modules
-bower_components
 .nyc_output
+.tmp
+bower_components
 build
-dist
-docs/styleguide
+node_modules
 
 # Ignore OS specific files
 .DS_Store

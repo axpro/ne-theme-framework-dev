@@ -14,12 +14,12 @@ gulp.task('nightmare:test', ['default'], cb => {
     port: 8888
   });
 
-  let args = ['test/visual/nightmare.js'];
+  const args = ['test/visual/nightmare.js'];
   if (buildRef) {
     args.push('--ref');
   }
 
-  return spawn('node', args, {stdio: 'inherit'})
+  return spawn('node', args, { stdio: 'inherit' })
     .on('close', code => {
       connect.serverClose();
       return cb(code);

@@ -3,10 +3,6 @@
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 
-module.exports = {
-  optimize: optimize
-};
-
 // Optimize images
 function optimize(done) {
   const startTime = Date.now();
@@ -19,7 +15,11 @@ function optimize(done) {
     .pipe(gulp.dest('dist'))
     .on('end', res => {
       const diff = Date.now() - startTime;
-      console.log('Optimize images: done (' + diff + 'ms)');
+      console.log(`Optimize images: done (${diff}ms)`);
       return done(res);
     });
 }
+
+module.exports = {
+  optimize
+};
