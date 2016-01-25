@@ -26,7 +26,7 @@ function serverGenerate(done) {
       ]
     },
     port: 3000,
-    open: 'local',
+    open: false,
     notify: false
   }, () => {
     done();
