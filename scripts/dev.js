@@ -12,7 +12,7 @@ program
   .parse(process.argv);
 
 // Array of tasks
-let tasks = [];
+const tasks = [];
 
 // Load config
 global.config = require('./tasks/config.js')();
@@ -21,7 +21,6 @@ const styles = require('./tasks/styles');
 const scripts = require('./tasks/scripts');
 const copy = require('./tasks/copy');
 const gitbook = require('./tasks/gitbook');
-const template = require('./tasks/template');
 
 if (program.clean) {
   const clean = require('./tasks/clean.js');
@@ -34,7 +33,7 @@ tasks.push(done => async.parallel([
   styles.compile,
   scripts.bundle,
   copy.build,
-  template.compile
+  // template.compile
 ], done));
 
 tasks.push(gitbook.build);
@@ -45,11 +44,10 @@ tasks.push(require('./tasks/server.js').generate);
 // Run tasks
 async.series(tasks, () => {
   const diff = Date.now() - startTime;
-  console.log('Build finished and server started in ' + diff + 'ms');
-  console.log('Now let\'s make some magic!');
+  console.log(`Build finished and server started in ${diff}ms`);
+  console.log(`Now let's make some magic!`);
 
   // Start watching for changes
   styles.watch();
-  template.watch();
   gitbook.watch();
 });

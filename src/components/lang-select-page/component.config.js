@@ -8,8 +8,6 @@ module.exports = {
     assets: [{
       src: './images/**',
       dest: 'images'
-    }],
-    templates: ['./templates/*.html'],
-    dependencies: ['core']
+    }]
   }
 };

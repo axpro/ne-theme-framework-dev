@@ -1,3 +1,3 @@
 # Social Media links
 
-{% styleguide tpl='./templates/social-media-links.html' %}{% endstyleguide %}
+{% styleguide './templates/social-media-links.html' %}{% endstyleguide %}

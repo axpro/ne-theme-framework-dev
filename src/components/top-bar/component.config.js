@@ -2,7 +2,6 @@
 
 module.exports = {
   'top-bar': {
-    styles: ['./styles/top-bar.scss'],
-    dependencies: ['core']
+    styles: ['./styles/top-bar.scss']
   }
 };

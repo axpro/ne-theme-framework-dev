@@ -8,7 +8,6 @@ module.exports = {
       src: './images/**',
       dest: 'images'
     }],
-    templates: ['./templates/filters.html'],
-    dependencies: ['core']
+    templates: ['./templates/filters.html']
   }
 };

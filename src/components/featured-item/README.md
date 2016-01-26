@@ -1,3 +1,3 @@
 # Featured Item
 
-{% styleguide tpl='./templates/featured-item.html' %}{% endstyleguide %}
+{% styleguide './templates/featured-item.html' %}{% endstyleguide %}

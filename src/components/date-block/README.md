@@ -1,3 +1,3 @@
 # Date Block
 
-{% styleguide tpl='./templates/date-block.html' %}{% endstyleguide %}
+{% styleguide './templates/date-block.html' %}{% endstyleguide %}

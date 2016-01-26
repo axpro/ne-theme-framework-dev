@@ -1,3 +1,3 @@
 # Timeline
 
-{% styleguide tpl='./templates/timeline.html' %}{% endstyleguide %}
+{% styleguide './templates/timeline.html' %}{% endstyleguide %}

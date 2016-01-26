@@ -1,3 +1,3 @@
 # Checkbox
 
-{% styleguide tpl='./templates/checkbox.html' %}{% endstyleguide %}
+{% styleguide './templates/checkbox.html' %}{% endstyleguide %}

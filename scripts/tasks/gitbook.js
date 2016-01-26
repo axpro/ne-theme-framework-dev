@@ -2,30 +2,14 @@
 
 const gitbook = require('gitbook');
 const gulp = require('gulp');
-const data = require('gulp-data');
 const path = require('path');
 
-// Helper
-function setAbsolutePath(base) {
-  return (match, originalPath) => `styleguide tpl='${path.resolve(base, originalPath)}'`;
-}
-
-// Copy Markdown files and replace relative paths with absolute
+// Copy Markdown files
 function prepare(done) {
   const startTime = Date.now();
   console.log('Generate styleguide: started');
 
   return gulp.src('src/{components,core,vendor,utilities}/**/*.md')
-    .pipe(data(file => {
-      let content = String(file.contents);
-      const absolutePath = path.dirname(file.path);
-      content = content.replace(
-        /styleguide tpl='(.*)'/g,
-        setAbsolutePath(absolutePath)
-      );
-      file.contents = new Buffer(content);
-      return true;
-    }))
     .pipe(gulp.dest('.tmp'))
     .on('end', res => {
       const diff = Date.now() - startTime;
@@ -34,7 +18,7 @@ function prepare(done) {
     });
 }
 
-// Copy Markdown files and replace relative paths with absolute
+// Prepare base
 function prepareBase(done) {
   const startTime = Date.now();
   console.log('Prepare styleguide: started');
@@ -54,7 +38,8 @@ function build(done) {
   console.log('Build styleguide: started');
 
   const input = '.tmp';
-  const output = 'build/styleguide/';
+  const output = 'build/styleguide';
+
   const book = new gitbook.Book(input, {
     logLevel: gitbook.LOG_LEVELS.INFO,
     config: { output }
@@ -70,7 +55,7 @@ function build(done) {
 }
 
 function watch() {
-  gulp.watch('src/{components,core,vendor,utilities}/**/*.{md,scss,html,js}', event => {
+  gulp.watch('src/{components,core,vendor,utilities}/**/*.{md,html}', event => {
     console.log(`File ${path.relative(process.cwd(), event.path)} was ${event.type}`);
     prepare(() => {
       if (global.browserSyncServer && global.browserSyncServer.active === true) {

@@ -8,6 +8,11 @@
     "-sharing",
     "styleguide"
   ],
+  "pluginsConfig": {
+    "styleguide": {
+      "base": "src"
+    }
+  },
   "links": {
     "sidebar" : {
       "Next EUROPA": "http://beta.ec.europa.eu/"

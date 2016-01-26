@@ -1,3 +1,3 @@
 # Tags
 
-{% styleguide tpl='./templates/tags.html' %}{% endstyleguide %}
+{% styleguide './templates/tags.html' %}{% endstyleguide %}

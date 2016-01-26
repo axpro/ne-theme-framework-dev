@@ -1,3 +1,3 @@
 # Notification
 
-{% styleguide tpl='./templates/notification.html' %}{% endstyleguide %}
+{% styleguide './templates/notification.html' %}{% endstyleguide %}

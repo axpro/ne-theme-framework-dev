@@ -15,7 +15,6 @@ function extractTasks(mappings, done) {
   return async.each(mappings, copy, done);
 }
 
-
 // Copy files during build phase
 function copyBuild(done) {
   const startTime = Date.now();

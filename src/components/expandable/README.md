@@ -1,3 +1,3 @@
 # Expandable
 
-{% styleguide tpl='./templates/expandable.html' %}{% endstyleguide %}
+{% styleguide './templates/expandable.html' %}{% endstyleguide %}

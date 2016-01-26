@@ -7,7 +7,6 @@ module.exports = {
       './templates/field.html',
       './templates/field--labeled.html',
       './templates/field--labeled-align.html'
-    ],
-    dependencies: ['core']
+    ]
   }
 };

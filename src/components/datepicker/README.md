@@ -1,3 +1,3 @@
 # Datepicker
 
-{% styleguide tpl='./templates/datepicker.html' %}{% endstyleguide %}
+{% styleguide './templates/datepicker.html' %}{% endstyleguide %}

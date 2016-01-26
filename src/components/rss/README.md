@@ -1,3 +1,3 @@
 # RSS
 
-{% styleguide tpl='./templates/rss-link.html' %}{% endstyleguide %}
+{% styleguide './templates/rss-link.html' %}{% endstyleguide %}

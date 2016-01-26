@@ -9,8 +9,11 @@ module.exports = {
     templates: [
       './templates/checkbox.html'
     ],
-    dependencies: [
-      'core'
+    assets: [
+      {
+        src: './images/**',
+        dest: 'images'
+      }
     ]
   }
 };

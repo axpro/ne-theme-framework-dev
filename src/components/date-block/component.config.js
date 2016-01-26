@@ -7,9 +7,6 @@ module.exports = {
     ],
     templates: [
       './templates/date-block.html'
-    ],
-    dependencies: [
-      'core'
     ]
   }
 };

@@ -3,7 +3,6 @@
 module.exports = {
   timeline: {
     styles: ['./styles/timeline.scss'],
-    templates: ['./templates/timeline.html'],
-    dependencies: ['core']
+    templates: ['./templates/timeline.html']
   }
 };

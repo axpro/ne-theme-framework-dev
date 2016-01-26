@@ -1,3 +1,3 @@
 # Pager
 
-{% styleguide tpl='./templates/pager.html' %}{% endstyleguide %}
+{% styleguide './templates/pager.html' %}{% endstyleguide %}

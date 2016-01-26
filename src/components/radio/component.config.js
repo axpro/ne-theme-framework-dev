@@ -4,6 +4,11 @@ module.exports = {
   radio: {
     styles: ['./styles/radio.scss'],
     templates: ['./templates/radio.html'],
-    dependencies: ['core']
+    assets: [
+      {
+        src: './images/**',
+        dest: 'images'
+      }
+    ]
   }
 };

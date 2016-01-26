@@ -2,4 +2,4 @@
 
 Site-wide footer component
 
-{% styleguide tpl='./templates/footer.html' %}{% endstyleguide %}
+{% styleguide './templates/footer.html' %}{% endstyleguide %}

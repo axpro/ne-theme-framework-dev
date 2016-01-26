@@ -1,3 +1,3 @@
 # Messages
 
-{% styleguide tpl='./templates/messages.html' %}{% endstyleguide %}
+{% styleguide './templates/messages.html' %}{% endstyleguide %}

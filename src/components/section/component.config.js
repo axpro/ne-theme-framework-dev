@@ -2,7 +2,6 @@
 
 module.exports = {
   section: {
-    styles: ['./styles/section.scss'],
-    dependencies: ['core']
+    styles: ['./styles/section.scss']
   }
 };

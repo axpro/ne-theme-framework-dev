@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
   // You can define multiple variants
   icon: {
@@ -8,8 +6,11 @@ module.exports = {
       './templates/icon.html',
       './templates/icon-social.html'
     ],
-    dependencies: [
-      'core'
+    assets: [
+      {
+        src: './images/**',
+        dest: 'images'
+      }
     ]
   }
 };

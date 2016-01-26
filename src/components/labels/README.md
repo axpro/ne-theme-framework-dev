@@ -1,3 +1,3 @@
 # Labels
 
-{% styleguide tpl='./templates/labels.html' %}{% endstyleguide %}
+{% styleguide './templates/labels.html' %}{% endstyleguide %}

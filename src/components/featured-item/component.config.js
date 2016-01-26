@@ -3,7 +3,6 @@
 module.exports = {
   'featured-item': {
     styles: ['./styles/featured-item.scss'],
-    templates: ['./templates/featured-item.html'],
-    dependencies: ['core']
+    templates: ['./templates/featured-item.html']
   }
 };

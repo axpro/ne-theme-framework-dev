@@ -7,9 +7,6 @@ module.exports = {
     ],
     templates: [
       './templates/context-nav.html'
-    ],
-    dependencies: [
-      'core'
     ]
   }
 };

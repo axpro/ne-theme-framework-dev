@@ -2,7 +2,6 @@
 
 module.exports = {
   'skip-link': {
-    styles: ['./styles/skip-link.scss'],
-    dependencies: ['core']
+    styles: ['./styles/skip-link.scss']
   }
 };

@@ -1,3 +1,3 @@
 # Search form
 
-{% styleguide tpl='./templates/search-form.html' %}{% endstyleguide %}
+{% styleguide './templates/search-form.html' %}{% endstyleguide %}

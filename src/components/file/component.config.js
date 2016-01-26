@@ -6,7 +6,6 @@ module.exports = {
     templates: [
       './templates/file.html',
       './templates/file-widebar.html'
-    ],
-    dependencies: ['core']
+    ]
   }
 };

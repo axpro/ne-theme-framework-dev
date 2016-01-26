@@ -9,7 +9,6 @@ module.exports = {
       }
     ],
     styles: ['./styles/logo.scss'],
-    templates: ['./templates/*.html'],
-    dependencies: ['core']
+    templates: ['./templates/*.html']
   }
 };

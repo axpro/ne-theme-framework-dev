@@ -2,7 +2,6 @@
 
 module.exports = {
   block: {
-    styles: ['./styles/block.scss'],
-    dependencies: ['core']
+    styles: ['./styles/block.scss']
   }
 };

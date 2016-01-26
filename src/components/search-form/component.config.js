@@ -3,7 +3,6 @@
 module.exports = {
   'search-form': {
     styles: ['./styles/search-form.scss'],
-    templates: ['./templates/search-form.html'],
-    dependencies: ['core']
+    templates: ['./templates/search-form.html']
   }
 };

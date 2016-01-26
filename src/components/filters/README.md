@@ -1,3 +1,3 @@
 # Filters
 
-{% styleguide tpl='./templates/filters.html' %}{% endstyleguide %}
+{% styleguide './templates/filters.html' %}{% endstyleguide %}

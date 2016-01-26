@@ -2,7 +2,6 @@
 
 module.exports = {
   'header-top': {
-    styles: ['./styles/header-top.scss'],
-    dependencies: ['core']
+    styles: ['./styles/header-top.scss']
   }
 };

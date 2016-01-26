@@ -13,9 +13,6 @@ module.exports = {
     templates: [
       './templates/breadcrumb.html',
       './templates/breadcrumb-collapsible.html'
-    ],
-    dependencies: [
-      'core'
     ]
   }
 };

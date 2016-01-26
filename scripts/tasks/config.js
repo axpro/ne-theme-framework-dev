@@ -11,7 +11,11 @@ function rebase(baseFile) {
 
     return {
       src: path.resolve(path.dirname(baseFile), relativeFile.src),
-      dest: path.resolve('build', relativeFile.dest)
+      dest: path.resolve(
+        'build/framework',
+        path.relative('src', path.dirname(baseFile)),
+        relativeFile.dest
+      )
     };
   };
 }

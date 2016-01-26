@@ -3,6 +3,7 @@
 .tmp
 bower_components
 build
+dist
 node_modules
 
 # Ignore OS specific files

@@ -1,3 +1,3 @@
-# Banner
+# Feedback
 
-{% styleguide tpl='./templates/feedback-message.html' %}{% endstyleguide %}
+{% styleguide './templates/feedback-message.html' %}{% endstyleguide %}

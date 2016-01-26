@@ -10,9 +10,6 @@ module.exports = {
         src: './images/**',
         dest: 'images'
       }
-    ],
-    dependencies: [
-      'core'
     ]
   }
 };

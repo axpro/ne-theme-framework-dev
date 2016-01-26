@@ -1,6 +1,6 @@
 {
   "name": "nexteuropa-theme-framework",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Next EUROPA Theme Framework",
   "repository": {
     "type": "git",
@@ -17,7 +17,8 @@
     "bower": "./node_modules/.bin/bower",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "dev": "node ./scripts/dev.js",
-    "dist": "node ./scripts/dist.js"
+    "dist": "node ./scripts/dist.js",
+    "gh-pages": "node ./scripts/gh-pages.js"
   },
   "devDependencies": {
     "async": "^1.5.2",
@@ -36,9 +37,10 @@
     "eslint-config-xo": "^0.9.2",
     "eslint-plugin-react": "^3.16.1",
     "front-matter": "^2.0.5",
+    "gh-pages": "^0.8.0",
     "gitbook": "^2.6.7",
     "gitbook-plugin-prism": "^1.0.0",
-    "gitbook-plugin-styleguide": "^0.1.0",
+    "gitbook-plugin-styleguide": "^0.4.0",
     "glob": "^6.0.4",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
@@ -64,7 +66,7 @@
     "node-sass": "^3.4.2",
     "nunjucks": "^2.3.0",
     "nunjucks-autoescape": "^1.0.1",
-    "nyc": "^5.3.0",
+    "nyc": "^5.5.0",
     "opn": "^4.0.0",
     "pixelmatch": "^4.0.1",
     "rollup-plugin-babel": "^2.3.9",

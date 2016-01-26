@@ -1,3 +1,3 @@
 # Radio
 
-{% styleguide tpl='./templates/radio.html' %}{% endstyleguide %}
+{% styleguide './templates/radio.html' %}{% endstyleguide %}

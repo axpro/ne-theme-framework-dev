@@ -21,14 +21,6 @@ module.exports = {
     ],
     templates: [
       './templates/*.html'
-    ],
-    docs: [
-      {
-        id: 'core-test',
-        parent: 'core',
-        title: 'Hello',
-        page: 'test.md'
-      }
     ]
   }
 };

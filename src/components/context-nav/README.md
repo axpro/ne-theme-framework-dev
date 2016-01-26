@@ -1,3 +1,3 @@
 # Context nav
 
-{% styleguide tpl='./templates/context-nav.html' %}{% endstyleguide %}
+{% styleguide './templates/context-nav.html' %}{% endstyleguide %}

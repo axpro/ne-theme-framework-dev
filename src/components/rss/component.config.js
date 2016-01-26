@@ -3,7 +3,6 @@
 module.exports = {
   rss: {
     styles: ['./styles/rss.scss'],
-    templates: ['./templates/rss-link.html'],
-    dependencies: ['core']
+    templates: ['./templates/rss-link.html']
   }
 };

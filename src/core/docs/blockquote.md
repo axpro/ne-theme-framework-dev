@@ -1,3 +1,3 @@
 # Blockquote
 
-{% styleguide tpl='../templates/blockquote.html' %}{% endstyleguide %}
+{% styleguide '../templates/blockquote.html' %}{% endstyleguide %}

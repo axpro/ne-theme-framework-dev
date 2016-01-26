@@ -48,8 +48,8 @@ function resolver(importee, importer) {
 function scriptsBundle(done) {
   const startTime = Date.now();
   console.log('Bundle JS: started');
-  gulp.src(config.scripts, { read: false })
-    .pipe($.newer('build/'))
+  gulp.src(config.scripts, { read: false, base: 'src' })
+    .pipe($.newer('build/framework'))
     .pipe($.sourcemaps.init())
     .pipe($.rollup({
       sourceMap: true,
@@ -65,7 +65,7 @@ function scriptsBundle(done) {
       ]
     }))
     .pipe($.sourcemaps.write('.', { includeContent: true, sourceRoot: '../src/' }))
-    .pipe(gulp.dest('build/scripts'))
+    .pipe(gulp.dest('build/framework'))
     .on('end', () => {
       const diff = Date.now() - startTime;
       console.log(`Bundle JS: done (${diff}ms)`);
@@ -77,7 +77,7 @@ function scriptsBundle(done) {
 function scriptsUglify(done) {
   const startTime = Date.now();
   console.log('Uglify JS: started');
-  return gulp.src('build/**/*.js', { base: 'build' })
+  return gulp.src('build/framework/**/*.js', { base: 'build/framework' })
     .pipe($.sourcemaps.init({ loadMaps: true }))
     .pipe($.uglify())
     .pipe($.sourcemaps.write('.', { includeContent: true, sourceRoot: '../src/' }))

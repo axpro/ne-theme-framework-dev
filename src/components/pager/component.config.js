@@ -2,10 +2,14 @@
 
 module.exports = {
   pager: {
-    styles: [
-      './styles/pager.scss'
-    ],
+    styles: ['./styles/pager.scss'],
+    scripts: ['./scripts/pager.js'],
     templates: ['./templates/pager.html'],
-    dependencies: ['core']
+    assets: [
+      {
+        src: './images/**',
+        dest: 'images'
+      }
+    ]
   }
 };

@@ -10,7 +10,7 @@ function serverGenerate(done) {
   browserSync.init({
     server: {
       baseDir: [
-        resolve(process.cwd(), 'build'),
+        resolve(process.cwd(), 'build/framework'),
         resolve(process.cwd(), 'build/styleguide')
       ]
     },

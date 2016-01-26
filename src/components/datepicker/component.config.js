@@ -8,9 +8,6 @@ module.exports = {
     ],
     templates: [
       './templates/datepicker.html'
-    ],
-    dependencies: [
-      'core'
     ]
   }
 };

@@ -13,18 +13,9 @@ function stylesCompile(done) {
 
   const srcDir = path.resolve(__dirname, '../../src');
   const bowerDir = path.resolve(__dirname, '../../bower_components');
+  const build = 'build/framework';
 
-  let src = '';
-  let build = 'build/styles';
-
-  if (config.theme) {
-    src = config.styles.entry;
-    build = `build/${config.theme}`;
-  } else {
-    src = config.styles;
-  }
-
-  gulp.src(src)
+  gulp.src(config.styles, { base: 'src' })
     .pipe($.newer(build))
     .pipe($.sourcemaps.init())
     .pipe($.sass({

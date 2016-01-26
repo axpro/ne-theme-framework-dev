@@ -6,10 +6,7 @@ module.exports = {
     styles: ['./styles/banner.scss'],
     scripts: [],
     assets: [],
-    templates: [],
-    dependencies: [
-      'core'
-    ]
+    templates: []
   },
   // Example of variant: banner quote
   'banner-quote': {
@@ -18,9 +15,6 @@ module.exports = {
     assets: [],
     templates: [
       './templates/banner-quote.html'
-    ],
-    dependencies: [
-      'banner'
     ]
   },
   'banner-video': {
@@ -31,9 +25,6 @@ module.exports = {
     assets: [],
     templates: [
       './templates/banner-video.html'
-    ],
-    dependencies: [
-      'banner'
     ]
   }
 };

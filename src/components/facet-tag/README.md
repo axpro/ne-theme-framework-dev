@@ -1,3 +1,3 @@
 # Facet Tag
 
-{% styleguide tpl='./templates/facet-tag.html' %}{% endstyleguide %}
+{% styleguide './templates/facet-tag.html' %}{% endstyleguide %}
