@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Next EUROPA Theme</title>
+  <meta name="author" content="EC Europa">
+
+  <link rel="stylesheet" href="../../../core/styles/core.css">
+
+  <link rel="stylesheet" href="../styles/pager.css">
+
+  <link rel="stylesheet" href="../../icon/styles/icon.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<ul class="pager">
+    <li class="pager__item pager__back">
+        <a class="pager__btn" href="#" title="Back">
+            <span class="pager__back-arrow icon icon--left"></span>
+            <span class="pager__back-text sr-only">Previous</span>
+        </a>
+    </li>
+    <li class="pager__item pager__combo">
+        <span class="pager__combo-upper">
+            <select class="pager__combo-dropdown">
+                <option value="/filter?value=test">Page 1</option>
+                <option value="/filter?value=test&amp;page=1">Page 2</option>
+                <option value="" selected="selected">Page 3</option>
+                <option value="/filter?value=test&amp;page=3">Page 4</option>
+            </select>
+        </span>
+        <span class="pager__combo-container">
+            <span class="pager__combo-current">page 3</span>
+            <span class="pager__combo-total">of 4</span>
+        </span>
+    </li>
+    <li class="pager__item pager__forward">
+        <a class="pager__btn" href="#" title="Forward">
+            <span class="pager__forward-text">Next</span>
+            <span class="pager__forward-arrow icon icon--right"></span>
+        </a>
+    </li>
+</ul>
+
+
+  <script src="../../../core/scripts/core.js"></script>
+
+  <script src="../scripts/pager.js"></script>
+
+  <script src="/gitbook/plugins/gitbook-plugin-styleguide/iframeResizer.contentWindow.js"></script>
+</body>
+</html>
