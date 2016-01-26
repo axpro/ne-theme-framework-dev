@@ -1,0 +1,320 @@
+.icon-social {
+  position: relative;
+  padding-left: 50px;
+  padding-top: 5px;
+  min-height: 40px; }
+  .icon-social:before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px 5px 0;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .icon-social:hover {
+    cursor: pointer; }
+
+.icon-social--blogger:before {
+  background: url("../images/svg/icons/social/blogger.svg") no-repeat; }
+
+.icon-social--blogger:hover:before {
+  background-image: url("../images/svg/icons/social/blogger_hover.svg"); }
+
+.icon-social--facebook:before {
+  background: url("../images/svg/icons/social/facebook.svg") no-repeat; }
+
+.icon-social--facebook:hover:before {
+  background-image: url("../images/svg/icons/social/facebook_hover.svg"); }
+
+.icon-social--flickr:before {
+  background: url("../images/svg/icons/social/flick.svg") no-repeat; }
+
+.icon-social--flickr:hover:before {
+  background-image: url("../images/svg/icons/social/flick_hover.svg"); }
+
+.icon-social--gplus:before {
+  background: url("../images/svg/icons/social/gplus.svg") no-repeat; }
+
+.icon-social--gplus:hover:before {
+  background-image: url("../images/svg/icons/social/gplus_hover.svg"); }
+
+.icon-social--linkedin:before {
+  background: url("../images/svg/icons/social/linkedin.svg") no-repeat; }
+
+.icon-social--linkedin:hover:before {
+  background-image: url("../images/svg/icons/social/linkedin_hover.svg"); }
+
+.icon-social--pinterest:before {
+  background: url("../images/svg/icons/social/pinterest.svg") no-repeat; }
+
+.icon-social--pinterest:hover:before {
+  background-image: url("../images/svg/icons/social/pinterest_hover.svg"); }
+
+.icon-social--rss:before {
+  background: url("../images/svg/icons/social/rss.svg") no-repeat; }
+
+.icon-social--rss:hover:before {
+  background-image: url("../images/svg/icons/social/rss_hover.svg"); }
+
+.icon-social--skype:before {
+  background: url("../images/svg/icons/social/skype.svg") no-repeat; }
+
+.icon-social--skype:hover:before {
+  background-image: url("../images/svg/icons/social/skype_hover.svg"); }
+
+.icon-social--twitter:before {
+  background: url("../images/svg/icons/social/twitter.svg") no-repeat #ffffff; }
+
+.icon-social--twitter:hover:before {
+  background-image: url("../images/svg/icons/social/twitter_hover.svg"); }
+
+.icon-social--youtube:before {
+  background: url("../images/svg/icons/social/youtube.svg") no-repeat; }
+
+.icon-social--youtube:hover:before {
+  background-image: url("../images/svg/icons/social/youtube_hover.svg"); }
+
+.no-svg .icon-social--blogger:before {
+  background-image: url("../images/png/icons/social/blogger.png"); }
+
+.no-svg .icon-social--blogger:hover:before {
+  background-image: url("../images/png/icons/social/blogger_hover.png"); }
+
+.no-svg .icon-social--facebook:before {
+  background-image: url("../images/png/icons/social/facebook.png"); }
+
+.no-svg .icon-social--facebook:hover:before {
+  background-image: url("../images/png/icons/social/facebook_hover.png"); }
+
+.no-svg .icon-social--flickr:before {
+  background-image: url("../images/png/icons/social/flickr.png"); }
+
+.no-svg .icon-social--flickr:hover:before {
+  background-image: url("../images/png/icons/social/flickr_hover.png"); }
+
+.no-svg .icon-social--gplus:before {
+  background-image: url("../images/png/icons/social/gplus.png"); }
+
+.no-svg .icon-social--gplus:hover:before {
+  background-image: url("../images/png/icons/social/gplus_hover.png"); }
+
+.no-svg .icon-social--linkedin:before {
+  background-image: url("../images/png/icons/social/linkedin.png"); }
+
+.no-svg .icon-social--linkedin:hover:before {
+  background-image: url("../images/png/icons/social/linkedin_hover.png"); }
+
+.no-svg .icon-social--pinterest:before {
+  background-image: url("../images/png/icons/social/pinterest.png"); }
+
+.no-svg .icon-social--pinterest:hover:before {
+  background-image: url("../images/png/icons/social/pinterest_hover.png"); }
+
+.no-svg .icon-social--rss:before {
+  background-image: url("../images/png/icons/social/rss.png"); }
+
+.no-svg .icon-social--rss:hover:before {
+  background-image: url("../images/png/icons/social/rss_hover.png"); }
+
+.no-svg .icon-social--skype:before {
+  background-image: url("../images/png/icons/social/skype.png"); }
+
+.no-svg .icon-social--skype:hover:before {
+  background-image: url("../images/png/icons/social/skype_hover.png"); }
+
+.no-svg .icon-social--twitter:before {
+  background-image: url("../images/png/icons/social/twitter.png"); }
+
+.no-svg .icon-social--twitter:hover:before {
+  background-image: url("../images/png/icons/social/twitter_hover.png"); }
+
+.no-svg .icon-social--youtube:before {
+  background-image: url("../images/png/icons/social/youtube.png"); }
+
+.no-svg .icon-social--youtube:hover:before {
+  background-image: url("../images/png/icons/social/youtube_hover.png"); }
+
+.icon:before {
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'EuropaIcons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  margin-right: 4px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon--after {
+  text-decoration: none;
+  font-family: 'EuropaIcons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  margin-left: 4px;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon--external, .icon--external:before {
+  content: '\e61a' !important; }
+
+.icon--arrow-up, .icon--arrow-up:before {
+  content: '\e61e'; }
+
+.icon--arrow-down, .icon--arrow-down:before {
+  content: '\e61d'; }
+
+.icon--spinner:before {
+  content: '\e984'; }
+
+.icon--facebook:before {
+  content: '\e605'; }
+
+.icon--twitter:before {
+  content: '\e613'; }
+
+.icon--googleplus:before {
+  content: '\e608'; }
+
+.icon--linkedin:before {
+  content: '\e60c'; }
+
+.icon--rss:before {
+  content: '\e60f'; }
+
+.icon--language:before {
+  content: '\e611'; }
+
+.icon--search:before {
+  content: '\e61c'; }
+
+.icon--up:before {
+  content: '\e618'; }
+
+.icon--right, .icon--right:before {
+  content: '\e617'; }
+
+.icon--breadcrumb {
+  content: '\e617' !important; }
+
+.icon--down:before {
+  content: '\e616'; }
+
+.icon--left:before {
+  content: '\e619'; }
+
+.icon--file:before {
+  content: '\e606'; }
+
+.icon--audio:before {
+  content: '\e600'; }
+
+.icon--brochure:before {
+  content: '\e601'; }
+
+.icon--edit:before {
+  content: '\e603'; }
+
+.icon--image:before {
+  content: '\e609'; }
+
+.icon--download, .icon--download:before {
+  content: '\e602' !important; }
+
+.icon--infographic:before {
+  content: '\e60b'; }
+
+.icon--multiple-files:before {
+  content: '\e615'; }
+
+.icon--organigram:before {
+  content: '\e60d'; }
+
+.icon--package:before {
+  content: '\e60e'; }
+
+.icon--slides:before {
+  content: '\e610'; }
+
+.icon--video:before {
+  content: '\e614'; }
+
+.icon--error:before {
+  content: '\e604'; }
+
+.icon--success:before {
+  content: '\e612'; }
+
+.icon--warning:before {
+  content: '\e615'; }
+
+.icon--budget:before {
+  content: '\e900'; }
+
+.icon--digital:before {
+  content: '\e901'; }
+
+.icon--energy:before {
+  content: '\e902'; }
+
+.icon--euro:before {
+  content: '\e903'; }
+
+.icon--global:before {
+  content: '\e904'; }
+
+.icon--growth:before {
+  content: '\e905'; }
+
+.icon--regulation:before {
+  content: '\e906'; }
+
+.icon--check, .icon--check:before {
+  content: '\e620'; }
+
+.icon--generic-lang, .icon--generic-lang:before {
+  content: '\e621'; }
+
+.icon--yellowbg {
+  background-color: #ffd617;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block; }
+  .icon--yellowbg:before {
+    margin-right: 0;
+    line-height: inherit; }
+
+.is-spinning:before {
+  -webkit-animation: icon-spin-right 2s infinite linear;
+  animation: icon-spin-right 2s infinite linear; }
+
+@-webkit-keyframes icon-spin-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes icon-spin-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+/*# sourceMappingURL=icon.css.map */

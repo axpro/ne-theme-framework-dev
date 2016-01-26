@@ -1,0 +1,73 @@
+.label {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: normal;
+  line-height: 1;
+  color: #313cfb;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0; }
+  .label:empty {
+    display: none; }
+  .btn .label {
+    position: relative;
+    top: -1px; }
+
+a.label:hover, a.label:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer; }
+
+.label--default {
+  background-color: #777777;
+  color: #fff; }
+  .label--default[href]:hover, .label--default[href]:focus {
+    background-color: #5e5e5e; }
+
+.label--primary {
+  background-color: #004494;
+  color: #fff; }
+  .label--primary[href]:hover, .label--primary[href]:focus {
+    background-color: #002d61; }
+
+.label--success {
+  background-color: #467a39;
+  color: #fff; }
+  .label--success[href]:hover, .label--success[href]:focus {
+    background-color: #325729; }
+
+.label--info {
+  background-color: #575757;
+  color: #fff; }
+  .label--info[href]:hover, .label--info[href]:focus {
+    background-color: #3e3e3e; }
+
+.label--warning {
+  background-color: #f2a615;
+  color: #fff; }
+  .label--warning[href]:hover, .label--warning[href]:focus {
+    background-color: #c9880b; }
+
+.label--danger {
+  background-color: #ff2423;
+  color: #fff; }
+  .label--danger[href]:hover, .label--danger[href]:focus {
+    background-color: #ef0100; }
+
+.label--highlight {
+  color: #313cfb;
+  background-color: #ffd617; }
+  .label--highlight.label--meta:after {
+    content: '';
+    margin: 0; }
+
+.label--meta {
+  padding: 0.25em 0.5em 0.3em 0.5em;
+  font-size: 90%;
+  top: -0.075em;
+  margin-right: 0.8em;
+  position: relative; }
+
+/*# sourceMappingURL=labels.css.map */

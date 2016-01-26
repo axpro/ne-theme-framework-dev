@@ -1,0 +1,75 @@
+/*
+ * Please
+ * @see http://bootsnipp.com/snippets/featured/funky-radio-buttons
+ * @see http://webdesign.tutsplus.com/tutorials/quick-tip-easy-css3-checkboxes-and-radio-buttons--webdesign-8953
+ */
+.radio {
+  margin-bottom: 2px;
+  margin-top: 0; }
+  .radio label {
+    color: #575757;
+    height: 2.75em;
+    line-height: 2.75em;
+    display: block;
+    text-align: left;
+    border: transparent solid 2px;
+    border-radius: 0; }
+  .radio input {
+    margin: 1px 0 0 13px; }
+  .radio input[type="radio"] {
+    height: 2.75em;
+    margin-left: -9999px;
+    position: relative;
+    float: left; }
+    .radio input[type="radio"]:not(checked) + label {
+      background-color: #ececec;
+      padding-left: 2.778em; }
+      .radio input[type="radio"]:not(checked) + label:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 1.25em;
+        height: 1.25em;
+        top: 0.8em;
+        left: 1em;
+        background: url("../images/svg/radio-unchecked.svg") no-repeat;
+        background-size: auto 1.25em; }
+    .radio input[type="radio"]:checked + label {
+      color: #fff;
+      background-color: #004494; }
+      .radio input[type="radio"]:checked + label:before {
+        background-image: url("../images/svg/radio-checked.svg"); }
+    .radio input[type="radio"]:hover:not(checked) + label {
+      color: #575757;
+      border: #004494 solid 2px;
+      background-color: #fff; }
+    .radio input[type="radio"]:hover:checked + label {
+      color: #fff;
+      border: #ffd617 solid 2px;
+      background-color: #004494; }
+
+.no-svg .radio label {
+  height: auto;
+  line-height: inherit;
+  display: inline;
+  background: none;
+  padding-left: 0; }
+
+.no-svg .radio input[type="radio"] {
+  margin: 0;
+  float: none;
+  height: auto; }
+  .no-svg .radio input[type="radio"]:before {
+    display: none; }
+  .no-svg .radio input[type="radio"]:not(checked) + label {
+    background: none;
+    padding: 0; }
+    .no-svg .radio input[type="radio"]:not(checked) + label:before {
+      display: none; }
+  .no-svg .radio input[type="radio"]:checked + label {
+    color: inherit;
+    background: none; }
+    .no-svg .radio input[type="radio"]:checked + label:before {
+      display: none; }
+
+/*# sourceMappingURL=radio.css.map */

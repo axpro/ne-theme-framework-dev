@@ -1,0 +1,102 @@
+.feedback-form {
+  margin: 0; }
+
+.feedback-form__wrapper {
+  border-top: 1px solid #004494;
+  background: #fff; }
+  .feedback-form__wrapper:hover, .feedback-form__wrapper:active, .feedback-form__wrapper:focus, .feedback-form__wrapper.is-open {
+    background: #f2f2f2; }
+
+.feedback-form__trigger {
+  text-decoration: none;
+  color: #004494;
+  display: block;
+  padding: 0.667em 0 0.556em;
+  font-size: 0.889em; }
+  .feedback-form__trigger:hover, .feedback-form__trigger:active, .feedback-form__trigger:focus {
+    text-decoration: underline; }
+
+.feedback-form__content {
+  margin: 0.8em 0 2em; }
+
+.feedback-form__text {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-left: 1.944em; }
+
+.feedback-form__btn {
+  width: 12em; }
+  .feedback-form__btn .icon {
+    font-size: 0.778em; }
+
+#feedback-form__accordion {
+  margin-bottom: 1em;
+  border: 1px solid #575757; }
+  #feedback-form__accordion .accordion-group {
+    border-top: 1px solid #575757;
+    padding: 10px; }
+    #feedback-form__accordion .accordion-group:first-child {
+      border-top: none; }
+    #feedback-form__accordion .accordion-group .accordion-toggle {
+      background: url("../images/svg/checkbox-checked--blue.svg") no-repeat;
+      line-height: 20px;
+      padding-left: 25px;
+      color: #004494;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+      text-decoration: none;
+      font-size: 0.889em; }
+      #feedback-form__accordion .accordion-group .accordion-toggle.collapsed {
+        background: url("../images/svg/checkbox-unchecked--grey.svg") no-repeat;
+        color: #404040;
+        font-weight: 400; }
+        #feedback-form__accordion .accordion-group .accordion-toggle.collapsed:focus {
+          text-decoration: underline; }
+    #feedback-form__accordion .accordion-group .accordion-body {
+      padding-left: 25px; }
+      #feedback-form__accordion .accordion-group .accordion-body .accordion-inner {
+        margin-top: 15px; }
+
+@media (min-width: 768px) {
+  .feedback-form__text {
+    float: left;
+    width: 10.111em;
+    padding-top: 8px; }
+  .feedback-form__btn {
+    margin-left: 12.055em;
+    font-size: 1em; }
+  #feedback-form__accordion {
+    overflow: hidden; } }
+
+.no-svg #feedback-form__accordion .accordion-group .accordion-toggle {
+  background: url("../images/png/checkbox.png") no-repeat; }
+  .no-svg #feedback-form__accordion .accordion-group .accordion-toggle.collapsed {
+    background-position: 0 -21px; }
+
+.feedback-message {
+  color: #575757;
+  max-width: none; }
+  .feedback-message.is-disabled {
+    color: #b3b4b5; }
+  .feedback-message.is-error {
+    background-color: #e2e2e2;
+    padding: 12px; }
+    .feedback-message.is-error:before {
+      content: '';
+      background: url("../images/svg/error.svg") no-repeat;
+      background-size: 1.5em;
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 12px;
+      display: inline-block;
+      margin-bottom: -4px; }
+
+@media (min-width: 480px) {
+  .feedback-message.is-error:before {
+    margin-bottom: -6px; } }
+
+.no-svg .feedback-message.is-error:before {
+  background: url("../images/png/error.png") no-repeat; }
+
+/*# sourceMappingURL=feedback.css.map */

@@ -1,0 +1,1 @@
+{"version":3,"sources":["banner-quote.css"],"names":[],"mappings":"AAAA;EACE,mCAAmC;EACnC,sBAAsB,EAAE","file":"components/banner/styles/banner-quote.css","sourcesContent":[".banner--quote {\n  border-left: 0.556em solid #ffd617;\n  padding-left: 0.556em; }\n"],"sourceRoot":"../src/"}

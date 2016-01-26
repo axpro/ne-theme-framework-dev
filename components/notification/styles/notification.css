@@ -1,0 +1,45 @@
+.notification {
+  background: #ffd617;
+  padding: 10px 0 6px;
+  font-size: 14px; }
+  .notification a {
+    color: #000; }
+
+.notification__label {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 1.5em; }
+
+.notification__content {
+  display: block; }
+  .notification__content .notification__text {
+    float: left;
+    margin-bottom: 6px;
+    margin-right: 8px;
+    width: 100%; }
+  .notification__content .notification__btn {
+    font-weight: bold;
+    float: left;
+    margin-bottom: 6px; }
+    .notification__content .notification__btn:after {
+      font-size: 12px; }
+  .notification__content p {
+    max-width: none;
+    margin: 0; }
+
+@media (min-width: 768px) {
+  .notification__content {
+    display: block; }
+    .notification__content .notification__text {
+      width: 75%; }
+    .notification__content .notification__btn {
+      float: right; } }
+
+.notification a {
+  padding-right: 1.1em; }
+  .notification a[href^="http"]:not(.is-internal):after {
+    position: absolute;
+    line-height: 2.2; }
+
+/*# sourceMappingURL=notification.css.map */

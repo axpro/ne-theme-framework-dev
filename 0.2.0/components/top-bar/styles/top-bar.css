@@ -1,0 +1,44 @@
+.top-bar {
+  padding: 15px 0 10px 0;
+  overflow: hidden;
+  width: 100%; }
+
+@media (min-width: 480px) {
+  .block-Next EUROPA-europa-search,
+  .site-menu__toggle {
+    float: left; }
+  .block-Next EUROPA-europa-search {
+    width: 75%; }
+  .site-menu__toggle {
+    width: 25%;
+    padding-left: 15px; } }
+
+@media (min-width: 992px) {
+  .top-bar {
+    width: auto;
+    float: right;
+    position: relative;
+    top: 6px; }
+    .top-bar > .region {
+      padding: 0;
+      margin: 0; }
+    .top-bar .block-Next EUROPA-europa-search {
+      width: auto;
+      padding-left: 15px; }
+    .top-bar .site-menu__toggle {
+      position: static;
+      width: auto; } }
+
+.front .top-bar {
+  width: auto;
+  background: #004494;
+  padding-bottom: 0; }
+
+@media (min-width: 992px) {
+  .front .top-bar {
+    float: none;
+    position: static; }
+  .front .top-bar__wrapper {
+    float: right; } }
+
+/*# sourceMappingURL=top-bar.css.map */

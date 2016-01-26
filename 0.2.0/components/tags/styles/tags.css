@@ -1,0 +1,32 @@
+.tags {
+  padding-bottom: 0.8em;
+  width: 100%;
+  overflow: hidden; }
+
+.tags__label {
+  float: left;
+  text-transform: uppercase;
+  margin-right: 1em;
+  margin-top: 0.1em; }
+
+.tags__items {
+  float: left;
+  overflow: hidden; }
+
+.tags__item {
+  display: inline-block;
+  margin-right: 0.4em;
+  margin-bottom: 0.4em; }
+  .tags__item a {
+    background: #e2e2e2;
+    border-radius: 5px;
+    color: #313cfb;
+    display: inline-block;
+    font-size: 0.889em;
+    line-height: 1;
+    padding: 0.5em;
+    text-transform: lowercase; }
+    .tags__item a:hover, .tags__item a:active, .tags__item a:focus {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=tags.css.map */
