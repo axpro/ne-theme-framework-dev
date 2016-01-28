@@ -21,7 +21,8 @@ require(["gitbook"], function(gitbook) {
     });
   }
 
-  // "page.change" is triggered on first load, but due to a Chrome bug we have to check it
+  // "page.change" is triggered on first load, but due to a Chrome bug we have to prevent it
+  // in order to make the style guide run from the silesystem
   var loadedOnce = false;
   gitbook.events.bind("page.change", function() {
     if (loadedOnce) {
