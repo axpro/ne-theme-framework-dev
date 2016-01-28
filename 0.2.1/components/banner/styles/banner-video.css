@@ -1,0 +1,10 @@
+.banner__video .file {
+  margin-bottom: 0;
+  max-width: 100%;
+  padding: 0; }
+
+.banner__video iframe {
+  display: block;
+  width: 100%; }
+
+/*# sourceMappingURL=banner-video.css.map */

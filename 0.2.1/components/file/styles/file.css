@@ -1,0 +1,71 @@
+.file {
+  background: #ececec;
+  padding: 1.333em 1.333em 1.333em 1.333em;
+  overflow: hidden; }
+
+.file-video {
+  background: none;
+  padding: 1em 0; }
+
+.file__icon {
+  float: left;
+  margin-right: 1.333em; }
+  .file__icon:before {
+    color: #b3b4b5;
+    font-size: 2.778em; }
+
+.file__metadata {
+  line-height: 1; }
+
+.file__title {
+  font-weight: bold;
+  line-height: initial; }
+
+.file__language {
+  font-weight: bold;
+  font-size: 0.889em;
+  display: block;
+  line-height: initial;
+  margin-top: 0.556em; }
+
+.file__info {
+  font-size: 0.778em;
+  line-height: initial;
+  margin-top: 0.556em; }
+
+.file__btn {
+  margin-bottom: 0;
+  margin-top: 0.778em;
+  width: 10.5em; }
+
+.file--widebar {
+  max-width: 100%;
+  margin-left: 0; }
+  .file--widebar .file__icon {
+    margin-right: 0;
+    padding-left: 0;
+    height: 2.556em;
+    overflow: hidden; }
+    @media (max-width: 768px) {
+      .file--widebar .file__icon {
+        min-width: 60px; } }
+    .file--widebar .file__icon:before {
+      font-size: 2.556em; }
+  .file--widebar .file__metadata {
+    padding-left: 0; }
+  @media (max-width: 768px) {
+    .file--widebar .file__btn {
+      margin-top: 15px; } }
+
+@media (min-width: 622px) {
+  .file__metadata,
+  .file__btn {
+    overflow: hidden; }
+  .file__metadata {
+    float: left;
+    width: 15em; }
+  .file__btn {
+    float: right;
+    margin-top: 0; } }
+
+/*# sourceMappingURL=file.css.map */

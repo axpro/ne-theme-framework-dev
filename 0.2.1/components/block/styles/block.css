@@ -1,0 +1,13 @@
+.block--full-width {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .block--full-width > * {
+    margin-left: auto !important;
+    margin-right: auto !important; }
+
+@media (min-width: 1200px) {
+  .block--full-width {
+    margin-left: -100%;
+    margin-right: -100%; } }
+
+/*# sourceMappingURL=block.css.map */

@@ -1,0 +1,1 @@
+{"version":3,"sources":["top-image.css"],"names":[],"mappings":"AAAA;EACE,iBAAiB,EAAE;EACnB;IACE,eAAe;IACf,mBAAmB,EAAE","file":"components/top-image/styles/top-image.css","sourcesContent":[".top-image {\n  overflow: hidden; }\n  .top-image picture {\n    display: block;\n    text-align: center; }\n"],"sourceRoot":"../src/"}
