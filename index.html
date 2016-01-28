@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
         <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css">
         
     
@@ -57,7 +61,7 @@
         data-chapter-title="Introduction"
         data-filepath="README.md"
         data-basepath="."
-        data-revision="Thu Jan 28 2016 14:38:08 GMT+0100 (CET)"
+        data-revision="Thu Jan 28 2016 16:59:08 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -859,17 +863,17 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="next-europa-frontend-documentation">Next EUROPA Frontend Documentation</h1>
-<h2 id="purpose">Purpose</h2>
+                        <h1 id="next-europa-frontend-documentation"><a name="next-europa-frontend-documentation" class="plugin-anchor" href="#next-europa-frontend-documentation"><span class="fa fa-link"></span></a>Next EUROPA Frontend Documentation</h1>
+<h2 id="purpose"><a name="purpose" class="plugin-anchor" href="#purpose"><span class="fa fa-link"></span></a>Purpose</h2>
 <p><em>Explain the purpose of the style guide.</em></p>
-<h2 id="generate">Generate</h2>
-<h3 id="requirements">Requirements</h3>
+<h2 id="generate"><a name="generate" class="plugin-anchor" href="#generate"><span class="fa fa-link"></span></a>Generate</h2>
+<h3 id="requirements"><a name="requirements" class="plugin-anchor" href="#requirements"><span class="fa fa-link"></span></a>Requirements</h3>
 <ul>
 <li>Node.js &gt;= v4</li>
 <li>npm &gt;= v3.3.x</li>
 <li>Python 2.7</li>
 </ul>
-<h3 id="install-build-system">Install build system</h3>
+<h3 id="install-build-system"><a name="install-build-system" class="plugin-anchor" href="#install-build-system"><span class="fa fa-link"></span></a>Install build system</h3>
 <p>Before we can build the NextEurop a theme framework we need to install the build system
 itself. This can be done using Node.js and npm:</p>
 <pre><code class="lang-bash">npm <span class="token function">install</span>
@@ -879,13 +883,13 @@ npm run bower update
 <p>Note: if you have Phing installed globally, you can also use the command:</p>
 <pre><code class="lang-bash">phing
 </code></pre>
-<h3 id="live-style-guide">Live Style Guide</h3>
+<h3 id="live-style-guide"><a name="live-style-guide" class="plugin-anchor" href="#live-style-guide"><span class="fa fa-link"></span></a>Live Style Guide</h3>
 <pre><code class="lang-bash">npm run dev
 </code></pre>
 <p>Phing alias:</p>
 <pre><code class="lang-bash">phing dev
 </code></pre>
-<h3 id="build">Build</h3>
+<h3 id="build"><a name="build" class="plugin-anchor" href="#build"><span class="fa fa-link"></span></a>Build</h3>
 <p><em>Not implemented yet</em></p>
 <pre><code class="lang-bash">npm run build
 </code></pre>
@@ -937,7 +941,7 @@ npm run bower update
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"styleguide":{"base":"src"},"prism":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
+    var config = {"styleguide":{"base":"src"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
     gitbook.start(config);
 });
 </script>

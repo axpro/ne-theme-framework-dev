@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
         
     
@@ -59,7 +63,7 @@
         data-chapter-title="Icons"
         data-filepath="components/icon/README.md"
         data-basepath="../.."
-        data-revision="Thu Jan 28 2016 14:38:08 GMT+0100 (CET)"
+        data-revision="Thu Jan 28 2016 16:59:08 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -861,10 +865,10 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="icon">Icon</h1>
+                        <h1 id="icon"><a name="icon" class="plugin-anchor" href="#icon"><span class="fa fa-link"></span></a>Icon</h1>
 <p><div class="styleguide">
   <div class="preview">
-    <iframe id="frame" class="is-loading" src="./templates/icon.html" scrolling="no" onload="return iframeLoaded(this);"></iframe>
+    <iframe id="frame" class="lazy" data-src="./templates/icon.html"></iframe>
   </div>
   <div class="tabs">
     <ul class="nav nav-tabs">
@@ -1000,11 +1004,11 @@
   </div>
 </div>
 </p>
-<h2 id="social">Social</h2>
+<h2 id="social"><a name="social" class="plugin-anchor" href="#social"><span class="fa fa-link"></span></a>Social</h2>
 <p>Social network icons</p>
 <p><div class="styleguide">
   <div class="preview">
-    <iframe id="social-frame" class="is-loading" src="./templates/icon-social.html" scrolling="no" onload="return iframeLoaded(this);"></iframe>
+    <iframe id="social-frame" class="lazy" data-src="./templates/icon-social.html"></iframe>
   </div>
   <div class="tabs">
     <ul class="nav nav-tabs">
@@ -1082,7 +1086,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"styleguide":{"base":"src","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
+    var config = {"styleguide":{"base":"src","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
     gitbook.start(config);
 });
 </script>

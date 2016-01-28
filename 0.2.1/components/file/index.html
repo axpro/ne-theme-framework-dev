@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
         
     
@@ -59,7 +63,7 @@
         data-chapter-title="File"
         data-filepath="components/file/README.md"
         data-basepath="../.."
-        data-revision="Thu Jan 28 2016 14:38:08 GMT+0100 (CET)"
+        data-revision="Thu Jan 28 2016 16:59:08 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -861,11 +865,11 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="file">File</h1>
+                        <h1 id="file"><a name="file" class="plugin-anchor" href="#file"><span class="fa fa-link"></span></a>File</h1>
 <p>File component used to show info about the file that can be downloaded by clicking on the component</p>
 <p><div class="styleguide">
   <div class="preview">
-    <iframe id="frame" class="is-loading" src="./templates/file.html" scrolling="no" onload="return iframeLoaded(this);"></iframe>
+    <iframe id="frame" class="lazy" data-src="./templates/file.html"></iframe>
   </div>
   <div class="tabs">
     <ul class="nav nav-tabs">
@@ -895,10 +899,10 @@
   </div>
 </div>
 </p>
-<h2 id="widebar">Widebar</h2>
+<h2 id="widebar"><a name="widebar" class="plugin-anchor" href="#widebar"><span class="fa fa-link"></span></a>Widebar</h2>
 <p><div class="styleguide">
   <div class="preview">
-    <iframe id="widebar-frame" class="is-loading" src="./templates/file-widebar.html" scrolling="no" onload="return iframeLoaded(this);"></iframe>
+    <iframe id="widebar-frame" class="lazy" data-src="./templates/file-widebar.html"></iframe>
   </div>
   <div class="tabs">
     <ul class="nav nav-tabs">
@@ -975,7 +979,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"styleguide":{"base":"src","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
+    var config = {"styleguide":{"base":"src","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
     gitbook.start(config);
 });
 </script>

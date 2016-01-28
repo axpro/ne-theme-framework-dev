@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
         
     
@@ -59,7 +63,7 @@
         data-chapter-title="page"
         data-filepath="components/page/README.md"
         data-basepath="../.."
-        data-revision="Thu Jan 28 2016 14:38:08 GMT+0100 (CET)"
+        data-revision="Thu Jan 28 2016 16:59:08 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -861,10 +865,10 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="page">Page</h1>
+                        <h1 id="page"><a name="page" class="plugin-anchor" href="#page"><span class="fa fa-link"></span></a>Page</h1>
 <p><div class="styleguide">
   <div class="preview">
-    <iframe id="frame" class="is-loading" src="./templates/page-header.html" scrolling="no" onload="return iframeLoaded(this);"></iframe>
+    <iframe id="frame" class="lazy" data-src="./templates/page-header.html"></iframe>
   </div>
   <div class="tabs">
     <ul class="nav nav-tabs">
@@ -886,10 +890,10 @@
   </div>
 </div>
 </p>
-<h2 id="featured-page-header">Featured page header</h2>
+<h2 id="featured-page-header"><a name="featured-page-header" class="plugin-anchor" href="#featured-page-header"><span class="fa fa-link"></span></a>Featured page header</h2>
 <p><div class="styleguide">
   <div class="preview">
-    <iframe id="featured-frame" class="is-loading" src="./templates/page-header-featured.html" scrolling="no" onload="return iframeLoaded(this);"></iframe>
+    <iframe id="featured-frame" class="lazy" data-src="./templates/page-header-featured.html"></iframe>
   </div>
   <div class="tabs">
     <ul class="nav nav-tabs">
@@ -911,10 +915,10 @@
   </div>
 </div>
 </p>
-<h2 id="page-header-with-image-background">Page header with image background</h2>
+<h2 id="page-header-with-image-background"><a name="page-header-with-image-background" class="plugin-anchor" href="#page-header-with-image-background"><span class="fa fa-link"></span></a>Page header with image background</h2>
 <p><div class="styleguide">
   <div class="preview">
-    <iframe id="image-frame" class="is-loading" src="./templates/page-header-image.html" scrolling="no" onload="return iframeLoaded(this);"></iframe>
+    <iframe id="image-frame" class="lazy" data-src="./templates/page-header-image.html"></iframe>
   </div>
   <div class="tabs">
     <ul class="nav nav-tabs">
@@ -983,7 +987,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"styleguide":{"base":"src","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
+    var config = {"styleguide":{"base":"src","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
     gitbook.start(config);
 });
 </script>

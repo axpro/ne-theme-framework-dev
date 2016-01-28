@@ -29,6 +29,10 @@
         
     
         
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
         <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
         
     
@@ -59,7 +63,7 @@
         data-chapter-title="Field"
         data-filepath="components/field/README.md"
         data-basepath="../.."
-        data-revision="Thu Jan 28 2016 14:38:08 GMT+0100 (CET)"
+        data-revision="Thu Jan 28 2016 16:59:08 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -861,12 +865,12 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="field">Field</h1>
+                        <h1 id="field"><a name="field" class="plugin-anchor" href="#field"><span class="fa fa-link"></span></a>Field</h1>
 <p>Drupal note:</p>
 <p>Field styling appearing in this styleguide is only valid for Default drupal field settings</p>
 <p><div class="styleguide">
   <div class="preview">
-    <iframe id="frame" class="is-loading" src="./templates/field.html" scrolling="no" onload="return iframeLoaded(this);"></iframe>
+    <iframe id="frame" class="lazy" data-src="./templates/field.html"></iframe>
   </div>
   <div class="tabs">
     <ul class="nav nav-tabs">
@@ -891,10 +895,10 @@
   </div>
 </div>
 </p>
-<h2 id="labeled-field">Labeled field</h2>
+<h2 id="labeled-field"><a name="labeled-field" class="plugin-anchor" href="#labeled-field"><span class="fa fa-link"></span></a>Labeled field</h2>
 <p><div class="styleguide">
   <div class="preview">
-    <iframe id="labeled-frame" class="is-loading" src="./templates/field--labeled.html" scrolling="no" onload="return iframeLoaded(this);"></iframe>
+    <iframe id="labeled-frame" class="lazy" data-src="./templates/field--labeled.html"></iframe>
   </div>
   <div class="tabs">
     <ul class="nav nav-tabs">
@@ -919,11 +923,11 @@
   </div>
 </div>
 </p>
-<h2 id="labeled-field-align">Labeled field align</h2>
+<h2 id="labeled-field-align"><a name="labeled-field-align" class="plugin-anchor" href="#labeled-field-align"><span class="fa fa-link"></span></a>Labeled field align</h2>
 <p>Labeled align modifier should be used for aligning fields that do not have a label with fields that do have a label.</p>
 <p><div class="styleguide">
   <div class="preview">
-    <iframe id="labeled-align-frame" class="is-loading" src="./templates/field--labeled-align.html" scrolling="no" onload="return iframeLoaded(this);"></iframe>
+    <iframe id="labeled-align-frame" class="lazy" data-src="./templates/field--labeled-align.html"></iframe>
   </div>
   <div class="tabs">
     <ul class="nav nav-tabs">
@@ -1001,7 +1005,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"styleguide":{"base":"src","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
+    var config = {"styleguide":{"base":"src","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
     gitbook.start(config);
 });
 </script>
