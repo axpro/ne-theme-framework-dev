@@ -2,9 +2,6 @@
  * Import external lib and conquer the world
  */
 
-// jQuery
-import 'bower_components/jquery/dist/jquery';
-
 // Bootstrap
 import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition';
 import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert';

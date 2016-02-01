@@ -3,10 +3,22 @@
 const path = require('path');
 const glob = require('glob');
 
+let env = 'dev';
+
 function rebase(baseFile) {
   return relativeFile => {
     if (typeof relativeFile === 'string') {
       return path.resolve(path.dirname(baseFile), relativeFile);
+    }
+
+    if (env === 'prod') {
+      return {
+        src: path.resolve(path.dirname(baseFile), relativeFile.src),
+        dest: path.resolve(
+          'dist',
+          relativeFile.dest
+        )
+      };
     }
 
     return {
@@ -86,14 +98,7 @@ function parseFrameworkConfig() {
 }
 
 
-module.exports = (theme) => {
-  let config = {};
-  if (theme) {
-    config = require(`../../src/theme/${theme}/theme.config.js`);
-    config.theme = config.theme || theme;
-  } else {
-    config = parseFrameworkConfig();
-  }
-
-  return config;
+module.exports = (userEnv) => {
+  env = userEnv || 'dev';
+  return parseFrameworkConfig();
 };

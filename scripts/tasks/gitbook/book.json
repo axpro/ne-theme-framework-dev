@@ -6,7 +6,8 @@
     "prism",
     "-highlight",
     "-sharing",
-    "styleguide"
+    "styleguide",
+    "anchors"
   ],
   "pluginsConfig": {
     "styleguide": {
@@ -17,5 +18,8 @@
     "sidebar" : {
       "Next EUROPA": "http://beta.ec.europa.eu/"
     }
+  },
+  "styles": {
+    "website": "site.css"
   }
 }

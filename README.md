@@ -4,6 +4,10 @@
 [![Coverage Status](https://coveralls.io/repos/ec-europa/ne-theme-framework-dev/badge.svg?branch=master&service=github)](https://coveralls.io/github/ec-europa/ne-theme-framework-dev?branch=master)
 [![Code Climate](https://codeclimate.com/github/ec-europa/ne-theme-framework-dev/badges/gpa.svg)](https://codeclimate.com/github/ec-europa/ne-theme-framework-dev)
 
+## Style Guide
+
+The online documentation is availble here: https://ec-europa.github.io/ne-theme-framework-dev/
+
 ## Requirements
 
 * Node.js >= v4

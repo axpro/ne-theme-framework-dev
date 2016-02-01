@@ -1,3 +1,4 @@
 // Prefer importing dependencies first thus you can override them if needed
 @import './generic/font';
-@import 'vendor/bootstrap/styles/generic';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/normalize';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/print';

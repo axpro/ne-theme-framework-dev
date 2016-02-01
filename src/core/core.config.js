@@ -11,6 +11,10 @@ module.exports = {
     ],
     assets: [
       {
+        src: '../../bower_components/bootstrap-sass/assets/fonts/bootstrap/**',
+        dest: 'fonts'
+      },
+      {
         src: './fonts/**',
         dest: 'fonts'
       },

@@ -74,14 +74,19 @@ function scriptsBundle(done) {
 }
 
 // UglifyJS
-function scriptsUglify(done) {
+function dist(done) {
   const startTime = Date.now();
   console.log('Uglify JS: started');
-  return gulp.src('build/framework/**/*.js', { base: 'build/framework' })
+  return gulp.src([
+    'build/framework/vendor/**/*.js',
+    'build/framework/core/**/*.js',
+    'build/framework/components/**/*.js'
+  ], { base: 'build/framework' })
     .pipe($.sourcemaps.init({ loadMaps: true }))
     .pipe($.uglify())
+    .pipe($.concat('europa.js'))
     .pipe($.sourcemaps.write('.', { includeContent: true, sourceRoot: '../src/' }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/scripts'))
     .on('end', () => {
       const diff = Date.now() - startTime;
       console.log(`Uglify JS: done (${diff}ms)`);
@@ -98,6 +103,6 @@ function watch() {
 
 module.exports = {
   bundle: scriptsBundle,
-  uglify: scriptsUglify,
+  dist,
   watch
 };

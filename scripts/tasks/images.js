@@ -7,7 +7,7 @@ const $ = require('gulp-load-plugins')();
 function optimize(done) {
   const startTime = Date.now();
   console.log('Optimize images: started');
-  return gulp.src('build/**/*.{jpg,jpeg,gif,png}')
+  return gulp.src('dist/**/*.{jpg,jpeg,gif,png,svg}')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true

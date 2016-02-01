@@ -27,7 +27,7 @@ function prepareAssets(done) {
 }
 
 function copyLatest(done) {
-  return gulp.src('.tmp/**', { dot: true })
+  return gulp.src(['.tmp/**', './README.md'], { dot: true })
     .pipe(gulp.dest(`./dist/styleguide/`))
     .on('end', done);
 }
