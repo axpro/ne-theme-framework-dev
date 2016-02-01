@@ -1,0 +1,136 @@
+/* Footer top
+
+  Placeholder for adding a background on the .footer-top
+*/
+.footer-top {
+  overflow: hidden;
+  background: #f2f2f2;
+  margin-bottom: 1px; }
+  .footer-top .container-fluid {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0; }
+  @media (min-width: 510px) {
+    .footer-top .container-fluid {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px; } }
+
+.footer {
+  background: #004494;
+  color: #fff;
+  font-size: 0.889em;
+  text-align: center; }
+  .footer a {
+    color: #fff;
+    text-decoration: underline; }
+    .footer a:hover, .footer a:active, .footer a:focus {
+      text-decoration: none; }
+
+.footer__column-main {
+  padding-bottom: 30px;
+  padding-top: 30px; }
+
+.footer__label {
+  display: block;
+  font-size: 14px;
+  margin-right: 20px; }
+
+.footer__disclaimer {
+  padding-top: 8px; }
+  .footer__disclaimer > * {
+    width: 100%;
+    display: block; }
+
+.footer__menu {
+  padding-left: 0;
+  margin: 0; }
+  .footer__menu .footer__menu-item {
+    margin-right: 15px;
+    margin-bottom: 0.5em;
+    padding: 0; }
+    .footer__menu .footer__menu-item:first-child > a {
+      padding-left: 0; }
+    .footer__menu .footer__menu-item a {
+      padding: 0; }
+      .footer__menu .footer__menu-item a:hover, .footer__menu .footer__menu-item a:active, .footer__menu .footer__menu-item a:focus {
+        background: none; }
+
+.footer__menu--separator {
+  border-top: 1px solid #4d7cb4;
+  margin-top: 0.6em;
+  padding-top: 1.2em; }
+
+.footer__icon--social:before {
+  position: relative;
+  top: 4px;
+  margin-right: 8px !important; }
+
+.footer__icon--social:after {
+  content: none !important;
+  display: none !important; }
+
+.footer__icon--facebook:before {
+  font-size: 22px; }
+
+.footer__icon--twitter:before {
+  font-size: 18px; }
+
+.footer__site-switcher {
+  background: url("../images/svg/footer__logo.svg") no-repeat center 25px #012b58;
+  background-size: 80px 40px;
+  padding: 90px 30px 30px 30px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold; }
+
+a.footer__site-switcher {
+  text-decoration: none;
+  border: 2px solid transparent; }
+  a.footer__site-switcher:hover, a.footer__site-switcher:active, a.footer__site-switcher:focus {
+    text-decoration: underline; }
+  a.footer__site-switcher:focus {
+    border: 2px solid #ffd617; }
+
+.no-svg .footer__site-switcher {
+  background-image: url("../images/png/footer__logo.png"); }
+
+@media (min-width: 768px) {
+  .footer {
+    text-align: left; }
+  .footer__column-main {
+    padding-bottom: 60px;
+    padding-top: 60px; }
+  .footer__column-right {
+    padding-bottom: 0;
+    float: right; }
+  .footer__label {
+    display: inline-block; }
+    .footer__label ~ .footer__menu {
+      display: inline-block; }
+  .footer__disclaimer > * {
+    width: auto;
+    display: inline-block;
+    margin-right: 4px; } }
+
+@media (min-width: 992px) {
+  .footer__site-switcher > * {
+    white-space: nowrap;
+    display: inline-block; } }
+
+.footer a {
+  padding-right: 1.1em !important; }
+  .footer a[href^="http"]:not(.is-internal):after {
+    position: absolute;
+    line-height: 2.2; }
+
+.footer .footer__icon--social {
+  padding-right: 0 !important; }
+
+.footer a.footer__site-switcher {
+  padding-right: 30px !important; }
+
+/*# sourceMappingURL=footer.css.map */

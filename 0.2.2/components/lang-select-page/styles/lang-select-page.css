@@ -1,0 +1,79 @@
+.lang-select-page {
+  background: #f2f2f2;
+  border-bottom: 1px solid #b3b4b5;
+  font-size: 0.778em;
+  width: 100%; }
+  .front .lang-select-page {
+    display: none; }
+
+.icon.lang-select-page__icon {
+  float: left;
+  margin: 0 0.7em 0 0;
+  font-size: 2em;
+  padding: 0; }
+  .icon.lang-select-page__icon:before {
+    padding-top: 30%;
+    float: left; }
+
+.lang-select-page__unavailable {
+  text-decoration: line-through; }
+
+ul.lang-select-page__list {
+  float: left;
+  padding: 0;
+  margin: 0; }
+  ul.lang-select-page__list .lang-select-page__option {
+    list-style: none;
+    float: left;
+    padding: 0.85em; }
+    ul.lang-select-page__list .lang-select-page__option a {
+      display: block; }
+    ul.lang-select-page__list .lang-select-page__option.is-selected {
+      background: #ffd617;
+      font-weight: bold;
+      color: #000; }
+
+.lang-select-page--dark {
+  border: none; }
+
+.lang-select-page--transparent {
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff; }
+  .lang-select-page--transparent select.lang-select-page__list {
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    background-color: #012b58;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    line-height: 3.4em; }
+    .lang-select-page--transparent select.lang-select-page__list:hover, .lang-select-page--transparent select.lang-select-page__list:active {
+      border: 0; }
+    .lang-select-page--transparent select.lang-select-page__list > option {
+      background: #012b58; }
+
+@-moz-document url-prefix() {
+  .lang-select-page--transparent select.lang-select-page__list {
+    height: 3.4em; } }
+  .lang-select-page--transparent .lang-select-page__option a {
+    color: #fff; }
+
+@media (min-width: 768px) {
+  .lang-select-page__option {
+    display: inline-block; }
+  .lang-select-page__unavailable {
+    margin-right: 3em; } }
+
+select.lang-select-page__list {
+  background: transparent url("../images/png/arrow-thick-down.png") no-repeat 8em center;
+  border-radius: 0;
+  padding-left: 0.5em;
+  width: 10em;
+  cursor: pointer; }
+
+.region-content .page-header ul.lang-select-page__list {
+  max-width: inherit; }
+
+/*# sourceMappingURL=lang-select-page.css.map */
