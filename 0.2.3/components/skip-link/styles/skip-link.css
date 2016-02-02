@@ -1,0 +1,14 @@
+.skip-link,
+#skip-link {
+  position: fixed;
+  top: 1.5em;
+  left: 1.5em;
+  z-index: 1060; }
+  .skip-link a,
+  #skip-link a {
+    color: #fff;
+    background: #006fb4;
+    padding: 8px;
+    border: 4px solid #ffd617; }
+
+/*# sourceMappingURL=skip-link.css.map */

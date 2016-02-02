@@ -1,0 +1,115 @@
+/*
+Datepicker
+
+This example is based on jQuery Datepicker widget. It requires both jQuery and jQuery UI libraries.<br/>
+Also, it assumes that the default CSS styles from jQuery UI are included as well.<br/>
+The CSS applied from styleguide is an override over the default CSS of jQuery UI.<br/>
+
+*/
+#ui-datepicker-div {
+  border: none;
+  width: 100%; }
+
+.ui-datepicker {
+  border: none;
+  border-radius: 0;
+  font-family: Arial, sans-serif;
+  padding: 0; }
+  .ui-datepicker .ui-datepicker-header {
+    background: #393939;
+    border: none;
+    border-radius: 0;
+    padding: 0 !important;
+    height: 50px;
+    line-height: 50px; }
+    .ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
+    .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+      display: block;
+      height: 100%;
+      width: 50px;
+      top: 0;
+      background: none;
+      border: none; }
+      .ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover,
+      .ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover {
+        cursor: pointer; }
+      .ui-datepicker .ui-datepicker-header .ui-datepicker-prev .ui-icon,
+      .ui-datepicker .ui-datepicker-header .ui-datepicker-next .ui-icon {
+        display: block;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        margin: 0;
+        background: url("../images/svg/arrow.svg") center center no-repeat;
+        background-size: 7px; }
+    .ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+      left: 0; }
+      .ui-datepicker .ui-datepicker-header .ui-datepicker-prev .ui-icon {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg); }
+    .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+      right: 0; }
+    .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+      margin: 0 50px;
+      height: 100%; }
+      .ui-datepicker .ui-datepicker-header .ui-datepicker-title span,
+      .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+        color: #fff; }
+      .ui-datepicker .ui-datepicker-header .ui-datepicker-title span {
+        font-weight: normal;
+        font-size: 0.8em; }
+      .ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+        background: #4f4f4f;
+        color: #fff;
+        border: none;
+        height: 100%;
+        width: 49% !important;
+        margin: 0;
+        display: inline-block;
+        float: none;
+        padding-right: 0; }
+        .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:first-child {
+          border-right: 2px solid #686868; }
+        .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:hover, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:active, .ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus {
+          color: #fff; }
+  .ui-datepicker table.ui-datepicker-calendar {
+    background: #eaeaea;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent; }
+    .ui-datepicker table.ui-datepicker-calendar th {
+      font-size: 16px;
+      font-weight: normal;
+      background: none; }
+  .ui-datepicker .ui-state-default {
+    border: none;
+    background: #fff;
+    color: #404040;
+    text-align: center;
+    margin: 1px;
+    padding: 5px 10px; }
+  .ui-datepicker .ui-state-active {
+    border: 2px solid #0b64b2;
+    padding: 3px 10px; }
+  .ui-datepicker .ui-state-highlight {
+    background: #fed500;
+    color: #000; }
+
+.no-svg .ui-datepicker-prev .ui-icon {
+  background-image: url("../images/png/arrow-left.png"); }
+
+.no-svg .ui-datepicker-next .ui-icon {
+  background-image: url("../images/png/arrow.png"); }
+
+@media (min-width: 480px) {
+  #ui-datepicker-div {
+    width: auto; }
+  .ui-datepicker table.ui-datepicker-calendar {
+    width: auto !important; } }
+
+@media (max-width: 479px) {
+  #ui-datepicker-div {
+    left: 0 !important; } }
+
+/*# sourceMappingURL=datepicker.css.map */
