@@ -1,8 +1,4 @@
 // Blockquote
-//
-// Markup: ../../templates/blockquote.html
-//
-// Styleguide 1.1.1
 
 $small-quote-size: 1em;
 $small-quote-width: 0.5em;
@@ -27,6 +23,7 @@ blockquote,
     line-height: inherit;
     display: inline;
   }
+
   &:before {
     content: open-quote;
   }
@@ -37,10 +34,10 @@ blockquote,
 }
 
 .blockquote--small {
-  color: $text-color;
-  font-family: $font-family-base;
+  padding-left: 0;
   font-size: $font-size-little;
   font-style: normal;
+  color: $text-color;
+  font-family: $font-family-base;
   margin-bottom: 0;
-  padding-left: 0;
 }

@@ -11,6 +11,7 @@
   border-radius: 0;
   overflow: hidden;
   line-height: normal;
+
   @extend .hidden-print;
 
   ol,
@@ -92,6 +93,7 @@
     width: auto;
     &:after {
       position: static;
+
       @include translate(0, 0);
     }
   }
@@ -115,11 +117,14 @@
   }
 }
 
-// Breadcrumb collapsible
-//
-// Markup: ../templates/breadcrumb--collapsible.html
-//
-// Styleguide 2.1.1
+/*
+Breadcrumb collapsible
+
+Markup: html/breadcrumb--collapsible.html
+
+Styleguide breadcrumb.collapsible
+*/
+
 .breadcrumb--collapsible {
   .breadcrumb__btn-separator {
     background: $blue-darkest;
@@ -209,6 +214,7 @@
       padding-left: 0;
     }
   }
+
   @include breakpoint(screen-xs-min) {
     .breadcrumb__segments-wrapper {
       float: left;
@@ -229,7 +235,7 @@
           display: inline-block !important;
           position: relative;
           top: -4px;
-          color: #ffffff;
+          color: #fff;
         }
 
         &:before {

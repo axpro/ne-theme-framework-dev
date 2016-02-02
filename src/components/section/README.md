@@ -1,3 +1,0 @@
-# Section
-
-No template provided

@@ -2,24 +2,21 @@
 //
 // Base styles applied to HTML elements.
 // Prefer importing dependencies first thus you can override them if needed
-//
-// Styleguide 1.0
 @import './settings';
 @import './tools';
 @import './generic';
-// styleguide:ignore:end
 
 // Content
 //
 // Base styles applied to HTML elements.
 // Prefer importing dependencies first thus you can override them if needed
-//
-// Styleguide 1.1
 @import './base';
+
+// Layout
+@import './layout';
 
 // Objects
 @import './objects';
 
-// Trumps
-@import 'bootstrap-sass/assets/stylesheets/bootstrap/utilities';
-@import 'bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
+// Utilities
+@import './utilities';

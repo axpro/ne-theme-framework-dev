@@ -6,4 +6,5 @@ import './bootstrap';
 
 // Import custom code
 import './europa';
+import './ie9';
 import './selectify';

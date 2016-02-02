@@ -1,4 +1,15 @@
-// Field
+/*
+Field
+
+Drupal note:
+Field styling appearing in this styleguide is only valid for Default drupal field settings
+
+Markup: html/field.html
+
+.field--labeled - External link icon
+
+Styleguide field
+*/
 
 .field {
   .label-above {
@@ -18,6 +29,8 @@
     display: block;
     clear: both;
     font-size: $font-size-little;
+    line-height: 2em;
+    font-weight: $font-weight-bold;
   }
 
   .field__items {
@@ -36,6 +49,7 @@
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
+
     @extend .container-fluid;
   }
 }
@@ -92,10 +106,16 @@
   }
 }
 
-// Field labeled align
+/*
+Field labeled align
 
-.field--labeled-align {}
+Labeled align modifier should be used for aligning fields that do not have a label
+with fields that do have a label.
 
+Markup: html/field--labeled-align.html
+
+Styleguide field.labeledalign
+*/
 @include breakpoint(screen-xs-min) {
   .field--labeled-align {
     margin-left: -15px;

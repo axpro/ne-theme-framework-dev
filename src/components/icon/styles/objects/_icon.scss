@@ -1,6 +1,13 @@
-// Icon
-//
 // Icons using europa icons font
+
+@font-face {
+  font-family: 'EuropaIcons';
+  src: url('../fonts/europa-icons/europa-icons.eot');
+  src: url('../fonts/europa-icons/europa-icons.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/europa-icons/europa-icons.woff') format('woff'),
+  url('../fonts/europa-icons/europa-icons.ttf') format('truetype'),
+  url('../fonts/europa-icons/europa-icons.svg#icomoon') format('svg');
+}
 
 .icon {
   &:before {
@@ -47,6 +54,11 @@
   &:before {
     @extend .icon--external;
   }
+}
+
+// Only color change using global $blue-dark.
+.icon--blue-dark {
+  color: $blue-dark;
 }
 
 .icon--arrow-up {
@@ -135,6 +147,7 @@
 }
 
 .icon--down {
+  content: '\e616';
   &:before {
     content: '\e616';
   }

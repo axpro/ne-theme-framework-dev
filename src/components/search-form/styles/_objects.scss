@@ -1,13 +1,10 @@
 // Search form
-//
-// Markup: ../../templates/search-form.html
-//
-// Styleguide 1.2.31
 
 .search-form {
   overflow: hidden;
   border: 1px solid $grey;
   margin-bottom: 1em;
+
   @extend .hidden-print;
 }
 

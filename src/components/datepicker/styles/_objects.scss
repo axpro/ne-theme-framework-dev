@@ -1,12 +1,17 @@
-// Datepicker
-//
-// This example is based on jQuery Datepicker widget. It requires both jQuery and jQuery UI libraries.<br/>
-// Also, it assumes that the default CSS styles from jQuery UI are included as well.<br/>
-// The CSS applied from styleguide is an override over the default CSS of jQuery UI.<br/>
-//
-// Markup: ../../templates/datepicker.html
-//
-// Styleguide 1.2.6
+/*
+Datepicker
+
+This example is based on jQuery Datepicker widget. It requires both jQuery and jQuery UI libraries.<br/>
+Also, it assumes that the default CSS styles from jQuery UI are included as well.<br/>
+The CSS applied from styleguide is an override over the default CSS of jQuery UI.<br/>
+
+*/
+
+// Local Variables
+$datepicker-color-header: #393939;
+$datepicker-color-select: #4f4f4f;
+$datepicker-color-select-separator: #686868;
+$datepicker-color-background: #eaeaea;
 
 // Component
 #ui-datepicker-div {
@@ -19,7 +24,6 @@
   border-radius: 0;
   font-family: $font-family-sans-serif;
   padding: 0;
-
 
   // Datepicker header
   .ui-datepicker-header {
@@ -42,7 +46,7 @@
         cursor: pointer;
       }
 
-      .ui-icon{
+      .ui-icon {
         display: block;
         height: 100%;
         width: 100%;
@@ -51,7 +55,7 @@
         margin: 0;
         background: url('../images/svg/arrow.svg') center center no-repeat;
         background-size: 7px;
-       }
+      }
     }
 
     .ui-datepicker-prev {
@@ -64,7 +68,6 @@
     .ui-datepicker-next {
       right: 0;
     }
-
 
     .ui-datepicker-title {
       margin: 0 50px;
@@ -90,6 +93,7 @@
         display: inline-block;
         float: none;
         padding-right: 0;
+
         @extend .form-control;
 
         &:first-child {

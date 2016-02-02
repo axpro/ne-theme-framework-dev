@@ -1,5 +1,4 @@
 // Ec logo small (svg)
-//
 // Default EC logo.
 
 // Component
@@ -15,6 +14,7 @@
 }
 
 // EC logo small (png)
+// Ec logo without SVG.
 
 .no-svg {
   .logo {
@@ -23,31 +23,6 @@
 }
 
 // EC logo front (svg)
-//
-// .language-bg - Bulgarian
-// .language-cs - Czech
-// .language-da - Danish
-// .language-de - German
-// .language-et - Estonian
-// .language-el - Greek
-// .language-en - English
-// .language-es - Spanish
-// .language-fr - French
-// .language-ga - Irish/Gaeilge
-// .language-hr - Croatian
-// .language-it - Italian
-// .language-lv - Latvian
-// .language-lt - Lithuanian
-// .language-hu - Hungarian
-// .language-mt - Maltese
-// .language-nl - Dutch
-// .language-pl - Polish
-// .language-pt - Portuguese
-// .language-ro - Romanian
-// .language-sk - Slovak
-// .language-sl - Slovene
-// .language-fi - Finnish
-// .language-sv - Swedish
 
 .front {
   .logo {
@@ -60,6 +35,7 @@
     background: url('../images/svg/logo--big.svg') center center no-repeat;
     background-size: 100%;
   }
+
   @include languages_logo('../images/svg/logo/logo--', '.svg');
 
   @include breakpoint(screen-xs-min) {
@@ -85,31 +61,6 @@
 
 // EC logo front (png)
 
-// .language-bg - Bulgarian
-// .language-cs - Czech
-// .language-da - Danish
-// .language-de - German
-// .language-et - Estonian
-// .language-el - Greek
-// .language-en - English
-// .language-es - Spanish
-// .language-fr - French
-// .language-ga - Irish/Gaeilge
-// .language-hr - Croatian
-// .language-it - Italian
-// .language-lv - Latvian
-// .language-lt - Lithuanian
-// .language-hu - Hungarian
-// .language-mt - Maltese
-// .language-nl - Dutch
-// .language-pl - Polish
-// .language-pt - Portuguese
-// .language-ro - Romanian
-// .language-sk - Slovak
-// .language-sl - Slovene
-// .language-fi - Finnish
-// .language-sv - Swedish
-
 .no-svg {
   .front {
     .logo {
@@ -119,5 +70,13 @@
     }
 
     @include languages_logo('../images/png/logo/logo--', '.png');
+  }
+}
+
+// If the logo is linking to an external page do not show the external icon.
+.site-header__logo {
+  &:before,
+  &:after {
+    display: none !important;
   }
 }

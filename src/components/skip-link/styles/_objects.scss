@@ -4,6 +4,7 @@
   top: 1.5em;
   left: 1.5em;
   z-index: $zindex-popover;
+
   @extend .hidden-print;
 
   a {

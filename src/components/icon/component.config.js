@@ -10,6 +10,10 @@ module.exports = {
       {
         src: './images/**',
         dest: 'images'
+      },
+      {
+        src: './fonts/**',
+        dest: 'fonts'
       }
     ]
   }

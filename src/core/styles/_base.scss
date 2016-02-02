@@ -4,8 +4,12 @@
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/code';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/grid';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/tables';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/forms';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/buttons';
+
 @import './base/blockquote';
 @import './base/body';
+@import './base/global';
 @import './base/headings';
 @import './base/img';
 @import './base/label';
@@ -14,3 +18,4 @@
 @import './base/lists';
 @import './base/paragraphs';
 @import './base/select';
+@import './base/textarea';

@@ -1,13 +1,7 @@
-/*
-Date Block
+// Date Block
+// Date components
 
-Date components
-
-Markup: ../../templates/date-block.html
-
-Styleguide date-block
-*/
-
+$agenda-yellow: #fed437;
 
 .date-block {
   float: left;
@@ -16,21 +10,21 @@ Styleguide date-block
   width: 5.5em;
   margin-right: 0.75em;
   min-width: 5.556em;
-  padding: 0.85em 0em 0.4em 0em;
+  padding: 0.85em 0 0.4em;
   text-align: center;
   position: relative;
   overflow: hidden;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: -0.667em;
-    right: -0.200em;
+    right: -0.2em;
     width: 0;
-  	height: 0;
-  	border-top: 1em solid transparent;
-  	border-bottom: 1em solid transparent;
-  	border-right:1em solid #fff;
+    height: 0;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    border-right: 1em solid #fff;
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
     transform: rotate(135deg);
@@ -55,7 +49,6 @@ Styleguide date-block
   font-size: 1.111em;
   line-height: 1;
 }
-
 
 .date-block__element {
   width: 100%;

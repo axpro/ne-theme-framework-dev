@@ -1,4 +1,6 @@
-// Icon
+// Icon Social
+
+$icon-size: 40px;
 
 .icon-social {
   position: relative;
@@ -19,6 +21,16 @@
 
   &:hover {
     cursor: pointer;
+  }
+}
+
+.icon-social--blog {
+  &:before {
+    background: url('../images/svg/icons/social/blog.svg') no-repeat;
+  }
+
+  &:hover:before {
+    background-image: url('../images/svg/icons/social/blog_hover.svg');
   }
 }
 
@@ -102,9 +114,19 @@
   }
 }
 
+.icon-social--storify {
+  &:before {
+    background: url('../images/svg/icons/social/storify.svg') no-repeat;
+  }
+
+  &:hover:before {
+    background-image: url('../images/svg/icons/social/storify_hover.svg');
+  }
+}
+
 .icon-social--twitter {
   &:before {
-    background: url('../images/svg/icons/social/twitter.svg') no-repeat #ffffff;
+    background: url('../images/svg/icons/social/twitter.svg') no-repeat #fff;
   }
 
   &:hover:before {
@@ -122,7 +144,27 @@
   }
 }
 
+.icon-social--instagram {
+  &:before {
+    background: url('../images/svg/icons/social/instagram.svg') no-repeat;
+  }
+
+  &:hover:before {
+    background-image: url('../images/svg/icons/social/instagram_hover.svg');
+  }
+}
+
 .no-svg {
+  .icon-social--blog {
+    &:before {
+      background-image: url('../images/png/icons/social/blog.png');
+    }
+
+    &:hover:before {
+      background-image: url('../images/png/icons/social/blog_hover.png');
+    }
+  }
+
   .icon-social--blogger {
     &:before {
       background-image: url('../images/png/icons/social/blogger.png');
@@ -203,6 +245,16 @@
     }
   }
 
+  .icon-social--storify {
+    &:before {
+      background-image: url('../images/png/icons/social/storify.png');
+    }
+
+    &:hover:before {
+      background-image: url('../images/png/icons/social/storify_hover.png');
+    }
+  }
+
   .icon-social--twitter {
     &:before {
       background-image: url('../images/png/icons/social/twitter.png');
@@ -220,6 +272,16 @@
 
     &:hover:before {
       background-image: url('../images/png/icons/social/youtube_hover.png');
+    }
+  }
+
+  .icon-social--instagram {
+    &:before {
+      background-image: url('../images/png/icons/social/instagram.png');
+    }
+
+    &:hover:before {
+      background-image: url('../images/png/icons/social/instagram_hover.png');
     }
   }
 }

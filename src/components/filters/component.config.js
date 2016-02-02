@@ -8,6 +8,5 @@ module.exports = {
       src: './images/**',
       dest: 'images'
     }],
-    templates: ['./templates/filters.html']
   }
 };

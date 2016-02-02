@@ -1,3 +1,0 @@
-# Top bar
-
-No template provided...

@@ -1,19 +1,12 @@
 // Inpage navigation
-//
-// Floating menu containing links to headings in a long page.
-// Styleguide implementation is not complete. TODO: Refactor Drupal js to be
-// technology agnostic.
-//
-// Markup: ../../templates/inpage-nav.html
-//
-// Styleguide 1.2.18
 
 .inpage-nav__wrapper {
   margin-bottom: 1.667em;
   &.affix,
   &.affix-top {
-    position:relative;
+    position: relative;
   }
+
   @extend .hidden-print;
 }
 
@@ -23,7 +16,6 @@
     padding: 0;
     list-style: none;
     list-style-image: none;
-
     li {
       &.active {
         .inpage_nav__list-item {
@@ -33,7 +25,6 @@
       }
     }
   }
-
   .inpage_nav__list-item {
     padding-top: 7px;
     padding-bottom: 7px;
@@ -43,12 +34,10 @@
     font-size: $font-size-little;
     font-weight: bold;
     border-left: 3px solid transparent;
-
     &:hover {
       background: none;
       text-decoration: underline;
     }
-
     &:focus {
       background: $yellow-light !important;
     }
@@ -56,20 +45,17 @@
 }
 
 .inpage-nav__navbar {
-  background-color: #ffffff;
-  color: #ffffff;
-
+  background-color: #fff;
+  color: #fff;
   .inpage-nav__current-wrapper {
     overflow: hidden;
   }
-
   .inpage-nav__current,
   .inpage-nav__help {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
-
   .inpage-nav__current {
-    color: #ffffff;
+    color: #fff;
     text-overflow: ellipsis;
     white-space: nowrap;
     display: block;
@@ -79,12 +65,10 @@
     font-size: 1em;
     cursor: pointer;
     padding-top: 1em;
-
     &:hover {
       color: #fff;
     }
   }
-
   .inpage-nav__help {
     display: none;
     background-color: $grey-lighter;
@@ -93,7 +77,6 @@
     color: $grey-dark;
     padding-top: 1.35em;
   }
-
   .inpage-nav__title {
     display: block;
     font-size: 1em;
@@ -101,7 +84,6 @@
     line-height: 1;
     font-weight: bold;
   }
-
   .inpage-nav__toggle {
     @extend .btn;
     margin: 0;
@@ -113,42 +95,36 @@
     &:focus {
       background-color: $blue-darkest;
       text-decoration: none;
-      color: #ffffff;
+      color: #fff;
     }
   }
-
   .inpage-nav__icon-arrow {
     display: block;
     transition: all 0.3s ease 0s;
     transform-origin: 50% 50%;
-    color: #ffffff;
+    color: #fff;
     margin: 5px 4px;
     font-size: 10px;
     &:before {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
-
   .inpage-nav__close-text {
     display: none;
     font-size: $font-size-base;
     line-height: $line-height-computed;
   }
-
   .inpage-nav__header {
     margin: 0;
   }
-
   .inpage-nav__container {
     padding: 0;
     width: auto;
     background-color: $blue-dark;
-
     .navbar-collapse {
       max-height: none;
     }
   }
-
   .inpage-nav__list--navbar {
     padding: 0 15px;
     li {
@@ -163,7 +139,6 @@
         border-top: 1px solid $blue-darkest;
         padding: 0.8em 0 0.8em 1em;
         font-size: $font-size-little;
-
         &:hover {
           background: none;
           text-decoration: underline;
@@ -185,19 +160,18 @@
     }
     .inpage-nav__help,
     .inpage-nav__close-text {
-       display: block;
+      display: block;
     }
     .inpage-nav__current {
-     display: none;
+      display: none;
     }
-    .inpage-nav__header{
-     background-color: $grey-lighter;
-     font-weight: normal;
+    .inpage-nav__header {
+      background-color: $grey-lighter;
+      font-weight: normal;
     }
     .inpage-nav__toggle {
       background-color: $grey;
       border-color: $grey;
-
       .inpage-nav__icon-arrow {
         @include rotate(180deg);
         color: $grey-dark;
@@ -216,7 +190,6 @@
 
 .is-inpage-nav-open {
   overflow: hidden;
-
   .inpage-nav__navbar {
     overflow: auto;
   }
@@ -228,18 +201,15 @@
     &.affix-top {
       top: 0;
     }
-
     &.affix {
       position: fixed;
       top: 0;
       padding-top: 30px;
     }
-
     &.affix-bottom {
       position: absolute;
     }
   }
-
   .inpage-nav__navbar-wrapper.is-active {
     display: none;
   }

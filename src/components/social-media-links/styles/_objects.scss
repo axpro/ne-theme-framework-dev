@@ -1,19 +1,15 @@
-// Social Media
-//
 // Social Media Links
-//
-// Markup: ../../templates/social-media-links.html
-//
-// Styleguide 1.2.35
 
 .social-media-links {
   background-color: $grey-lighter;
   padding: 30px;
+
   .social-media-links__list {
     list-style-type: none;
-    padding: 0px !important;
-    margin: 0px !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
+
   @extend .hidden-print;
 }
 
@@ -25,20 +21,78 @@
 
 .social-media-links__item {
   margin-bottom: 0.7em;
+
   & > a {
     width: 100%;
     display: block;
 
     &:before {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
-    &:after, &.is-external:after {
+
+    &:after,
+    &.is-external:after {
       display: none !important;
+    }
+  }
+
+  &--noicon {
+    font-size: 0.8em;
+    margin-top: 1.2em;
+  }
+}
+
+.social-media-links--webtool-vertical {
+  // Extending for social bookmark kit web tools.
+  .wtShareList {
+    @extend .social-media-links__item;
+    background: transparent !important;
+    padding: 0;
+
+    a[href^="http"]:not(.is-internal):after {
+      display: none !important;
+    }
+
+    ul {
+      @extend .social-media-links__list;
+    }
+
+    li {
+      float: none;
+    }
+
+    a {
+      width: 100%;
+      margin-bottom: 0 !important;
+    }
+
+    a.wtShareMore {
+      font-size: 0.8em;
+      margin-top: 1.2em;
+    }
+
+    .wtShareLink {
+      @extend .social-media-links__item;
+      font-size: $font-size-medium;
     }
   }
 }
 
-.social-media-links__item--noicon {
-  font-size: 0.8em;
-  margin-top: 1.2em;
+.social-media-links--webtool-horizontal {
+  @extend .social-media-links--webtool-vertical;
+  clear: both;
+
+  .wtShareList {
+    li {
+      float: left;
+    }
+
+    ul.wtShareNetworks {
+      max-width: none !important;
+    }
+
+    a {
+      width: inherit;
+    }
+  }
 }

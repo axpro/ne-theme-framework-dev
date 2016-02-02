@@ -1,13 +1,9 @@
 // Splash Page
-//
-// Markup: ../../templates/splash-page.html
-//
-// Styleguide 1.2.36
 
 .splash-page {
 
   &__site-header {
-    background: #ffffff;
+    background: #fff;
 
     .logo {
       margin: 16px auto 40px auto;
@@ -44,16 +40,16 @@
 
     h2 {
       display: none;
-      color: #ffffff;
+      color: #fff;
       font-size: $font-size-mid;
       padding-top: $padding-splash-xl;
       padding-bottom: $padding-splash-xl;
-      clear:both;
+      clear: both;
     }
   }
 
   &__helper-text {
-    color: #ffffff;
+    color: #fff;
     font-size: $font-size-little;
     margin-top: $padding-splash-xl;
     clear: both;
@@ -65,13 +61,13 @@
   }
 
   &__btn-language {
-    background: #ffffff;
+    background: #fff;
     margin-bottom: 4px;
     width: 100%;
     text-align: left !important; // overriding bootstrap btn class
 
     &:hover {
-      color: #000000;
+      color: #000;
       background: $yellow-light;
     }
 
@@ -87,18 +83,18 @@
     padding: 0.5em 0 0.5em 1em;
     font-size: $font-size-little;
     font-weight: normal;
-    color: #ffffff;
+    color: #fff;
     display: none;
 
     &:hover {
-      color: #ffffff;
+      color: #fff;
     }
 
     &:after {
-      content: "X";
+      content: 'X';
       float: right;
       display: inline-block;
-      border: 1px solid #ffffff;
+      border: 1px solid #fff;
       margin-left: 0.5em;
       width: 1.6em;
       height: 1.6em;
@@ -125,7 +121,7 @@
 
     .splash-page__btn-language {
       &.is-active {
-        color: #000000;
+        color: #000;
         background: $yellow-light;
         box-shadow: none;
       }
@@ -149,6 +145,7 @@ body {
     overflow: hidden;
   }
 }
+
 .page-splash {
   background: rgba(0, 68, 148, 1);
 }
@@ -172,7 +169,8 @@ body {
           padding-top: 0.6em;
         }
 
-        td, th {
+        td,
+        th {
           padding: 0.6em 0 0.6em 0;
         }
       }

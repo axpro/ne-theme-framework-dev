@@ -1,6 +1,4 @@
-@import 'bootstrap-sass/assets/stylesheets/bootstrap/forms';
-@import 'bootstrap-sass/assets/stylesheets/bootstrap/buttons';
-
+// Components
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/component-animations';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/dropdowns';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/button-groups';
@@ -9,8 +7,7 @@
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/navbar';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/pagination';
-@import 'bootstrap-sass/assets/stylesheets/bootstrap/pager';
-@import 'bootstrap-sass/assets/stylesheets/bootstrap/labels';
+// @import 'bootstrap-sass/assets/stylesheets/bootstrap/pager';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/badges';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/jumbotron';
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/thumbnails';
@@ -32,7 +29,11 @@
 // Override
 @import './objects/bootstrap-reset';
 @import './objects/btn';
-@import './objects/container-fluid';
+@import './objects/btn-group';
+@import './objects/checkbox';
+@import './objects/form-control';
+@import './objects/form-group';
 @import './objects/help-block';
+@import './objects/nav-tabs';
 @import './objects/navbar';
-@import './objects/row';
+@import './objects/radio';

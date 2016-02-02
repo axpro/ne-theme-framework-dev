@@ -1,8 +1,4 @@
 // Feedback message
-//
-// Markup: ../../templates/feedback-message.html
-//
-// Styleguide 1.2.10
 
 .feedback-message {
   color: $grey-dark;
@@ -28,6 +24,7 @@
       margin-bottom: -4px;
     }
   }
+
   @extend .hidden-print;
 }
 

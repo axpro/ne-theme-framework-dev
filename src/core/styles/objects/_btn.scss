@@ -31,12 +31,14 @@ Styleguide buttons
   min-height: 2.75em;
   font-size: $font-size-little;
   text-decoration: none;
+
   @extend .hidden-print;
 
   &:hover,
   &:active,
   &:focus {
     text-decoration: underline;
+
     @include box-shadow(none);
   }
 
@@ -91,6 +93,7 @@ Styleguide buttons
   &.btn-ctn {
     background: $yellow-light;
     color: #000;
+
     @include white-space-reset();
 
     &:hover,
@@ -107,6 +110,7 @@ Styleguide buttons
     &:after {
       margin-left: 10px;
       font-size: 0.8em;
+
       @extend .icon--after;
       @extend .icon--right;
     }
@@ -138,6 +142,7 @@ Styleguide buttons
       top: -2px;
       position: relative;
       transition: all 0.3s ease 0s;
+
       @extend .icon--after;
       @extend .icon--arrow-down;
     }
@@ -169,7 +174,6 @@ Styleguide buttons
   }
 }
 
-
 // Class that can be also used on a button wrapper since there are sometimes
 // situations where button is wrapped in unnecessary markup coming from a CMS
 .btn--no-margin-bottom {
@@ -192,6 +196,7 @@ Styleguide buttons.btn-block
   max-width: 450px;
   text-align: left;
   margin-bottom: -2px !important;
+
   @include white-space-reset();
 
   &:last-child {
@@ -216,26 +221,92 @@ Styleguide buttons.btn-search
   border-color: #fff;
   background: $grey-light;
   color: $grey-dark;
+
+  &:hover {
+    background: $grey-light;
+  }
 }
 
+/*
+Button Collapse
+
+Button collapse element
+
+Markup: html/btn-collapse.html
+
+Styleguide buttons.btn-
+*/
+.btn-collapse {
+  @extend .btn-default;
+
+  span.toggling-text:after {
+    content: '\00a0';
+  }
+
+  &:hover,
+  &:focus {
+    span.toggling-text,
+    span.toggling-text:after {
+      text-decoration: underline;
+    }
+  }
+
+  .icon {
+    margin-left: 0.3em;
+
+    &:before {
+      vertical-align: bottom;
+    }
+  }
+
+  &:hover:not(:focus) {
+    .icon:before {
+      color: #fff;
+    }
+  }
+
+  &.collapsed {
+    &:span.icon {
+      @include rotate(180deg);
+    }
+  }
+}
+
+.no-js {
+  .btn-collapse {
+    display: none;
+    visibility: hidden;
+  }
+}
 
 // External link specific adjustments
-a.btn {
-  &[href^="http"]:not(.is-internal) {
-    padding-right: 2.1em;
+@mixin _btn_external_link_mixin() {
+  padding-right: 2.1em;
+  &:after {
+    position: absolute;
+    line-height: 1.4 !important;
+  }
+
+  // Reseting for .btn-block
+  &.btn-block {
+    padding-right: 1em;
+
     &:after {
-      position: absolute;
-      line-height: 1.4 !important;
+      position: static;
+      line-height: inherit;
     }
+  }
+}
 
-    // Reseting for .btn-block
-    &.btn-block {
-      padding-right: 1em;
-
-      &:after {
-        position: static;
-        line-height: inherit;
+a.btn {
+  &#{'[' + $external_link_pattern + ']'}:not(.is-internal) {
+    .site-political & {
+      &:not(#{$ec_url_patterns}) {
+        @include _btn_external_link_mixin();
       }
+    }
+    .site-information & {
+      @include _btn_external_link_mixin();
     }
   }
 }

@@ -1,9 +1,10 @@
-// Help Block
-//
-// Markup: ../../templates/help-block.html
-//
-// Styleguide 1.2.15
+/*
+Help Block
 
+Markup: html/help-block.html
+
+Styleguide form.help-block
+*/
 .help-block {
   margin-top: 0;
   margin-bottom: 0.556em;
@@ -17,5 +18,6 @@
     // Disable settings of base Bootstrap.
     color: $form-group-help-block-text-color-has-error;
   }
+
   @extend .hidden-print;
 }

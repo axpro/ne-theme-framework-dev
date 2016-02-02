@@ -1,11 +1,4 @@
 // Language select (Page)
-//
-// Page specific language selection.
-//
-// .lang-select-page               - Default, background is light
-// .lang-select-page--dark         - Background is dark blue or a picture
-// .lang-select-page--transparent  - Transparent background
-// .lang-select-page--dropdown     - When JS converts the ul to select
 
 .lang-select-page {
   @extend .hidden-print;
@@ -13,7 +6,7 @@
   background: $grey-lightest;
   border-bottom: 1px solid $grey;
   font-size: $font-size-xsmall;
-  width: 100%;
+  width:100%;
 
   .front & {
     display: none;
@@ -23,13 +16,13 @@
 .icon.lang-select-page__icon {
   @extend .hidden-print;
 
-  float: left;
+  float:left;
   margin: 0 0.7em 0 0;
   font-size: 2em;
   padding: 0;
 
   &:before {
-    padding-top: 30%;
+    padding-top:30%;
     float: left;
   }
 }
@@ -39,7 +32,7 @@
 }
 
 ul.lang-select-page__list {
-  float: left;
+  float:left;
   padding: 0;
   margin: 0;
 
@@ -81,8 +74,7 @@ ul.lang-select-page__list {
     font-weight: bold;
     line-height: 3.4em;
 
-    &:hover,
-    &:active {
+    &:hover, &:active {
       border: 0;
     }
 

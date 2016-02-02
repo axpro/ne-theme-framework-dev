@@ -1,10 +1,4 @@
-/*
-Contextual navigation
-
-Markup: html/context-nav.html
-
-Styleguide contextnav
-*/
+// Contextual navigation
 
 .context-nav {
   @extend .row;
@@ -47,7 +41,7 @@ Styleguide contextnav
 .context-nav__item {
   display: inline-block;
   &:after {
-    content: " |";
+    content: ' |';
     margin-right: 4px;
   }
 
@@ -65,10 +59,12 @@ Styleguide contextnav
   }
 }
 
-
 // Drupal specific override for the node-person-name display mode.
 .context-nav__item {
   .view-mode-name {
     display: inline-block;
+  }
+  & > * {
+    display: inline;
   }
 }

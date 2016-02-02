@@ -1,8 +1,9 @@
 // Link
-//
-// Markup: ../../templates/link.html
-//
-// Styleguide 1.1.5
+
+// Default external link mixin.
+@mixin _external_link_mixin() {
+  @extend .is-external;
+}
 
 a {
   &:hover,
@@ -12,9 +13,21 @@ a {
     text-decoration: underline;
   }
 
-  &[href^="http"]:not(.is-internal) {
-    @extend .is-external;
+  &#{'[' + $external_link_pattern + ']'}:not(.is-internal) {
+    .site-political & {
+      &:not(#{$ec_url_patterns}) {
+        @include _external_link_mixin();
+      }
+    }
+    .site-information & {
+      @include _external_link_mixin();
+    }
   }
+
+  &.smaller {
+    font-size: 0.8em;
+  }
+
   @media print {
     &:after {
       content: none !important;
@@ -38,14 +51,24 @@ p a {
 }
 
 // External link specific adjustments
+@mixin _link_external_link_mixin() {
+  &.btn {
+    padding-right: 2.1em;
+  }
+}
+
 .page-content {
   ul,
   p {
     a {
-      &[href^="http"]:not(.is-internal) {
-
-        &.btn {
-          padding-right: 2.1em;
+      &#{'[' + $external_link_pattern + ']'}:not(.is-internal) {
+        .site-political & {
+          &:not(#{$ec_url_patterns}) {
+            @include _link_external_link_mixin();
+          }
+        }
+        .site-information & {
+          @include _link_external_link_mixin();
         }
       }
     }

@@ -3,7 +3,6 @@
 module.exports = {
   'inpage-nav': {
     styles: ['./styles/inpage-nav.scss'],
-    scripts: [],
-    templates: ['./templates/inpage-nav.html']
+    scripts: ['./scripts/inpage_nav.js'],
   }
 };

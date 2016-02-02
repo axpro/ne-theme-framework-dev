@@ -1,8 +1,4 @@
 // Facet tag
-//
-// Markup: ../../templates/facet-tag.html
-//
-// Styleguide 1.2.8
 
 .facet-tag {
   display: inline-block;
@@ -12,6 +8,7 @@
   & > * {
     display: inline-block;
   }
+
   @extend .hidden-print;
 }
 

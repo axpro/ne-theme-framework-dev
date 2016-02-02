@@ -1,15 +1,9 @@
 // Label
-//
-// Markup: ../../templates/label.html
-//
-// Styleguide 1.1.3
-
 form {
   .label {
     @extend .form_label;
   }
 }
-
 
 label {
   @extend .form_label;

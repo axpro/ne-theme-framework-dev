@@ -8,3 +8,4 @@ rules:
         - first-nested
         - blockless-group
   string-quotes: single
+  selector-pseudo-element-colon-notation: single

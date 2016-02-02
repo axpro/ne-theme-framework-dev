@@ -5,6 +5,7 @@
   background: $grey-lighter;
   padding: 1.333em 1.333em 1.333em 1.333em;
   overflow: hidden;
+
   @extend .hidden-print;
 }
 
@@ -45,6 +46,10 @@
   margin-top: 0.556em;
 }
 
+.file__contentlanguage {
+  font-weight: bold;
+}
+
 .file__btn {
   margin-bottom: 0;
   margin-top: 0.778em;
@@ -64,18 +69,29 @@
 
   .file__icon {
     @extend .col-xs-1;
-    margin-right: 0;
+    @extend .col-md-1;
+    @extend .col-sm-1;
     padding-left: 0;
+    // We remove 5px on the left (as the image has some whitespace) as it causes a wrong looking margin. Then we add
+    // back the margin on the right, to have more spacing between those fields.
+    margin-right: 5px;
+    margin-left: -5px;
     height: 2.556em;
     overflow: hidden;
-
-    @media (max-width: $screen-sm-min) {
-      min-width: 60px;
-    }
+    text-align: center;
 
     &:before {
       font-size: 2.556em;
     }
+
+    // Make it self scaling.
+    @media (max-width: 650px) {
+      &:before {
+        font-size: 1.556em; // Fallback for <IE10.
+        font-size: #{$col-1-no-percentage}vw !important;
+      }
+    }
+
   }
 
   .file__metadata {
@@ -83,6 +99,9 @@
     @extend .col-sm-8;
     @extend .col-xs-10;
     padding-left: 0;
+    //@media (max-width: $screen-sm-min) {
+    //  float: none;
+    //}
   }
 
   .file__btn {
@@ -93,6 +112,93 @@
     @media (max-width: $screen-sm-min) {
       margin-top: 15px;
     }
+  }
+}
+
+// Modifications in the translations under a normal file.
+.file--bare {
+  background: none;
+  padding: 0.5em 0;
+  margin: 0;
+
+  .file__btn {
+    padding-right: 0;
+    text-align: right;
+    float: right;
+    border: none;
+
+    &:hover {
+      color: $text-color;
+      background: none;
+    }
+  }
+
+  @media (max-width: $screen-sm-min) {
+    .file__btn {
+      text-align: left;
+      float: left;
+      padding-left: 0;
+      margin: 0;
+    }
+  }
+
+  .file__icon,
+  .file__language {
+    display: none;
+  }
+}
+
+.file__translations {
+  overflow: hidden;
+  margin-bottom: 1em;
+
+  .file__translations-control {
+    margin-bottom: 0.3em;
+    padding: 0 1.333em;
+    outline: none;
+
+    &:active,
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $blue-dark;
+    }
+
+    // The arrow, rotating on collapse change.
+    &:after {
+      margin-left: 10px !important;
+      position: relative;
+      transition: all 0.3s ease 0s;
+
+      @extend .icon--after;
+      @extend .icon--down;
+      @extend .icon--blue-dark;
+    }
+
+    &.is-collapsed {
+      &:after {
+        @include rotate(180deg);
+      }
+    }
+  }
+
+  .file__translations-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .file__translations-item {
+    border-top: 1px solid $grey;
+    list-style: none;
+    margin: 0 1.389em;
+  }
+
+  // "Looking for another language ..."
+  .file__translations-details {
+    @extend .file__translations-item;
+    font-size: $font-size-little;
+    padding-top: 0.5em;
   }
 }
 

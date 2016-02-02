@@ -2,14 +2,10 @@
 
 module.exports = {
   comments: {
-    styles: [
-      './styles/_objects.scss'
-    ],
-    assets: [
-      {
-        src: './images/**',
-        dest: 'images'
-      }
-    ]
+    styles: ['./styles/comments.scss'],
+    assets: [{
+      src: './images/**',
+      dest: 'images'
+    }]
   }
 };
