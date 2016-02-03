@@ -1,0 +1,49 @@
+.lang-select-site {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 15px; }
+  .lang-select-site .lang-select-site__link {
+    color: inherit;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.889em;
+    font-weight: bold;
+    padding: 7.5px 15px;
+    border: 2px solid transparent; }
+    .lang-select-site .lang-select-site__link:focus {
+      border-color: #ffd617; }
+  .lang-select-site .lang-select-site__label {
+    margin-right: 0.556em; }
+  .lang-select-site .lang-select-site__code {
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+    color: #004494;
+    width: 1.556em; }
+  .lang-select-site .lang-select-site__code-text {
+    position: relative;
+    top: -3px;
+    left: -2px;
+    font-size: 0.778em;
+    color: #fff; }
+  .lang-select-site .lang-select-site__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #004494;
+    font-size: 1.556em;
+    line-height: 1;
+    display: inline-block; }
+
+@media (min-width: 992px) {
+  .lang-select-site {
+    position: static;
+    float: left; } }
+
+@media (min-width: 992px) {
+  .front .lang-select-site {
+    position: absolute;
+    float: none; } }
+
+/*# sourceMappingURL=lang-select-site.css.map */

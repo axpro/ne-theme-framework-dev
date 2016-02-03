@@ -1,0 +1,18 @@
+.book.with-summary .book-body .navigation {
+  display: none;
+}
+
+.book .book-body .page-wrapper .page-inner {
+  max-width: 980px;
+}
+
+a.plugin-anchor span {
+  font-size: 15px !important;
+  position: relative;
+  bottom: 5px;
+  right: 2px;
+}
+
+.book .book-body .page-wrapper .page-inner section {
+  padding: 5px 25px;
+}

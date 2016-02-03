@@ -1,0 +1,73 @@
+.page-bottom-header {
+  margin-top: -1px; }
+
+.page-content {
+  margin-top: 60px;
+  margin-bottom: 30px; }
+
+.main-content {
+  overflow: hidden; }
+
+.page-header {
+  background: #004494;
+  margin: 0;
+  padding: 0 0 1.5em;
+  color: #fff; }
+  .page-header h1 {
+    margin: 0;
+    color: #fff; }
+  .page-header p {
+    margin: 0;
+    font-size: 1.222em;
+    line-height: 1.5;
+    color: #fff;
+    max-width: 40em; }
+  .page-header .page-header__top,
+  .page-header .page-header__main,
+  .page-header .page-header__bottom {
+    display: block;
+    width: 100%; }
+  .page-header .page-header__top {
+    text-transform: uppercase; }
+  .page-header .page-header__main {
+    line-height: 1.42857143; }
+  .page-header .page-header__bottom {
+    font-size: 26px; }
+  .page-header .page-header--featured, .page-header .front .page-header, .front .page-header .page-header {
+    background: #004494;
+    color: #fff;
+    line-height: 1.5; }
+    .page-header .page-header--featured h2, .page-header .front .page-header h2, .front .page-header .page-header h2 {
+      color: #fff; }
+    .page-header .page-header--featured p, .page-header .front .page-header p, .front .page-header .page-header p {
+      font-size: 1.667em; }
+
+.page-header--image {
+  background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.page-header a {
+  color: #fff; }
+  .page-header a:hover:not(.breadcrumb__link) {
+    color: #ffd617; }
+  .page-header a[href^="http"]:not(.is-internal) {
+    padding-right: 1.1em;
+    display: inline-block; }
+    .page-header a[href^="http"]:not(.is-internal):after {
+      position: absolute;
+      line-height: 2.2; }
+    .page-header a[href^="http"]:not(.is-internal).btn {
+      padding-right: 2.1em; }
+
+.front .page-header {
+  padding: 0; }
+
+.page-navigation {
+  background: #004494; }
+
+.page-header .page-navigation {
+  background: transparent; }
+
+/*# sourceMappingURL=page.css.map */

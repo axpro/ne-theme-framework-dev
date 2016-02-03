@@ -1,0 +1,103 @@
+.filters {
+  background: #ececec;
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.filters__wrapper {
+  padding: 15px; }
+
+.no-js .filters {
+  padding: 15px; }
+
+.filters__filter {
+  width: 100%;
+  clear: both; }
+
+.filters__title {
+  margin-bottom: 20px; }
+
+.filters__btn-submit {
+  width: 100%; }
+
+.filters__btn-reset {
+  width: 100%;
+  display: block;
+  position: relative;
+  top: 10px; }
+  .filters__btn-reset--small {
+    float: right; }
+
+.filters__result-count {
+  font-weight: bold;
+  padding: 1em 0;
+  line-height: 1;
+  overflow: hidden; }
+  .filters__result-count .btn-group {
+    float: right;
+    margin-top: 0; }
+  .filters__result-count + .filters__active-facets {
+    margin-top: -0.5em; }
+
+.filters__active-facets {
+  padding: 0 0 1em; }
+
+.filters__btn-collapse {
+  float: right; }
+
+.filters__close {
+  color: #004494 !important;
+  opacity: 1 !important;
+  font-size: 1em;
+  font-weight: 400;
+  padding-top: 32px;
+  margin-right: 20px;
+  text-decoration: none;
+  text-shadow: none; }
+  .filters__close:after {
+    content: '';
+    background: url("../images/svg/arrow-up--blue.svg") no-repeat;
+    height: 8px;
+    width: 10px;
+    margin-left: 5px;
+    display: inline-block;
+    text-decoration: none !important; }
+  .filters__close:hover, .filters__close:active, .filters__close:focus {
+    text-decoration: underline; }
+
+.filters__items-number,
+.filters__items-name {
+  font-size: 1.667em; }
+
+.filters__items-number {
+  display: block;
+  margin-right: 0.333em;
+  float: left;
+  padding-bottom: 0.5em; }
+
+.filters__btn-reset--small {
+  display: inline-block; }
+
+@media (min-width: 480px) {
+  .filters__close:after {
+    height: 9px;
+    width: 12px; }
+  html.js .filters__btn-submit {
+    display: inline-block; } }
+
+@media (min-width: 992px) {
+  .filters {
+    background: transparent;
+    margin: 0;
+    padding: 0; }
+  .filters__btn-reset--small,
+  .filters__btn-collapse {
+    display: none; }
+  html.js .filters__btn-submit {
+    display: none; }
+  html.js.ie8 .filters__btn-submit {
+    display: block; } }
+
+.views-exposed-form .views-exposed-widget {
+  padding: 0; }
+
+/*# sourceMappingURL=filters.css.map */
