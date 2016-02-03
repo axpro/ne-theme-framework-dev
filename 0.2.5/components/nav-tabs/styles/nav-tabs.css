@@ -1,0 +1,86 @@
+ul.nav-tabs,
+.nav-tabs {
+  max-width: inherit !important;
+  padding: 0;
+  margin-bottom: 2em !important;
+  border-bottom: 2px solid #b3b4b5; }
+  ul.nav-tabs > li,
+  .nav-tabs > li {
+    margin-bottom: -2px; }
+    ul.nav-tabs > li.active > a,
+    .nav-tabs > li.active > a {
+      border-bottom: 2px solid #fff;
+      border-top: 2px solid #b3b4b5;
+      border-right: 2px solid #b3b4b5;
+      border-left: 2px solid #b3b4b5;
+      color: #404040; }
+      ul.nav-tabs > li.active > a:hover, ul.nav-tabs > li.active > a:active, ul.nav-tabs > li.active > a:focus,
+      .nav-tabs > li.active > a:hover,
+      .nav-tabs > li.active > a:active,
+      .nav-tabs > li.active > a:focus {
+        border-bottom: 2px solid #fff;
+        border-top: 2px solid #b3b4b5;
+        border-right: 2px solid #b3b4b5;
+        border-left: 2px solid #b3b4b5;
+        color: #404040; }
+      ul.nav-tabs > li.active > a:focus,
+      .nav-tabs > li.active > a:focus {
+        background: #ffd617;
+        border-bottom-color: #ffd617; }
+    ul.nav-tabs > li > a,
+    .nav-tabs > li > a {
+      border-width: 2px;
+      border-radius: 0; }
+      ul.nav-tabs > li > a:hover,
+      .nav-tabs > li > a:hover {
+        background: none;
+        border-bottom-color: #b3b4b5;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        text-decoration: underline; }
+      ul.nav-tabs > li > a:focus,
+      .nav-tabs > li > a:focus {
+        background: #ffd617;
+        border-bottom-color: #ffd617; }
+
+.nav-tabs--with-content {
+  display: none; }
+  .nav-tabs--with-content > li > a {
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 1em;
+    padding-right: 1em; }
+  .nav-tabs--with-content + .tab-content {
+    padding: 0; }
+
+ul.nav-tabs-right {
+  text-align: right; }
+  ul.nav-tabs-right li {
+    display: inline-block;
+    float: none; }
+    ul.nav-tabs-right li a {
+      font-size: inherit; }
+      ul.nav-tabs-right li a:hover {
+        border-bottom: inherit; }
+
+@media (min-width: 992px) {
+  .nav-tabs-right {
+    margin-top: -2.8em; } }
+
+@media (min-width: 480px) {
+  .nav-tabs--with-content {
+    display: block; }
+    .nav-tabs--with-content + .tab-content .tab-pane {
+      padding: 0; }
+  .tab-title {
+    display: none; } }
+
+@media print {
+  .tab-content .tab-pane,
+  .tab-content .tab-title {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important; } }
+
+/*# sourceMappingURL=nav-tabs.css.map */

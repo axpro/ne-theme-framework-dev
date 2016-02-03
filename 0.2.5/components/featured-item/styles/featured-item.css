@@ -1,0 +1,18 @@
+.featured-item {
+  background-color: #ececec;
+  padding: 15px 0;
+  border-left: 0.556em solid #ffd617;
+  width: 100%;
+  float: left;
+  margin-bottom: 1.667em; }
+
+.featured-item__image picture img {
+  width: 100%; }
+
+.featured-item__content p {
+  font-size: 0.889em; }
+
+.featured-item__content h3 a {
+  color: #404040; }
+
+/*# sourceMappingURL=featured-item.css.map */

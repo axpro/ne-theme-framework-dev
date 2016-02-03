@@ -1,0 +1,19 @@
+.banner--quote {
+  border-left: 0.556em solid #ffd617;
+  padding-left: 0.556em;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .banner--quote {
+      float: left;
+      width: 66.66666667%; } }
+  .banner--quote blockquote {
+    font-size: 0.889em;
+    padding-left: 0;
+    border-left: none;
+    margin-bottom: 0;
+    max-width: none; }
+
+/*# sourceMappingURL=banner-quote.css.map */

@@ -1,0 +1,95 @@
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em; }
+  .label:empty {
+    display: none; }
+  .btn .label {
+    position: relative;
+    top: -1px; }
+
+a.label:hover, a.label:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer; }
+
+.label-default, .label--default {
+  background-color: #777777; }
+  .label-default[href]:hover, [href].label--default:hover, .label-default[href]:focus, [href].label--default:focus {
+    background-color: #5e5e5e; }
+
+.label-primary, .label--primary {
+  background-color: #004494; }
+  .label-primary[href]:hover, [href].label--primary:hover, .label-primary[href]:focus, [href].label--primary:focus {
+    background-color: #002d61; }
+
+.label-success, .label--success {
+  background-color: #467a39; }
+  .label-success[href]:hover, [href].label--success:hover, .label-success[href]:focus, [href].label--success:focus {
+    background-color: #325729; }
+
+.label-info, .label--info {
+  background-color: #575757; }
+  .label-info[href]:hover, [href].label--info:hover, .label-info[href]:focus, [href].label--info:focus {
+    background-color: #3e3e3e; }
+
+.label-warning, .label--warning {
+  background-color: #f2a615; }
+  .label-warning[href]:hover, [href].label--warning:hover, .label-warning[href]:focus, [href].label--warning:focus {
+    background-color: #c9880b; }
+
+.label-danger, .label--danger {
+  background-color: #ff2423; }
+  .label-danger[href]:hover, [href].label--danger:hover, .label-danger[href]:focus, [href].label--danger:focus {
+    background-color: #ef0100; }
+
+.label {
+  border-radius: 0;
+  font-weight: normal;
+  color: #404040; }
+
+.label--default {
+  color: #fff; }
+
+.label--primary {
+  color: #fff; }
+
+.label--success {
+  color: #fff; }
+
+.label--info {
+  color: #fff; }
+
+.label--warning {
+  color: #fff; }
+
+.label--danger {
+  color: #fff; }
+
+.label--upper {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 0.8em; }
+
+.label--highlight {
+  color: #404040;
+  background-color: #ffd617; }
+  .label--highlight.label--meta:after {
+    content: '';
+    margin: 0; }
+
+.label--meta {
+  padding: 0.25em 0.5em 0.3em 0.5em;
+  font-size: 90%;
+  top: -0.075em;
+  margin-right: 0.8em;
+  position: relative; }
+
+/*# sourceMappingURL=labels.css.map */
