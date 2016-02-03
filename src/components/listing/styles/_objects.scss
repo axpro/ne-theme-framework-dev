@@ -397,23 +397,7 @@ ul.listing--title {
   }
 }
 
-/*
-Listing teaser
-
-Listing components
-
-Markup: html/listing--teaser.html
-
-.listing--cta  - Listing CTA
-.listing--no-padding - Listing no padding
-.listing--title-large - Listing title large
-.listing--title-medium - Listing title medium
-.listing--short-spaced - Listing short spaced
-.listing--line-left - Listing line left
-
-Styleguide listing.teaser
-*/
-
+// Listing teaser
 .listing--priorities {
   .meta {
     display: none;
@@ -428,15 +412,7 @@ ul.listing--teaser {
   }
 }
 
-/*
-Listing layouts
-
-Listing components
-
-Markup: html/listing--column-left.html
-
-Styleguide listing.column-left
-*/
+// Listing layouts
 .listing--column-left {
   .listing__column-main {
     width: auto;
@@ -518,15 +494,7 @@ Styleguide listing.column-left
   }
 }
 
-/*
-Listing Agenda
-
-Listing components
-
-Markup: html/listing--agenda.html
-
-Styleguide listing.agenda
-*/
+// Listing Agenda
 .listing--agenda {
 
   p {

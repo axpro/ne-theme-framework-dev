@@ -1,6 +1,6 @@
 {
   "name": "nexteuropa-theme-framework",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Next EUROPA Theme Framework",
   "repository": {
     "type": "git",
@@ -71,7 +71,7 @@
     "pixelmatch": "^4.0.1",
     "postcss-sprites": "^3.0.3",
     "postcss-svgo": "^2.1.1",
-    "postcss-url": "^5.1.0",
+    "postcss-url": "^5.1.1",
     "rollup-plugin-babel": "^2.3.9",
     "rollup-plugin-replace": "^1.1.0",
     "stylelint": "^4.2.0",

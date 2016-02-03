@@ -49,6 +49,10 @@
   }
 }
 
+.page-header__hero-title {
+  padding-top: 2.39em;
+}
+
 .page-header--image {
   background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
   background-repeat: no-repeat;
@@ -57,23 +61,33 @@
 }
 
 // External link specific adjustments
+@mixin _page_header_external_link_mixin() {
+  padding-right: 1.1em;
+  display: inline-block;
+  &:after {
+    position: absolute;
+    line-height: 2.2;
+  }
+
+  &.btn {
+    padding-right: 2.1em;
+  }
+}
 .page-header {
   a {
     color: #fff;
-    &:hover:not(.breadcrumb__link) {
-      color:$yellow-light;
+    &:hover:not(.breadcrumb__link, .btn) {
+      color: $yellow-light;
     }
 
-    &[href^="http"]:not(.is-internal) {
-      padding-right: 1.1em;
-      display: inline-block;
-      &:after {
-        position: absolute;
-        line-height: 2.2;
+    &#{"[" + $external_link_pattern + "]"}:not(.is-internal, .listing__title) {
+      .site-political & {
+        &:not(#{$ec_url_patterns}) {
+          @include _page_header_external_link_mixin();
+        }
       }
-
-      &.btn {
-        padding-right: 2.1em;
+      .site-information & {
+        @include _page_header_external_link_mixin();
       }
     }
   }

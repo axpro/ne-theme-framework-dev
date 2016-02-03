@@ -79,8 +79,7 @@ function dist(done) {
   return gulp.src([
     'build/framework/core/**/*.css',
     'build/framework/vendor/**/*.css',
-    'build/framework/components/**/*.css',
-    'build/framework/utilities/**/*.css'
+    'build/framework/components/**/*.css'
   ])
     // .pipe($.sourcemaps.init())
     .pipe($.concat('europa.css'))

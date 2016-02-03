@@ -61,3 +61,7 @@ Listing line left
 Listing line left
 
 {% styleguide './templates/listing--title-left.html', id='title-left' %}{% endstyleguide %}
+
+## 2 rows
+
+{% styleguide './templates/listing--2rows.html', id='2rows' %}{% endstyleguide %}

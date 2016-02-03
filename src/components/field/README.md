@@ -8,6 +8,8 @@ Field styling appearing in this styleguide is only valid for Default drupal fiel
 
 ## Labeled field
 
+External link icon
+
 {% styleguide './templates/field--labeled.html', id='labeled' %}{% endstyleguide %}
 
 ## Labeled field align

@@ -1,18 +1,10 @@
 // Site switcher
-//
-// Helps the user choose between political and informational websites.
-//
-// Markup: ../../templates/site-switcher.html
-//
-// .site-switcher--header - Header modifier
-// .site-switcher--footer - Footer modifier
-//
-// Styleguide 1.2.34
 
 .site-switcher {
   background: $grey-lightest;
   display: block;
   font-size: $font-size-little;
+
   @extend .hidden-print;
 }
 
@@ -34,7 +26,8 @@
     padding: 0.5em 1.667em;
     line-height: 1.3;
 
-    &:after, &.is-external:after {
+    &:after,
+    &.is-external:after {
       content: none !important;
     }
   }
@@ -66,7 +59,7 @@
           top: 100%;
           left: 50%;
           border: solid transparent;
-          content: " " !important;
+          content: ' ' !important;
           height: 0;
           width: 0;
           position: absolute;
@@ -92,7 +85,6 @@
       }
     }
 
-
     &:first-child {
       border-left: none;
     }
@@ -107,7 +99,7 @@
           bottom: 100%;
           left: 50%;
           border: solid transparent;
-          content: " " !important;
+          content: ' ' !important;
           height: 0;
           width: 0;
           position: absolute;
