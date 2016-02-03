@@ -8,9 +8,9 @@
 
 * Framework
   * [Base](core/README.md)
-    * [Checkbox](core/docs/base/checkbox.md)
-    * [Radio](core/docs/base/radio.md)
-    * [Quote](core/docs/base/blockquote.md)
+    * [Buttons](core/docs/base/button.md)
+    * [Forms](core/docs/base/forms.md)
+    * [Typography](core/docs/base/typography.md)
   * [Layout](core/docs/layout.md)
     * [Footer](core/docs/layout/footer.md)
     * [Header](core/docs/layout/header.md)
@@ -40,6 +40,7 @@
     * [Logo](components/logo/README.md)
     * [Messages](components/messages/README.md)
     * [Meta](components/meta/README.md)
+    * [Nav tabs](components/nav-tabs/README.md)
     * [Notification](components/notification/README.md)
     * [Pager](components/pager/README.md)
     * [RSS](components/rss/README.md)

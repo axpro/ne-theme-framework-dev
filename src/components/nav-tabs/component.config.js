@@ -2,6 +2,6 @@
 
 module.exports = {
   meta: {
-    styles: ['./styles/meta.scss']
+    styles: ['./styles/nav-tabs.scss']
   }
 };

@@ -1,12 +1,5 @@
-/*
-Bootstrap: Nav tabs
+// Bootstrap: Nav tabs
 
-Implementation of bootstrap nav tabs
-
-Markup: html/nav-tabs.html
-
-Styleguide navtabs
-*/
 ul.nav-tabs,
 .nav-tabs {
   max-width: inherit !important;
@@ -84,15 +77,8 @@ ul.nav-tabs,
   }
 }
 
-/*
-Bootstrap: Nav tabs right.
+// Bootstrap: Nav tabs right.
 
-Implementation of bootstrap nav tabs for the CWS.
-
-Markup: html/nav-tabs-right.html
-
-Styleguide navtabs.nav-tabs-right
-*/
 ul.nav-tabs-right {
   text-align: right;
   li {

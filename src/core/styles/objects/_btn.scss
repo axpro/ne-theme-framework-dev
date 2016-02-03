@@ -1,19 +1,5 @@
-/*
-Buttons
+// Buttons
 
-Custom bootstrap buttons styling
-
-Markup: html/btn.html
-
-.btn-default     - Button default
-.btn-primary     - Button primary
-.btn-secondary   - Button secondary
-.btn-ctn         - Button call to action
-.btn-ctn--border - Button call to action with border
-.btn-menu        - BUtton menu
-
-Styleguide buttons
-*/
 @mixin white-space-reset() {
   white-space: normal;
   padding-top: 0.5em;
