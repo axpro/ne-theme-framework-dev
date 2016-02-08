@@ -5,25 +5,25 @@ const $ = require('gulp-load-plugins')();
 const postcss = require('gulp-postcss');
 const path = require('path');
 
-const srcDir = path.resolve(__dirname, '../../src');
-const bowerDir = path.resolve(__dirname, '../../bower_components');
-
 // Compile and automatically prefix stylesheets
 function stylesCompile(done) {
   const startTime = Date.now();
   console.log('Compile SCSS: started');
 
   const build = 'build/framework';
+  const importOnce = require('node-sass-import-once');
 
   gulp.src('src/themes/default/styles/europa.scss', { base: 'src/themes/default' })
     .pipe($.newer(build))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       precision: 8,
-      includePaths: [
-        bowerDir,
-        srcDir
-      ]
+      importer: importOnce,
+      importOnce: {
+        index: true,
+        css: true,
+        bower: true
+      }
     }).on('error', $.sass.logError))
     .pipe(postcss([require('autoprefixer')({ browsers: [
       'ie >= 9',

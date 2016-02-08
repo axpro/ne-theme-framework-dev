@@ -1,19 +1,7 @@
 // Main stylesheet
 
-// Settings
+// Custom settings
 @import 'settings';
 
-// Tools
-@import '../../../framework/tools/index';
-
-// Base
-@import '../../../framework/base/index';
-
-// Layout
-@import '../../../framework/layout/index';
-
-// Components
-@import '../../../framework/components/index';
-
-// Utilities
-@import '../../../framework/utilities/index';
+// Import framework
+@import '../../../framework';

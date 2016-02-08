@@ -17,27 +17,24 @@ function isFile(file) {
 }
 
 function resolver(importee, importer) {
-  importee = importee.replace(/\.js$/, '') + '.js';
-  let resolvedFile = null;
+  const resolvedFile = `${importee.replace(/\.js$/, '')}.js`;
 
-  if (isFile(importee)) {
+  if (isFile(path.resolve(resolvedFile))) {
     // Absolute
-    resolvedFile = importee;
-  } else if (isFile(path.resolve(path.dirname(importer), importee))) {
+    return path.resolve(resolvedFile);
+  } else if (isFile(path.resolve(path.dirname(importer), resolvedFile))) {
     // Relative to importer
-    resolvedFile = path.resolve(path.dirname(importer), importee);
-  } else if (isFile(path.resolve(process.cwd(), importee))) {
-    // Relative to process working directory
-    resolvedFile = path.resolve(process.cwd(), importee);
-  } else if (isFile(path.resolve(process.cwd(), 'src', importee))) {
-    // Relative to src
-    resolvedFile = path.resolve(process.cwd(), 'src', importee);
-  } else if (isFile(path.resolve(process.cwd(), importee))) {
+    return path.resolve(path.dirname(importer), resolvedFile);
+  } else if (isFile(path.resolve(__dirname, '../../bower_components', resolvedFile))) {
     // Relative to bower_components
-    resolvedFile = path.resolve(process.cwd(), importee);
+    return path.resolve(__dirname, '../../bower_components', resolvedFile);
   }
 
-  return resolvedFile;
+  if (path.basename(resolvedFile) !== 'index.js') {
+    return resolver(path.join(importee, 'index.js'), importer);
+  }
+
+  throw new Error(`File ${importee} not found`);
 }
 
 // Concatenate and minify JavaScript. Transpiles ES2015 code to ES5.
