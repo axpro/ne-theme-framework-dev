@@ -1860,5 +1860,126 @@ else {$blocks.push($wrapper.find('.listing__item-link > :first-child'));}var i,m
 if(triggerValue==1){var innerElements=triggerValue+action+category+value+data;if($.inArray(innerElements,trackElements)===-1){trackElements.push(innerElements);if(typeof _paq!='undefined'){_paq.push([action,category,value,data]);}}} // Always trigger.
 if(triggerValue===0){if(typeof _paq!='undefined'){_paq.push([action,category,value,data]);}}}};})(jQuery);
 
+/**
+ * @file
+ * Breadcrumb related behaviors.
+ */(function($){Drupal.behaviors.europa_breadcrumb={attach:function(context){$('#breadcrumb').once('breadcrumb',function(){ // Add collapsible class for js mobile behavior.
+var $breadcrumbWrapper=$('#breadcrumb');$breadcrumbWrapper.addClass('breadcrumb--collapsible'); // Global selectors.
+var $breadcrumbSegmentsWrapper=$breadcrumbWrapper.children('.breadcrumb__segments-wrapper'),$breadcrumbSegments=$breadcrumbSegmentsWrapper.children('.breadcrumb__segment'),$breadcrumbSegmentFirst=$breadcrumbSegmentsWrapper.children('.breadcrumb__segment--first'),$breadcrumbSegmentSecond=$breadcrumbSegmentFirst.next(); // Calculating items that are not hidden.
+var $breadcrumbVisibleSegments=$breadcrumbSegments.not('.is-hidden'); // Hiding breadcrumb segments when there is not enough space.
+function toggleBreadcrumbSegments(){for(var i=0;i<$breadcrumbVisibleSegments.length;i++){ // Calculating sizes.
+var breadcrumbCalculations={};breadcrumbCalculations.wrapperWidth=$breadcrumbWrapper.width();breadcrumbCalculations.width=$breadcrumbSegmentsWrapper.width();breadcrumbCalculations.itemsWidth=0;$breadcrumbSegments.not('.is-hidden').each(function(i){breadcrumbCalculations.itemsWidth+=$(this).outerWidth(true);}); // Local variables.
+var $lastHiddenItem=$breadcrumbSegments.siblings('.is-hidden').last(),lastHiddenItemWidth=$lastHiddenItem.width(); // Hiding segments.
+if(breadcrumbCalculations.wrapperWidth<=breadcrumbCalculations.itemsWidth){if($breadcrumbSegmentSecond.hasClass('is-hidden')){$lastHiddenItem.next().not('.breadcrumb__segment--last').addClass('is-hidden');}else {$breadcrumbSegmentFirst.addClass('breadcrumb__segment--next-hidden');$breadcrumbSegmentSecond.addClass('is-hidden');}} // Showing segments.
+if(breadcrumbCalculations.itemsWidth+lastHiddenItemWidth<breadcrumbCalculations.wrapperWidth){if($lastHiddenItem.hasClass('is-hidden')){$lastHiddenItem.removeClass('is-hidden');}else {$breadcrumbSegmentFirst.removeClass('breadcrumb__segment--next-hidden');}}}$breadcrumbVisibleSegments=$breadcrumbSegments.not('.is-hidden');} // Showing all hidden breadcrumbs.
+function showBreadcrumbs($selector){$selector.hide();var $breadcrumbWrapper=$('#breadcrumb');$breadcrumbWrapper.addClass('is-open');} // Adding button to breadcrumb element that will be used for showing
+// hidden breadcrumb elements.
+if($breadcrumbSegments.length>1){$breadcrumbWrapper.append('<span class="breadcrumb__btn-separator">...</span>');var $breadcrumbButton=$breadcrumbWrapper.find('.breadcrumb__btn-separator');}if(typeof enquire!=='undefined'){ // Runs on device width change.
+enquire.register(Drupal.europa.breakpoints.medium,{ // Desktop.
+match:function(){$breadcrumbWrapper.removeClass('is-open');if($breadcrumbButton){$breadcrumbButton.hide();}toggleBreadcrumbSegments();$(window).resize(function(){toggleBreadcrumbSegments();});}, // Mobile.
+unmatch:function(){if($breadcrumbButton){$breadcrumbButton.show();}$breadcrumbSegments.removeClass('is-hidden');$breadcrumbSegmentFirst.removeClass('breadcrumb__segment--next-hidden');$(window).off('resize');},setup:function(){if($breadcrumbButton){$breadcrumbButton.click(function(){ // Adding $(this) as a selector for the showBreadcrumbs function.
+showBreadcrumbs($(this));});}}});}});}};})(jQuery);
+
+/**
+ * @file
+ * File component related behaviors.
+ */(function($){Drupal.behaviors.dt_file={attach:function(context){"use strict";var $button=$('.file__translations-control'),$translations=$('.file__translations-list');$button.click(function(){var self=this;$translations.collapse('toggle');$(self).toggleClass('is-collapsed');});}};})(jQuery);
+
+/**
+ * @file
+ * Exposed filter related behaviors.
+ */(function($){Drupal.behaviors.europa_filters={attach:function(context,settings){var $filters=$('.filters'),$filtersSubmit=$('.filters__btn-submit',$filters),filtersFormId=$filters.find('form').attr('id');refineText=Drupal.t('Refine'),hideText=Drupal.t('Hide'),clearAll=Drupal.t('Clear all'),$resultsCount=$('.filters__result-count'),$itemsNumber=$('.filters__items-number'); // Checking if IE8 is used.
+var oldIE=false;if($('html').is('.ie8')){oldIE=true;} // Function for hiding Submit and Reset buttons.
+var hideFilterButtons=function(){$('.filters__btn-collapse, .filters__btn-reset--small').hide();};var showFilterButtons=function(){$('.filters__btn-collapse, .filters__btn-reset--small').show();}; // Adding buttons for the filters.
+if($resultsCount.is(':visible')&&!$('.filters__btn-collapse').length){$resultsCount.append('<div class="btn-group"> \
+            <button class="btn btn-default filters__btn-reset--small hidden js-showonsubmit">'+clearAll+'\
+            </button> \
+              <button class="btn btn-primary filters__btn-collapse" type="button"  \
+                data-toggle="collapse" data-target="#'+Drupal.settings.europa.exposedBlockId+'"  \
+                aria-expanded="false" aria-controls="collapseFilters">  \
+                '+refineText+'  \
+              </button> \
+            </div>');} // Listeners.
+// Small button emulating the original reset button.
+$(".filters__btn-reset--small").on("click",function(){$(".filters__btn-reset").trigger("click");}); // Runs only once.
+// Add throbber next to content type and items count text.
+$filters.once('filters',function(){throbber='<div class="ajax-progress ajax-progress-throbber"><i class="icon icon--spinner is-spinning"></i></div>';$(document).ajaxStart(function(e){if(e.currentTarget.activeElement.form=='undefined'&&e.currentTarget.activeElement.form.id===filtersFormId){$itemsNumber.prepend(throbber);}});if(typeof enquire!=='undefined'){ // Runs on device width change.
+enquire.register('screen and (min-width: 992px)',{ // Desktop.
+match:function(){$filtersWrapper=$(".filters__wrapper");$filtersSubmit.addClass('ctools-auto-submit-click'); // Opening filters when changing to desktop.
+$filters.removeClass('collapse').addClass('collapse in').attr('aria-expanded',true).removeAttr('style'); // Hiding filter buttons.
+hideFilterButtons();$filters.children('.close').remove();if($filtersWrapper.length){$filtersWrapper.children().unwrap("<div class='filters__wrapper'></div>");}}, // Mobile.
+unmatch:function(){ // Showing buttons on viewport switch.
+showFilterButtons();$filters.wrapInner("<div class='filters__wrapper'></div>");$filters.removeClass('collapse in').addClass('collapse').attr('aria-expanded',false);$filtersSubmit.removeClass('ctools-auto-submit-click');},setup:function(){ // IE8 fix - showing the element containing the filters.
+if($(window).width()>991){$filters.removeClass('collapse').addClass('collapse in').attr('aria-expanded',true).removeAttr('style');}else {$filters.addClass('collapse');}$filtersSubmit.removeClass('ctools-auto-submit-click');$filters.wrapInner("<div class='filters__wrapper'></div>");if(!oldIE){$filtersSubmit.click(function(){if(!$filtersSubmit.hasClass('ctools-auto-submit-click')){$filters.collapse('hide');}});}$filters.on('show.bs.collapse',function(){$(this).prepend('<a class="close filters__close" data-toggle="collapse" '+' data-target="#'+Drupal.settings.europa.exposedBlockId+'"'+' aria-expanded="true" aria-controls="collapseFilters">'+hideText+'</a>');hideFilterButtons();});$filters.on('hide.bs.collapse',function(){$(this).children('.close').remove();showFilterButtons();});}});}});}};})(jQuery);
+
+/**
+ * @file
+ * In-page nav related behaviors.
+ */(function($){Drupal.behaviors.inpage_navigation={fixWidth:function($e,$parent){ // Adjust width dinamcally to parent.
+var blockWidth='auto';blockWidth=$parent.width()+'px';$e.css({'width':blockWidth});},currentTitle:function($navBar,$navBarCurrent){ // Clear title for In page nav navbar title if nothing selected.
+var currentItem=$("li.active > a",$navBar);if(currentItem.length==0){$navBarCurrent.text(Drupal.settings.inpage_navigation.node_title);}else {$navBarCurrent.text(currentItem.text());}},attach:function(context){$('.inpage-nav').once('page-navigation',function(){var $inPageActive=false,$inPage=$(this),$inPageBlock=$inPage.parents('.inpage-nav__wrapper'),$inPageBlockParent=$inPageBlock.parent(),inPageBlockHeight=$inPageBlock.height(),inPageBlockTop=$inPageBlock.offset().top,$inPageList=$('.inpage-nav__list',$inPage),title=Drupal.settings.inpage_navigation.node_title; // Calculate width on window resize, and check offset height of in-page
+// nav block.
+$(window).resize(function(e){Drupal.behaviors.inpage_navigation.fixWidth($inPageBlock,$inPageBlockParent);inPageBlockTop=$inPageBlock.offset().top;inPageBlockHeight=$inPageBlock.height(); // Refresh scrollspy.
+$('body').scrollspy('refresh');});var $navBar=$('<div class="inpage-nav__navbar-wrapper is-scrollspy-target"><nav class="navbar navbar-default navbar-fixed-top inpage-nav__navbar"><div class="container inpage-nav__container"><div class="navbar-header inpage-nav__header"  data-toggle="collapse" data-target="#inpage-navigation-list" aria-expanded="false" aria-controls="navbar"><button type="button" class="navbar-toggle collapsed inpage-nav__toggle"><span class="sr-only">'+Drupal.t("Toggle navigation")+'</span><span class="inpage-nav__icon-arrow icon icon--arrow-down"></span></button><span class="navbar-brand inpage-nav__help">'+Drupal.t('On this page')+'</span><div class="inpage-nav__current-wrapper"><span class="navbar-brand inpage-nav__current">'+title+'</span></div></div><div class="navbar-collapse collapse" id="inpage-navigation-list"><span class="inpage-nav__title" >'+title+'</span>'+$inPage.html()+'</div></div></nav>'),$navBarHeader=$('.inpage-nav__header',$navBar),$navBarCurrent=$('.inpage-nav__current',$navBar),$navBarTitle=$('.inpage-nav__title',$navBar),$navBarHelp=$('.inpage-nav__help',$navBar),$navBarList=$('.inpage-nav__list',$navBar);$navBarList.addClass('nav inpage-nav__list--navbar');$('body').append($navBar);enquire.register("screen and (min-width: 992px)",{ // Desktop.
+match:function(){ // Adding function that is calculating and adding inpage-nav block
+// width. This is due to usage of position: fixed on the inpage-nav
+// element.
+Drupal.behaviors.inpage_navigation.fixWidth($inPageBlock,$inPageBlockParent); // Remove class that adds overflow: hidden to body.
+$('body').removeClass('is-inpage-nav-open');$inPageBlock.affix('checkPosition');},setup:function(){ // Hide if clicked outside.
+$('.inpage-nav__navbar',$navBar).click(function(e){$('#inpage-navigation-list').collapse('hide');}); // Page navigation scroll spy.
+$('body').scrollspy({target:'.is-scrollspy-target'});$navBar.on('show.bs.collapse',function(){$navBar.addClass('is-collapsing');});$navBar.on('shown.bs.collapse',function(){$navBar.addClass('is-collapsed');$navBar.removeClass('is-collapsing');});$navBar.on('hide.bs.collapse',function(){$navBar.removeClass('is-collapsed');$('body').removeClass('is-inpage-nav-open');});$navBar.on("activate.bs.scrollspy",function(e){ // Set title to current;.
+Drupal.behaviors.inpage_navigation.currentTitle($navBar,$navBarCurrent);}); // Affix.
+$inPageBlock.affix({offset:{top:function(){return Math.floor($inPageBlock.parent().offset().top)-30;},bottom:function(){return $('.footer').outerHeight(true)+$('.footer-top').outerHeight(true)+20;}}});$(window).scroll(function(e){$window=$(this); // Set title to current;.
+Drupal.behaviors.inpage_navigation.currentTitle($navBar,$navBarCurrent); // Show navbar if scroll is under the block.
+var docViewTop=$window.scrollTop(),docViewBottom=docViewTop+$window.height(),inPageBottom=inPageBlockTop+inPageBlockHeight-5;if(inPageBottom<=docViewTop){$navBar.addClass('is-active');}else {$navBar.removeClass('is-active');$('#inpage-navigation-list').collapse('hide');}});}, // Mobile.
+unmatch:function(){ // Collapse navbar on changing to mobile behavior.
+if($('.inpage-nav__navbar-wrapper').hasClass('is-collapsed')){$('#inpage-navigation-list').collapse('hide');}$navBar.on('show.bs.collapse',function(){$('body').addClass('is-inpage-nav-open');});$navBar.on('hide.bs.collapse',function(){$('body').removeClass('is-inpage-nav-open');});}});});}};})(jQuery);
+
+(function($){ /**
+  * Standard jQuery plugin pattern. @see {@link http://learn.jquery.com/plugins/basic-plugin-creation/}.
+  */$.fn.selectify=function(options){this.each(function(){ // Defaults settings.
+var settings=$.extend({listWrapper:$(this),listSelector:'element__list',item:'element__option',other:'element__other',unavailable:'element__unavailable',selected:'is-selected'},options); // Private methods.
+var attachDropDown=function(){var listClass=settings.listSelector,$list=$('ul.'+listClass); // For every list which the user wants to convert.
+$list.each(function(){ // Start building the select and keep the same class as the ul.
+var $select=$('<select />').addClass(listClass); // For each element of the particular ul.
+$list.find('li.'+settings.item).each(function(){var currentClass=$(this).attr('class');switch(currentClass){ // Skip if it's unavailable.
+case String(settings.item+' '+settings.unavailable):break; // Build an option element, selected state.
+case String(settings.item+' '+settings.selected):var $option=$('<option />');$option.html($(this).html()).attr('selected',true);$select.append($option);break; // Build a regular option element.
+case String(settings.item+' '+settings.other):var $option=$('<option />');$option.attr('value',$(this).find('a').attr('href')).html($(this).html());$select.append($option);break;}}); // Add the select to the DOM. Only if it's not already added.
+if(!$list.parent().find('select').length){$list.parent().append($select);settings.listWrapper.find('select').hide(); // Listener to change the URL of the page depending on the target.
+$select.on({change:function(){var target=String($(this).val());window.location.href=$("a[href='"+target+"']").first().attr('href');}});}});};var hideDropDown=function(){settings.listWrapper.find('select'+'.'+settings.listSelector).hide();};var hideList=function(){var $list=settings.listWrapper.find('ul.'+settings.listSelector);$list.children('.lang-select-page__other').hide();$list.children('.is-selected').hide();};var showDropDown=function(){settings.listWrapper.find('select'+'.'+settings.listSelector).show();};var showList=function(){var $list=settings.listWrapper.find('ul.'+settings.listSelector);$list.children('.lang-select-page__other').show();$list.children('.is-selected').show();}; // Custom event handlers, scoped to the context of the instance.
+settings.listWrapper.on('hide.dropdown',hideDropDown);settings.listWrapper.on('hide.list',hideList);settings.listWrapper.on('show.dropdown',showDropDown);settings.listWrapper.on('show.list',showList); // Could be placed under init() method to be controlled by user.
+attachDropDown();});};})(jQuery);
+
+/**
+ * @file
+ * Page level language switcher.
+ */(function($){'use strict';var pageSwitcher={wrapClass:'.lang-select-page',listClass:'.lang-select-page__list',itemClass:'.lang-select-page__option',iconClass:'.lang-select-page__icon',unavClass:'.lang-select-page__unavailable',wrapWidth:function(){return $(pageSwitcher.wrapClass).outerWidth();},listWidth:function(){return $(pageSwitcher.listClass).outerWidth();},iconWidth:function(){return $(pageSwitcher.iconClass).outerWidth();},unavailableWidth:function(){return $(pageSwitcher.unavClass).outerWidth();},itemsWidth:function(){var overallWidth=0;$(pageSwitcher.listClass).children(pageSwitcher.itemClass).each(function(){overallWidth+=$(this).outerWidth();});return overallWidth;},itemsOverflow:function(){var availableSpace=pageSwitcher.wrapWidth()-pageSwitcher.iconWidth()-pageSwitcher.unavailableWidth();return pageSwitcher.itemsWidth()>availableSpace-20;}};Drupal.behaviors.languageSwitcherPage={attach:function(context){$('#block-language-selector-page-language-selector-page').once('lang-select-page',function(){var pageLanguageSelector=$('.lang-select-page');pageLanguageSelector.selectify({listSelector:'lang-select-page__list',item:'lang-select-page__option',other:'lang-select-page__other',unavailable:'lang-select-page__unavailable',selected:'is-selected'});var overflowToggle=function(){switch(pageSwitcher.itemsOverflow()){case true:pageLanguageSelector.trigger('hide.list');pageLanguageSelector.trigger('show.dropdown');break;case false:pageLanguageSelector.trigger('show.list');pageLanguageSelector.trigger('hide.dropdown');break;}};if(typeof enquire!=='undefined'){ // Runs on device width change.
+enquire.register(Drupal.europa.breakpoints.medium,{ // Desktop case.
+match:function(){$(window).resize(function(){overflowToggle();});}, // Mobile case.
+unmatch:function(){$(window).off('resize');},setup:function(){overflowToggle();}});}});}};})(jQuery);
+
+/**
+ * @file
+ * Site level language switcher related behaviors.
+ */(function($){Drupal.behaviors.europa_lang_select_site={attach:function(context){var $overlay=$('.splash-page--overlay'),overlay='.splash-page--overlay',closeBtn='.splash-page__btn-close',body='body';$('.lang-select-site').on('click','a.lang-select-site__link',function(event){ // We only want to load it once.
+if(!$overlay.find(closeBtn).length){$.get($(this).attr('href'),function(splashscreen){ // Store our object.
+var $jQueryObject=$($.parseHTML(splashscreen)); // Output the part we want to our overlay.
+$overlay.html($jQueryObject.find('.page-content'));});} // Show overlay.
+$(overlay).show();$(body).addClass('disablescroll'); // Hide frame helper function.
+var closeSplashScreen=function(event){$(overlay).hide();$(body).removeClass('disablescroll');}; // Hide frame on click.
+$overlay.on('click',closeBtn,function(event){closeSplashScreen(); // Prevent the actual close a href to trigger. This should only work
+// if javascript is disabled.
+event.preventDefault();}); // Hide frame on pressing ESC.
+$(document).keyup(function(e){ // Escape key maps to keycode '27'.
+if(e.keyCode==27){closeSplashScreen();}}); // Prevent the default click, if javascript is disabled this link
+// will keep on working.
+event.preventDefault();});}};})(jQuery);
+
+/**
+ * @file
+ * Pager related behaviors.
+ */(function($){Drupal.behaviors.europa_pager={attach:function(context){var options='';$('ul.pager').once('pager',function(){$('li.select',this).once('pagerselect',function(){var $link=$('a',this);if($link.length>0){var value=$link.attr('href');var title=Drupal.t('Page')+' '+$link.html();var selected='';}else {var value='';var title=Drupal.t('Page')+' '+$(this).html();var selected='selected="selected"';}options+='<option value="'+value+'"'+selected+'>'+title+'</option>';$(this).hide();});if(options!=''){var select=$('<span class="pager__combo-upper"><select class="pager__combo-dropdown">'+options+'</select></span>');select.children().data('activation','activated').on({keydown:function(event){if(event.which===13){if($(this).data('activation')==='paused'){$(this).data('activation','activated');$(this).trigger('change');}}else {$(this).data('activation','paused');}},click:function(event){if($(this).data('activation')==='paused'){$(this).data('activation','activated');$(this).trigger('change');}},change:function(event){if($(this).data('activation')==='activated'){var optionHref=$(this).val(),$pagerItem=$('.pager__item:hidden');$pagerItem.children('a[href="'+optionHref+'"]').click();}}});$('.pager__combo-container',this).before(select);}});}};})(jQuery);
+
 })();
 //# sourceMappingURL=europa.js.map
