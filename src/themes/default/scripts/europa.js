@@ -22,3 +22,11 @@ import 'bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix';
 import './core';
 
 // Components
+import '../../../framework/components/breadcrumb/scripts/breadcrumb';
+import '../../../framework/components/file/scripts/file';
+import '../../../framework/components/filters/scripts/filters';
+import '../../../framework/components/inpage-nav/scripts/inpage_nav';
+import '../../../framework/components/lang-select-page/scripts/selectify';
+import '../../../framework/components/lang-select-page/scripts/lang-switcher';
+import '../../../framework/components/lang-select-site/scripts/lang-select-site';
+import '../../../framework/components/pager/scripts/pager';
