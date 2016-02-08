@@ -7,12 +7,12 @@ const $ = require('gulp-load-plugins')();
 function optimize(done) {
   const startTime = Date.now();
   console.log('Optimize images: started');
-  return gulp.src('dist/**/*.{jpg,jpeg,gif,png,svg}')
+  return gulp.src('dist/images/**/*.{jpg,jpeg,gif,png,svg}')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true
     })))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/images'))
     .on('end', res => {
       const diff = Date.now() - startTime;
       console.log(`Optimize images: done (${diff}ms)`);
@@ -20,6 +20,24 @@ function optimize(done) {
     });
 }
 
+// Optimize sprites
+function optimizeSprites(done) {
+  const startTime = Date.now();
+  console.log('Optimize sprites: started');
+  return gulp.src('dist/images/**/*.sprite.{jpg,jpeg,gif,png,svg}')
+    .pipe($.cache($.imagemin({
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('dist/images'))
+    .on('end', res => {
+      const diff = Date.now() - startTime;
+      console.log(`Optimize sprites: done (${diff}ms)`);
+      return done(res);
+    });
+}
+
 module.exports = {
-  optimize
+  optimize,
+  optimizeSprites
 };

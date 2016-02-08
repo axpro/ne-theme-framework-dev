@@ -11,7 +11,8 @@
   ],
   "pluginsConfig": {
     "styleguide": {
-      "base": "src"
+      "base": "src",
+      "frame": "./tpl/frame.html"
     }
   },
   "links": {

@@ -5,8 +5,6 @@ const $ = require('gulp-load-plugins')();
 const postcss = require('gulp-postcss');
 const path = require('path');
 
-const config = global.config || {};
-
 const srcDir = path.resolve(__dirname, '../../src');
 const bowerDir = path.resolve(__dirname, '../../bower_components');
 
@@ -17,7 +15,7 @@ function stylesCompile(done) {
 
   const build = 'build/framework';
 
-  gulp.src(config.styles, { base: 'src' })
+  gulp.src('src/themes/default/styles/europa.scss', { base: 'src/themes/default' })
     .pipe($.newer(build))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
@@ -27,8 +25,8 @@ function stylesCompile(done) {
         srcDir
       ]
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer([
-      'ie >= 10',
+    .pipe(postcss([require('autoprefixer')({ browsers: [
+      'ie >= 9',
       'ie_mob >= 10',
       'ff >= 30',
       'chrome >= 34',
@@ -37,10 +35,10 @@ function stylesCompile(done) {
       'ios >= 7',
       'android >= 4.4',
       'bb >= 10'
-    ]))
+    ] })]))
     .pipe($.sourcemaps.write('.', {
       includeContent: true,
-      sourceRoot: '../src/'
+      sourceRoot: '../../src/'
     }))
     .pipe(gulp.dest(build))
     .on('end', () => {
@@ -55,32 +53,44 @@ function dist(done) {
   console.log('Dist styles: started');
 
   const processors = [
+    require('postcss-sprites').default({
+      stylesheetPath: './dist/styles',
+      spritePath: './dist/images/png/',
+      relativeTo: 'rule',
+      filterBy: image => {
+        // Allow only png files and files in subfolders of 'images/png'
+        if (!/\.(png)$/.test(image.url) ||
+          path.dirname(path.relative(path.resolve('./dist/images/png/'), image.path)) === '.') {
+          return Promise.reject();
+        }
+        return Promise.resolve();
+      },
+      groupBy: image => {
+        const file = path.dirname(path.relative(path.resolve('./dist/images/png/'), image.path));
+        if (file === '.') {
+          return Promise.reject();
+        }
+        return Promise.resolve(file);
+      },
+      hooks: {
+        onSaveSpritesheet: (opts, groups) => path.join(
+          opts.spritePath,
+          groups.join('/'),
+          '..',
+          `${path.basename(groups.join('/'), '.png')}.sprite.png`
+        )
+      }
+    }),
     require('postcss-url')({
       url: 'inline',
       maxSize: 8, // inline every image that weighs less than 8kB
       basePath: path.resolve('dist/styles')
     }),
     require('postcss-svgo'),
-    require('postcss-sprites').default({
-      stylesheetPath: './dist/styles',
-      spritePath: './dist/images/sprites/',
-      relativeTo: 'rule',
-      filterBy: image => {
-        // Allow only jpg/jpeg/png files
-        if (!/\.(png|jpg|jpeg)$/.test(image.url)) {
-          return Promise.reject();
-        }
-        return Promise.resolve();
-      }
-    }),
     require('cssnano')
   ];
 
-  return gulp.src([
-    'build/framework/core/**/*.css',
-    'build/framework/vendor/**/*.css',
-    'build/framework/components/**/*.css'
-  ])
+  return gulp.src('build/framework/styles/**/*.css')
     // .pipe($.sourcemaps.init())
     .pipe($.concat('europa.css'))
     .pipe(gulp.dest('dist/styles'))

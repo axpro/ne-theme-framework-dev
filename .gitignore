@@ -1,5 +1,4 @@
 # Ignore some folders
-.nyc_output
 .tmp
 bower_components
 build

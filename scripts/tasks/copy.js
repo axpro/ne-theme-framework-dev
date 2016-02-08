@@ -1,32 +1,43 @@
 'use strict';
 
-const async = require('async');
-const gulp = require('gulp');
-
-const config = global.config;
-
-function copy(file, done) {
-  return gulp.src(file.src, { dot: true })
-    .pipe(gulp.dest(file.dest))
-    .on('end', done);
-}
-
-function extractTasks(mappings, done) {
-  return async.each(mappings, copy, done);
-}
-
 // Copy files during build phase
-function copyBuild(done) {
+function copy(dest, done) {
   const startTime = Date.now();
-  console.log('Copy `build`: started');
+  console.log('Copy assets: started');
 
-  return extractTasks(config.assets, res => {
-    const diff = Date.now() - startTime;
-    console.log(`Copy 'build': done (${diff}ms)`);
-    return done(res);
+  const gulp = require('gulp');
+  const glob = require('glob');
+  const async = require('async');
+  const path = require('path');
+  const config = require('../../src/themes/default/config.js');
+
+  const sources = [];
+
+  [
+    'src/framework/components/*',
+    'src/framework/base/*',
+    'src/framework/layout/*'
+  ].forEach(folder => {
+    glob.sync(folder).forEach(component => {
+      sources.push(`${component}/{images,fonts}/**`);
+    });
   });
+
+  const assets = [{ src: sources, dest: '' }].concat(config.extraAssets);
+
+  return async.each(assets,
+    (file, cb) => gulp.src(file.src)
+      .pipe(gulp.dest(path.resolve(dest, file.dest)))
+      .on('end', cb),
+    res => {
+      const diff = Date.now() - startTime;
+      console.log(`Copy assets: done (${diff}ms)`);
+      return done(res);
+    }
+  );
 }
 
 module.exports = {
-  build: copyBuild
+  build: cb => copy('build/framework', cb),
+  dist: cb => copy('dist', cb)
 };

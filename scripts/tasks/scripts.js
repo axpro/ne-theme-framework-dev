@@ -6,8 +6,6 @@ const babel = require('rollup-plugin-babel');
 const path = require('path');
 const fs = require('fs');
 
-const config = global.config;
-
 // Helpers
 function isFile(file) {
   try {
@@ -48,7 +46,7 @@ function resolver(importee, importer) {
 function scriptsBundle(done) {
   const startTime = Date.now();
   console.log('Bundle JS: started');
-  gulp.src(config.scripts, { read: false, base: 'src' })
+  gulp.src('src/themes/default/scripts/europa.js', { base: 'src/themes/default' })
     .pipe($.newer('build/framework'))
     .pipe($.sourcemaps.init())
     .pipe($.rollup({
@@ -77,14 +75,9 @@ function scriptsBundle(done) {
 function dist(done) {
   const startTime = Date.now();
   console.log('Uglify JS: started');
-  return gulp.src([
-    'build/framework/vendor/**/*.js',
-    'build/framework/core/**/*.js',
-    'build/framework/components/**/*.js'
-  ], { base: 'build/framework' })
+  return gulp.src('build/framework/scripts/**/*.js')
     .pipe($.sourcemaps.init({ loadMaps: true }))
     .pipe($.uglify())
-    .pipe($.concat('europa.js'))
     .pipe($.sourcemaps.write('.', { includeContent: true, sourceRoot: '../src/' }))
     .pipe(gulp.dest('dist/scripts'))
     .on('end', () => {

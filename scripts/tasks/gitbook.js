@@ -9,7 +9,7 @@ function prepare(done) {
   const startTime = Date.now();
   console.log('Generate styleguide: started');
 
-  return gulp.src('src/{components,core,vendor,utilities}/**/*.md')
+  return gulp.src('src/**/*.md')
     .pipe(gulp.dest('.tmp'))
     .on('end', res => {
       const diff = Date.now() - startTime;
@@ -23,7 +23,7 @@ function prepareBase(done) {
   const startTime = Date.now();
   console.log('Prepare styleguide: started');
 
-  return gulp.src(['scripts/tasks/gitbook/**', 'docs/**'])
+  return gulp.src(['scripts/tasks/gitbook/**'])
     .pipe(gulp.dest('.tmp'))
     .on('end', res => {
       const diff = Date.now() - startTime;
@@ -55,7 +55,7 @@ function build(done) {
 }
 
 function watch() {
-  gulp.watch('src/{components,core,vendor,utilities}/**/*.{md,html}', event => {
+  gulp.watch('src/**/*.{md,html}', event => {
     console.log(`File ${path.relative(process.cwd(), event.path)} was ${event.type}`);
     prepare(() => {
       if (global.browserSyncServer && global.browserSyncServer.active === true) {
@@ -65,7 +65,7 @@ function watch() {
     });
   });
 
-  gulp.watch(['scripts/tasks/gitbook/**', 'docs/**'], event => {
+  gulp.watch(['scripts/tasks/gitbook/**'], event => {
     console.log(`File ${path.relative(process.cwd(), event.path)} was ${event.type}`);
     prepareBase(() => {
       if (global.browserSyncServer && global.browserSyncServer.active === true) {
