@@ -66,10 +66,10 @@ npm test
 _Not implemented yet_
 
 ```bash
-npm run build
+npm run dist
 ```
 
 Phing alias
 ```bash
-phing build
+phing dist
 ```
