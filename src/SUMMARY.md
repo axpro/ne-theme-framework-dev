@@ -2,9 +2,10 @@
 
 * [Introduction](README.md)
 
-* [Coding Conventions](./conventions/README.md)
+* [Conventions](./conventions/README.md)
   * [Styles](./conventions/styles.md)
   * [Scripts](./conventions/scripts.md)
+  * [Git Commits](./conventions/git.md)
 
 * [Framework](./framework/README.md)
   * [Base](./framework/base/README.md)

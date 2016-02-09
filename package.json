@@ -17,7 +17,8 @@
     "bower": "bower",
     "dev": "node ./scripts/build.js --server --watch",
     "dist": "node ./scripts/build.js -- -c && node ./scripts/dist.js",
-    "gh-pages": "node ./scripts/build.js -- -c && node ./scripts/gh-pages.js"
+    "gh-pages": "node ./scripts/build.js -- -c && node ./scripts/gh-pages.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "devDependencies": {
     "async": "^1.5.2",
@@ -28,9 +29,9 @@
     "browser-sync": "^2.11.1",
     "chokidar": "^1.4.2",
     "commander": "^2.9.0",
+    "conventional-changelog-cli": "^1.0.0",
     "cpy": "^4.0.0",
     "cssnano": "^3.4.0",
-    "cz-conventional-changelog": "^1.1.5",
     "del": "^2.2.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.0",
@@ -77,9 +78,6 @@
   "config": {
     "ghooks": {
       "commit-msg": "validate-commit-msg"
-    },
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
