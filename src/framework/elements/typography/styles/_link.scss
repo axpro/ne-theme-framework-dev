@@ -1,0 +1,76 @@
+// Link
+
+// Default external link mixin.
+@mixin _external_link_mixin() {
+  @extend .is-external;
+}
+
+a {
+  &:hover,
+  &:active,
+  &:focus {
+    color: $grey-base;
+    text-decoration: underline;
+  }
+
+  &#{'[' + $external_link_pattern + ']'}:not(.is-internal) {
+    .site-political & {
+      &:not(#{$ec_url_patterns}) {
+        @include _external_link_mixin();
+      }
+    }
+    .site-information & {
+      @include _external_link_mixin();
+    }
+  }
+
+  &.smaller {
+    font-size: 0.8em;
+  }
+
+  @media print {
+    &:after {
+      content: none !important;
+    }
+  }
+}
+
+p a {
+  text-decoration: underline;
+}
+
+.is-external {
+  position: relative;
+  &:after {
+    @extend .icon--after;
+    @extend .icon--external;
+    font-size: 75%;
+    margin-left: 0.4em;
+    margin-right: 0.2em;
+  }
+}
+
+// External link specific adjustments
+@mixin _link_external_link_mixin() {
+  &.btn {
+    padding-right: 2.1em;
+  }
+}
+
+.page-content {
+  ul,
+  p {
+    a {
+      &#{'[' + $external_link_pattern + ']'}:not(.is-internal) {
+        .site-political & {
+          &:not(#{$ec_url_patterns}) {
+            @include _link_external_link_mixin();
+          }
+        }
+        .site-information & {
+          @include _link_external_link_mixin();
+        }
+      }
+    }
+  }
+}

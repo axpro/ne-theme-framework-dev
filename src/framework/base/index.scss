@@ -1,8 +1,7 @@
-@import 'generic/styles';
-@import 'body/styles';
-@import '../../vendor/bootstrap/styles/base';
-@import '../../vendor/bootstrap/styles/objects';
-@import 'typography/styles';
-@import 'buttons/styles';
-@import 'forms/styles';
-@import 'img/styles';
+@import
+  '../../vendor/bootstrap/styles/generic',
+  '../../vendor/bootstrap/styles/base',
+  'body',
+  'typography',
+  'form',
+  'img'

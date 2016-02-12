@@ -1,14 +1,20 @@
 // Settings, Mixins & functions
-@import './dependencies';
+@import 'dependencies';
 
 // Base
-@import './base';
+@import 'base';
 
 // Layout
-@import './layout';
+@import 'layout';
+
+// Elements
+@import 'elements';
 
 // Components
-@import './components';
+@import 'components';
+
+// Structures
+@import 'structures';
 
 // Utilities
-@import './utilities';
+@import 'utilities';

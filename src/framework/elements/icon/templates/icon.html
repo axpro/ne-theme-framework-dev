@@ -1,0 +1,21 @@
+---
+src:
+  styles:
+    - '../styles/_settings.scss'
+    - '../styles/_icon.scss'
+---
+{%
+set icons = [
+  'external', 'arrow-up', 'arrow-down', 'spinner', 'search', 'language', 'facebook', 'twitter',
+  'googleplus', 'linkedin', 'rss', 'up', 'right', 'down', 'left', 'file', 'audio', 'brochure',
+  'edit', 'image', 'download', 'infographic', 'multiple-files', 'organigram', 'package', 'slides',
+  'video', 'error', 'success', 'warning', 'check', 'generic-lang', 'budget', 'digital', 'energy',
+  'euro', 'global', 'growth', 'regulation'
+]
+%}
+
+{% for icon in icons %}
+<span class="icon icon--{{ icon }}"></span>
+<span class="icon icon--yellowbg icon--{{ icon }}"></span>
+<span class="icon icon--blue-dark icon--{{ icon }}"></span>
+{% endfor %}

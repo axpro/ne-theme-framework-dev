@@ -1,0 +1,9 @@
+// Legend
+
+.legend {
+  font-size: 12px;// $form-item-legend-font-size;
+}
+
+legend {
+  @extend .legend;
+}
