@@ -9,7 +9,7 @@ function prepare(done) {
   const startTime = Date.now();
   console.log('Generate styleguide: started');
 
-  return gulp.src('src/**/*.md')
+  return gulp.src(['src/framework/**/*.md', 'src/{architecture,conventions}/**'])
     .pipe(gulp.dest('.tmp'))
     .on('end', res => {
       const diff = Date.now() - startTime;

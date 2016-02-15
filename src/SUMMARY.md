@@ -2,6 +2,8 @@
 
 * [Introduction](README.md)
 
+* [Architecture](./architecture/README.md)
+
 * [Conventions](./conventions/README.md)
   * [Styles](./conventions/styles.md)
   * [Scripts](./conventions/scripts.md)
