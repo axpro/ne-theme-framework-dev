@@ -13,6 +13,7 @@
   Drupal.europa.breakpoints.medium = 'screen and (min-width: 480px)';
   Drupal.europa.breakpoints.small = 'screen and (min-width: 768px)';
 
+  Drupal.behaviors = Drupal.behaviors || {};
   Drupal.behaviors.europa_tabs = {
     attach: function (context) {
       $('.nav-tabs--with-content').once('nav-tabs', function() {
@@ -122,7 +123,7 @@
 
         var i, max;
         for (i = 0, max = $blocks.length; i < max; i++) {
-          var $block = $blocks[i].equalHeight();
+          var $block = $blocks[i].matchHeight();
         }
       });
     }
@@ -160,48 +161,5 @@
         arrow.addClass(add).removeClass(rem);
       });
     });
-  };
-
-  var trackElements = [];
-  var errorEventSent = 'Piwik, trackEvent was not fired up.';
-  /**
-   * Acts like a wrapper for Piwik push method.
-   *
-   * For Piwik parameters refer to {@see https://developer.piwik.org/guides/tracking-javascript-guide}
-   *
-   * @param int {triggerValue}
-   *   How many times should the call be triggered by page load
-   *   Accepts 0,1 (0 for always and 1 just for one time).
-   * @param str {action}
-   *   Defines Action in piwik.
-   * @param str {category}
-   *   Defines category in piwik.
-   * @param {value}
-   *  Defines category in piwik.
-   * @param {data}
-   *  Defines category in piwik.
-   */
-  PiwikDTT = {
-    sendTrack: function(triggerValue, action, category, value, data) {
-      if (typeof action === "undefined" || action === null || action === '') {
-        action = "trackEvent";
-      }
-      // Trigger only once.
-      if (triggerValue == 1) {
-        var innerElements = (triggerValue + action + category + value + data);
-        if ($.inArray(innerElements, trackElements) === -1) {
-          trackElements.push(innerElements);
-          if (typeof _paq != 'undefined') {
-            _paq.push([action, category, value, data]);
-          }
-        }
-      }
-      // Always trigger.
-      if (triggerValue === 0) {
-        if (typeof _paq != 'undefined') {
-          _paq.push([action, category, value, data]);
-        }
-      }
-    }
   };
 })(jQuery);
