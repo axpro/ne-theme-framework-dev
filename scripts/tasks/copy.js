@@ -14,6 +14,7 @@ function copy(dest, done) {
   const sources = [];
 
   [
+    'src/framework/elements/*',
     'src/framework/components/*',
     'src/framework/base/*',
     'src/framework/layout/*'
