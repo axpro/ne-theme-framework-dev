@@ -2,9 +2,10 @@
 
 const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
-const babel = require('rollup-plugin-babel');
+const rollup = require('rollup').rollup;
 const path = require('path');
 const fs = require('fs');
+const babel = require('rollup-plugin-babel');
 
 // Helpers
 function isFile(file) {
@@ -34,7 +35,8 @@ function resolver(importee, importer) {
     return resolver(path.join(importee, 'index.js'), importer);
   }
 
-  throw new Error(`File ${importee} not found`);
+  console.log(`File ${importee} not found (loaded by ${importer})`);
+  return null;
 }
 
 // Concatenate and minify JavaScript. Transpiles ES2015 code to ES5.
@@ -42,30 +44,48 @@ function resolver(importee, importer) {
 // Note: "comments: false" is very heavy
 function scriptsBundle(done) {
   const startTime = Date.now();
-  console.log('Bundle JS: started');
-  gulp.src('src/themes/default/scripts/europa.js', { base: 'src/themes/default' })
-    .pipe($.newer('build/framework'))
-    .pipe($.sourcemaps.init())
-    .pipe($.rollup({
+  console.log('Bundle JS (framework): started');
+
+  return rollup({
+    entry: 'src/framework/index.js',
+    plugins: [
+      { resolveId: resolver },
+      babel({ presets: ['es2015-rollup'] }),
+    ],
+  }).then((bundle) => {
+    console.log('Bundling JS');
+    return bundle.write({
+      dest: 'build/framework/scripts/europa.js',
       sourceMap: true,
       format: 'iife',
+      moduleName: 'Europa',
+      exports: 'named',
       indent: false,
-      plugins: [
-        {
-          resolveId: resolver
-        },
-        babel({
-          compact: true
-        })
-      ]
-    }))
-    .pipe($.sourcemaps.write('.', { includeContent: true, sourceRoot: '../src/' }))
-    .pipe(gulp.dest('build/framework'))
-    .on('end', () => {
+    }).then(() => {
       const diff = Date.now() - startTime;
-      console.log(`Bundle JS: done (${diff}ms)`);
+      console.log(`Bundle JS (framework): done (${diff}ms)`);
       done();
     });
+  });
+}
+
+function scriptsBundleVendors(done) {
+  const startTime = Date.now();
+  console.log('Bundle JS: started');
+
+  return rollup({
+    entry: 'src/vendor/index.js',
+    plugins: [{ resolveId: resolver }],
+  }).then((bundle) => bundle.write({
+    dest: 'build/framework/scripts/vendors.js',
+    sourceMap: true,
+    format: 'es6',
+  }).then(() => {
+    const diff = Date.now() - startTime;
+    console.log(`Bundle JS: done (${diff}ms)`);
+    done();
+  })
+  );
 }
 
 // UglifyJS
@@ -93,6 +113,7 @@ function watch() {
 
 module.exports = {
   bundle: scriptsBundle,
+  bundleVendors: scriptsBundleVendors,
   dist,
   watch
 };

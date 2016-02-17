@@ -1,20 +1,14 @@
 /**
- * @file
  * File component related behaviors.
  */
 
-(function ($) {
-  Drupal.behaviors.dt_file = {
-    attach: function(context) {
-      "use strict";
-      var $button = $('.file__translations-control'),
-          $translations = $('.file__translations-list');
+export function file() {
+  const $button = jQuery('.file__translations-control');
+  const $translations = jQuery('.file__translations-list');
 
-      $button.click(function() {
-        var self = this;
-        $translations.collapse('toggle');
-        $(self).toggleClass('is-collapsed');
-      });
-    }
-  };
-})(jQuery);
+  $button.click(() => {
+    const self = this;
+    $translations.collapse('toggle');
+    jQuery(self).toggleClass('is-collapsed');
+  });
+}

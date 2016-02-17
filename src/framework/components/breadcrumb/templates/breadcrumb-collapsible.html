@@ -5,6 +5,12 @@ src:
     - '../styles/_breadcrumb.scss'
   scripts:
     - '../scripts/breadcrumb.js'
+js: |
+  var breakpoints = {
+    medium: 'screen and (min-width: 480px)',
+    small: 'screen and (min-width: 768px)',
+  };
+  Europa.breadcrumb('#breadcrumb', breakpoints);
 ---
 <nav id="breadcrumb" class="breadcrumb breadcrumb--collapsible" role="navigation" aria-label="breadcrumbs">
   <span class="element-invisible">You are here:</span>

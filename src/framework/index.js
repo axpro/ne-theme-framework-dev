@@ -1,5 +1,2 @@
-// Dependencies
-import './dependencies';
-
 // Components
-import './components';
+export * from './components';

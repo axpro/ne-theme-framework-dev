@@ -1,5 +1,3 @@
 ---
 extends: airbnb
 root: true
-rules:
-  comma-dangle: 0

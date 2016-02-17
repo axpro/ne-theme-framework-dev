@@ -31,6 +31,7 @@ tasks.push(done => async.parallel([
   gitbook.prepareBase,
   styles.compile,
   scripts.bundle,
+  scripts.bundleVendors,
   copy.build
 ], done));
 

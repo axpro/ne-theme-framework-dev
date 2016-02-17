@@ -10,11 +10,9 @@ function stylesCompile(done) {
   const startTime = Date.now();
   console.log('Compile SCSS: started');
 
-  const build = 'build/framework';
   const importOnce = require('node-sass-import-once');
 
-  gulp.src('src/themes/default/styles/europa.scss', { base: 'src/themes/default' })
-    .pipe($.newer(build))
+  gulp.src('src/framework/index.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
       precision: 8,
@@ -22,8 +20,8 @@ function stylesCompile(done) {
       importOnce: {
         index: true,
         css: true,
-        bower: true
-      }
+        bower: true,
+      },
     }).on('error', $.sass.logError))
     .pipe(postcss([require('autoprefixer')({ browsers: [
       'ie >= 9',
@@ -34,13 +32,14 @@ function stylesCompile(done) {
       'opera >= 23',
       'ios >= 7',
       'android >= 4.4',
-      'bb >= 10'
+      'bb >= 10',
     ] })]))
     .pipe($.sourcemaps.write('.', {
       includeContent: true,
-      sourceRoot: '../../src/'
+      // sourceRoot: '../../src/'
     }))
-    .pipe(gulp.dest(build))
+    .pipe($.rename('europa.css'))
+    .pipe(gulp.dest('build/framework/styles'))
     .on('end', () => {
       const diff = Date.now() - startTime;
       console.log(`Compile SCSS: done (${diff}ms)`);
@@ -78,27 +77,23 @@ function dist(done) {
           groups.join('/'),
           '..',
           `${path.basename(groups.join('/'), '.png')}.sprite.png`
-        )
-      }
+        ),
+      },
     }),
     require('postcss-url')({
       url: 'inline',
       maxSize: 8, // inline every image that weighs less than 8kB
-      basePath: path.resolve('dist/styles')
+      basePath: path.resolve('dist/styles'),
     }),
     require('postcss-svgo'),
-    require('cssnano')
+    require('cssnano'),
   ];
 
   return gulp.src('build/framework/styles/**/*.css')
     // .pipe($.sourcemaps.init())
     .pipe($.concat('europa.css'))
     .pipe(gulp.dest('dist/styles'))
-    .pipe(postcss(processors, {
-      to: 'dist/styles/europa.css'
-    }))
-    // .pipe($.concat('europa.css'))
-    // .pipe($.sourcemaps.write('.'))
+    .pipe(postcss(processors, { to: 'dist/styles/europa.css' }))
     .pipe(gulp.dest('dist/styles'))
     .on('end', () => {
       const diff = Date.now() - startTime;
@@ -122,5 +117,5 @@ function watch() {
 module.exports = {
   compile: stylesCompile,
   dist,
-  watch
+  watch,
 };
