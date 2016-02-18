@@ -12,7 +12,8 @@
     "respond": "^1.4.2",
     "matchHeight": "matchheight#^0.7.0",
     "velocity": "^1.2.3",
-    "jquery-once": "^2.1.1"
+    "jquery-once": "~1.2.6",
+    "jquery-ui": "^1.11.4"
   },
   "devDependencies": {
     "iframe-resizer": "~3.5.1"

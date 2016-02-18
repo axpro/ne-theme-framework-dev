@@ -14,7 +14,7 @@ export function inpageNav(nodeTitle, onThisPageText, toggleNavText) {
   };
 
   jQuery('.inpage-nav').once('page-navigation', () => {
-    const $inPage = jQuery(this);
+    const $inPage = jQuery('.inpage-nav');
     const $inPageBlock = $inPage.parents('.inpage-nav__wrapper');
     const $inPageBlockParent = $inPageBlock.parent();
     let inPageBlockHeight = $inPageBlock.height();

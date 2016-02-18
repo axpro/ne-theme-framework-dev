@@ -3,11 +3,17 @@ src:
   styles:
     - '../styles/_settings.scss'
     - '../styles/_datepicker.scss'
----
-<script src="public/js/components/datepicker/jquery.ui.datepicker.min.js"></script>
-<script src="public/js/components/datepicker/datepicker.js"></script>
-<link rel="stylesheet" href="public/css/jquery.ui.core.min.css">
-<link rel="stylesheet" href="public/css/jquery.ui.datepicker.min.css">
+js: |
+  $(function() {
+    $(document).ready(function() {
+        var $datepicker = $("#datepicker");
 
+        $datepicker.datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    });
+  });
+---
 <label for="datepicker">Date:</label>
 <input class="form-control" type="text" id="datepicker">

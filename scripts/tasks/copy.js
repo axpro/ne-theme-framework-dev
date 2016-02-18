@@ -9,7 +9,11 @@ function copy(dest, done) {
   const glob = require('glob');
   const async = require('async');
   const path = require('path');
-  const config = require('../../src/themes/default/config.js');
+
+  const extraAssets = [{
+    src: path.resolve(__dirname, '../../bower_components/bootstrap-sass/assets/fonts/bootstrap/**'),
+    dest: 'fonts/bootstrap',
+  }];
 
   const sources = [];
 
@@ -17,14 +21,14 @@ function copy(dest, done) {
     'src/framework/elements/*',
     'src/framework/components/*',
     'src/framework/base/*',
-    'src/framework/layout/*'
+    'src/framework/layouts/*',
   ].forEach(folder => {
     glob.sync(folder).forEach(component => {
       sources.push(`${component}/{images,fonts}/**`);
     });
   });
 
-  const assets = [{ src: sources, dest: '' }].concat(config.extraAssets);
+  const assets = [{ src: sources, dest: '' }].concat(extraAssets);
 
   return async.each(assets,
     (file, cb) => gulp.src(file.src)
@@ -40,5 +44,5 @@ function copy(dest, done) {
 
 module.exports = {
   build: cb => copy('build/framework', cb),
-  dist: cb => copy('dist', cb)
+  dist: cb => copy('dist', cb),
 };

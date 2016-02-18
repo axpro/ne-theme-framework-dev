@@ -74,7 +74,7 @@ function scriptsBundleVendors(done) {
   console.log('Bundle JS: started');
 
   return rollup({
-    entry: 'src/vendor/index.js',
+    entry: 'src/framework/vendors/index.js',
     plugins: [{ resolveId: resolver }],
   }).then((bundle) => bundle.write({
     dest: 'build/framework/scripts/vendors.js',

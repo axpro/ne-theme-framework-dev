@@ -5,6 +5,8 @@ import 'jquery/dist/jquery';
 import 'jquery-once/jquery.once';
 import 'matchHeight/dist/jquery.matchHeight';
 import './selectify';
+import 'jquery-ui/ui/core';
+import 'jquery-ui/ui/datepicker';
 
 // Bootstrap components
 import './bootstrap/scripts/bootstrap';
