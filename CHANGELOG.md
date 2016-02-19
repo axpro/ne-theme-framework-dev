@@ -1,3 +1,13 @@
+<a name="0.4.4"></a>
+## 0.4.4 (2016-02-19)
+
+
+### Features
+
+* **devices:** preview different sizes ([0a160dd](https://github.com/ec-europa/ne-theme-framework-dev/commit/0a160dd))
+
+
+
 <a name="0.4.2"></a>
 ## 0.4.2 (2016-02-17)
 
