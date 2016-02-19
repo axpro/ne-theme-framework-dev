@@ -43,7 +43,7 @@
     "gitbook": "^2.6.7",
     "gitbook-plugin-anchors": "^0.5.0",
     "gitbook-plugin-prism": "^1.0.0",
-    "gitbook-plugin-styleguide": "^0.5.4",
+    "gitbook-plugin-styleguide": "^0.6.0",
     "glob": "^7.0.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
