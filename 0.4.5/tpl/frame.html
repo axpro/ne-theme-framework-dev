@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Next EUROPA Theme</title>
+  <meta name="author" content="EC Europa">
+  <link rel="stylesheet" href="{{ staticBase }}/styles/europa.css">
+</head>
+<body>
+  {{ content | safe }}
+  <script src="{{ staticBase }}/scripts/vendors.js"></script>
+  <script src="{{ staticBase }}/scripts/europa.js"></script>
+  {% if js %}
+  <script type="text/javascript">
+    {{ js }}
+  </script>
+  {% endif %}
+  <script src="{{ staticBase }}/gitbook/plugins/gitbook-plugin-styleguide/iframeResizer.contentWindow.js"></script>
+</body>
+</html>

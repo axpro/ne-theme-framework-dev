@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Next EUROPA Theme</title>
+  <meta name="author" content="EC Europa">
+  <link rel="stylesheet" href="../../../../styles/europa.css">
+</head>
+<body>
+  <label for="datepicker">Date:</label>
+<input class="form-control" type="text" id="datepicker">
+  <script src="../../../../scripts/vendors.js"></script>
+  <script src="../../../../scripts/europa.js"></script>
+  
+  <script type="text/javascript">
+    $(function() {
+  $(document).ready(function() {
+      var $datepicker = $("#datepicker");
+
+      $datepicker.datepicker({
+          changeMonth: true,
+          changeYear: true
+      });
+  });
+});
+
+  </script>
+  
+  <script src="../../../../gitbook/plugins/gitbook-plugin-styleguide/iframeResizer.contentWindow.js"></script>
+</body>
+</html>
