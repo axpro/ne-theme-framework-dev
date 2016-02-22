@@ -1,3 +1,13 @@
+<a name="0.4.5"></a>
+## 0.4.5 (2016-02-22)
+
+
+### Features
+
+* **styleguide:** define "sizes" config ([a134ed0](https://github.com/ec-europa/ne-theme-framework-dev/commit/a134ed0))
+
+
+
 <a name="0.4.4"></a>
 ## 0.4.4 (2016-02-19)
 
