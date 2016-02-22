@@ -67,7 +67,7 @@
         data-chapter-title="Page"
         data-filepath="framework/layouts/page/README.md"
         data-basepath="../../.."
-        data-revision="Fri Feb 19 2016 15:09:44 GMT+0100 (CET)"
+        data-revision="Mon Feb 22 2016 11:51:36 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -1042,16 +1042,20 @@
 <h2 id="featured-page-header"><a name="featured-page-header" class="plugin-anchor" href="#featured-page-header"><span class="fa fa-link"></span></a>Featured page header</h2>
 <p><div class="styleguide">
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="page-header-featured-frame" data-width="1200px">Large</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="page-header-featured-frame" data-width="800px">Medium</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="page-header-featured-frame" data-width="400px">Small</a></li>
+    
+    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="page-header-featured-frame" data-width="1200px">Desktop</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="page-header-featured-frame" data-width="800px">Tablet</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="page-header-featured-frame" data-width="380px">Phone</a></li>
+    
   </ul>
   <div class="preview">
     <div class="btn-open">
       <a href="#" data-lity="" data-lity-target="./templates/page-header-featured.html" data-trigger="page-header-featured-frame"><i class="fa fa-search-plus"></i></a>
     </div>
     <div class="preview-frame">
-      <iframe id="page-header-featured-frame" class="lazy" data-src="./templates/page-header-featured.html" width="1200px"></iframe>
+      <iframe id="page-header-featured-frame" class="lazy" data-src="./templates/page-header-featured.html" style="width:1200px"></iframe>
     </div>
   </div>
   <div class="tabs">
@@ -1199,16 +1203,20 @@
 <h2 id="page-header-with-image-background"><a name="page-header-with-image-background" class="plugin-anchor" href="#page-header-with-image-background"><span class="fa fa-link"></span></a>Page header with image background</h2>
 <p><div class="styleguide">
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="page-header-image-frame" data-width="1200px">Large</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="page-header-image-frame" data-width="800px">Medium</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="page-header-image-frame" data-width="400px">Small</a></li>
+    
+    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="page-header-image-frame" data-width="1200px">Desktop</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="page-header-image-frame" data-width="800px">Tablet</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="page-header-image-frame" data-width="380px">Phone</a></li>
+    
   </ul>
   <div class="preview">
     <div class="btn-open">
       <a href="#" data-lity="" data-lity-target="./templates/page-header-image.html" data-trigger="page-header-image-frame"><i class="fa fa-search-plus"></i></a>
     </div>
     <div class="preview-frame">
-      <iframe id="page-header-image-frame" class="lazy" data-src="./templates/page-header-image.html" width="1200px"></iframe>
+      <iframe id="page-header-image-frame" class="lazy" data-src="./templates/page-header-image.html" style="width:1200px"></iframe>
     </div>
   </div>
   <div class="tabs">
@@ -1404,7 +1412,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"styleguide":{"base":"src","frame":"./tpl/frame.html","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
+    var config = {"styleguide":{"base":"src","frame":"./tpl/frame.html","sizes":[{"title":"Desktop","width":"1200px"},{"title":"Tablet","width":"800px"},{"title":"Phone","width":"380px"}],"dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
     gitbook.start(config);
 });
 </script>

@@ -67,7 +67,7 @@
         data-chapter-title="Meta"
         data-filepath="framework/components/meta/README.md"
         data-basepath="../../.."
-        data-revision="Fri Feb 19 2016 15:09:44 GMT+0100 (CET)"
+        data-revision="Mon Feb 22 2016 11:51:36 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -1042,16 +1042,20 @@
 It could also be reused in blocks.</p>
 <p><div class="styleguide">
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="meta-frame" data-width="1200px">Large</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="meta-frame" data-width="800px">Medium</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="meta-frame" data-width="400px">Small</a></li>
+    
+    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="meta-frame" data-width="1200px">Desktop</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="meta-frame" data-width="800px">Tablet</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="meta-frame" data-width="380px">Phone</a></li>
+    
   </ul>
   <div class="preview">
     <div class="btn-open">
       <a href="#" data-lity="" data-lity-target="./templates/meta.html" data-trigger="meta-frame"><i class="fa fa-search-plus"></i></a>
     </div>
     <div class="preview-frame">
-      <iframe id="meta-frame" class="lazy" data-src="./templates/meta.html" width="1200px"></iframe>
+      <iframe id="meta-frame" class="lazy" data-src="./templates/meta.html" style="width:1200px"></iframe>
     </div>
   </div>
   <div class="tabs">
@@ -1156,16 +1160,20 @@ It could also be reused in blocks.</p>
 <p>Meta header modifier that is currently used in the page header, it is larger than the meta component alone</p>
 <p><div class="styleguide">
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="meta-header-frame" data-width="1200px">Large</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="meta-header-frame" data-width="800px">Medium</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="meta-header-frame" data-width="400px">Small</a></li>
+    
+    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="meta-header-frame" data-width="1200px">Desktop</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="meta-header-frame" data-width="800px">Tablet</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="meta-header-frame" data-width="380px">Phone</a></li>
+    
   </ul>
   <div class="preview">
     <div class="btn-open">
       <a href="#" data-lity="" data-lity-target="./templates/meta-header.html" data-trigger="meta-header-frame"><i class="fa fa-search-plus"></i></a>
     </div>
     <div class="preview-frame">
-      <iframe id="meta-header-frame" class="lazy" data-src="./templates/meta-header.html" width="1200px"></iframe>
+      <iframe id="meta-header-frame" class="lazy" data-src="./templates/meta-header.html" style="width:1200px"></iframe>
     </div>
   </div>
   <div class="tabs">
@@ -1317,7 +1325,7 @@ It could also be reused in blocks.</p>
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"styleguide":{"base":"src","frame":"./tpl/frame.html","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
+    var config = {"styleguide":{"base":"src","frame":"./tpl/frame.html","sizes":[{"title":"Desktop","width":"1200px"},{"title":"Tablet","width":"800px"},{"title":"Phone","width":"380px"}],"dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
     gitbook.start(config);
 });
 </script>

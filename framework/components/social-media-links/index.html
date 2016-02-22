@@ -67,7 +67,7 @@
         data-chapter-title="Social Media Links"
         data-filepath="framework/components/social-media-links/README.md"
         data-basepath="../../.."
-        data-revision="Fri Feb 19 2016 15:09:44 GMT+0100 (CET)"
+        data-revision="Mon Feb 22 2016 11:51:36 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -1040,16 +1040,20 @@
                         <h1 id="social-media-links"><a name="social-media-links" class="plugin-anchor" href="#social-media-links"><span class="fa fa-link"></span></a>Social Media links</h1>
 <p><div class="styleguide">
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="social-media-links-frame" data-width="1200px">Large</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="social-media-links-frame" data-width="800px">Medium</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="social-media-links-frame" data-width="400px">Small</a></li>
+    
+    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="social-media-links-frame" data-width="1200px">Desktop</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="social-media-links-frame" data-width="800px">Tablet</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="social-media-links-frame" data-width="380px">Phone</a></li>
+    
   </ul>
   <div class="preview">
     <div class="btn-open">
       <a href="#" data-lity="" data-lity-target="./templates/social-media-links.html" data-trigger="social-media-links-frame"><i class="fa fa-search-plus"></i></a>
     </div>
     <div class="preview-frame">
-      <iframe id="social-media-links-frame" class="lazy" data-src="./templates/social-media-links.html" width="1200px"></iframe>
+      <iframe id="social-media-links-frame" class="lazy" data-src="./templates/social-media-links.html" style="width:1200px"></iframe>
     </div>
   </div>
   <div class="tabs">
@@ -1249,7 +1253,7 @@
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"styleguide":{"base":"src","frame":"./tpl/frame.html","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
+    var config = {"styleguide":{"base":"src","frame":"./tpl/frame.html","sizes":[{"title":"Desktop","width":"1200px"},{"title":"Tablet","width":"800px"},{"title":"Phone","width":"380px"}],"dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
     gitbook.start(config);
 });
 </script>

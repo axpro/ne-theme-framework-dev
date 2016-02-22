@@ -67,7 +67,7 @@
         data-chapter-title="Field"
         data-filepath="framework/components/field/README.md"
         data-basepath="../../.."
-        data-revision="Fri Feb 19 2016 15:09:44 GMT+0100 (CET)"
+        data-revision="Mon Feb 22 2016 11:51:36 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -1042,16 +1042,20 @@
 <p>Field styling appearing in this styleguide is only valid for Default drupal field settings</p>
 <p><div class="styleguide">
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="field-frame" data-width="1200px">Large</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field-frame" data-width="800px">Medium</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field-frame" data-width="400px">Small</a></li>
+    
+    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="field-frame" data-width="1200px">Desktop</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field-frame" data-width="800px">Tablet</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field-frame" data-width="380px">Phone</a></li>
+    
   </ul>
   <div class="preview">
     <div class="btn-open">
       <a href="#" data-lity="" data-lity-target="./templates/field.html" data-trigger="field-frame"><i class="fa fa-search-plus"></i></a>
     </div>
     <div class="preview-frame">
-      <iframe id="field-frame" class="lazy" data-src="./templates/field.html" width="1200px"></iframe>
+      <iframe id="field-frame" class="lazy" data-src="./templates/field.html" style="width:1200px"></iframe>
     </div>
   </div>
   <div class="tabs">
@@ -1235,16 +1239,20 @@ Styleguide field.labeledalign
 <p>External link icon</p>
 <p><div class="styleguide">
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="field--labeled-frame" data-width="1200px">Large</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field--labeled-frame" data-width="800px">Medium</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field--labeled-frame" data-width="400px">Small</a></li>
+    
+    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="field--labeled-frame" data-width="1200px">Desktop</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field--labeled-frame" data-width="800px">Tablet</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field--labeled-frame" data-width="380px">Phone</a></li>
+    
   </ul>
   <div class="preview">
     <div class="btn-open">
       <a href="#" data-lity="" data-lity-target="./templates/field--labeled.html" data-trigger="field--labeled-frame"><i class="fa fa-search-plus"></i></a>
     </div>
     <div class="preview-frame">
-      <iframe id="field--labeled-frame" class="lazy" data-src="./templates/field--labeled.html" width="1200px"></iframe>
+      <iframe id="field--labeled-frame" class="lazy" data-src="./templates/field--labeled.html" style="width:1200px"></iframe>
     </div>
   </div>
   <div class="tabs">
@@ -1428,16 +1436,20 @@ Styleguide field.labeledalign
 <p>Labeled align modifier should be used for aligning fields that do not have a label with fields that do have a label.</p>
 <p><div class="styleguide">
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="field--labeled-align-frame" data-width="1200px">Large</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field--labeled-align-frame" data-width="800px">Medium</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field--labeled-align-frame" data-width="400px">Small</a></li>
+    
+    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="field--labeled-align-frame" data-width="1200px">Desktop</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field--labeled-align-frame" data-width="800px">Tablet</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="field--labeled-align-frame" data-width="380px">Phone</a></li>
+    
   </ul>
   <div class="preview">
     <div class="btn-open">
       <a href="#" data-lity="" data-lity-target="./templates/field--labeled-align.html" data-trigger="field--labeled-align-frame"><i class="fa fa-search-plus"></i></a>
     </div>
     <div class="preview-frame">
-      <iframe id="field--labeled-align-frame" class="lazy" data-src="./templates/field--labeled-align.html" width="1200px"></iframe>
+      <iframe id="field--labeled-align-frame" class="lazy" data-src="./templates/field--labeled-align.html" style="width:1200px"></iframe>
     </div>
   </div>
   <div class="tabs">
@@ -1674,7 +1686,7 @@ Styleguide field.labeledalign
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"styleguide":{"base":"src","frame":"./tpl/frame.html","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
+    var config = {"styleguide":{"base":"src","frame":"./tpl/frame.html","sizes":[{"title":"Desktop","width":"1200px"},{"title":"Tablet","width":"800px"},{"title":"Phone","width":"380px"}],"dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
     gitbook.start(config);
 });
 </script>

@@ -67,7 +67,7 @@
         data-chapter-title="Nav tabs"
         data-filepath="framework/components/nav-tabs/README.md"
         data-basepath="../../.."
-        data-revision="Fri Feb 19 2016 15:09:44 GMT+0100 (CET)"
+        data-revision="Mon Feb 22 2016 11:51:36 GMT+0100 (CET)"
         data-innerlanguage="">
     
 
@@ -1041,16 +1041,20 @@
 <p>Implementation of bootstrap nav tabs</p>
 <p><div class="styleguide">
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="nav-tabs-frame" data-width="1200px">Large</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="nav-tabs-frame" data-width="800px">Medium</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="nav-tabs-frame" data-width="400px">Small</a></li>
+    
+    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="nav-tabs-frame" data-width="1200px">Desktop</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="nav-tabs-frame" data-width="800px">Tablet</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="nav-tabs-frame" data-width="380px">Phone</a></li>
+    
   </ul>
   <div class="preview">
     <div class="btn-open">
       <a href="#" data-lity="" data-lity-target="./templates/nav-tabs.html" data-trigger="nav-tabs-frame"><i class="fa fa-search-plus"></i></a>
     </div>
     <div class="preview-frame">
-      <iframe id="nav-tabs-frame" class="lazy" data-src="./templates/nav-tabs.html" width="1200px"></iframe>
+      <iframe id="nav-tabs-frame" class="lazy" data-src="./templates/nav-tabs.html" style="width:1200px"></iframe>
     </div>
   </div>
   <div class="tabs">
@@ -1235,16 +1239,20 @@ ul.nav-tabs-right </span><span class="token punctuation">{</span>
 <p>Implementation of bootstrap nav tabs for the CWS.</p>
 <p><div class="styleguide">
   <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="nav-tabs-right-frame" data-width="1200px">Large</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="nav-tabs-right-frame" data-width="800px">Medium</a></li>
-    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="nav-tabs-right-frame" data-width="400px">Small</a></li>
+    
+    <li role="presentation" class="active"><a href="#" data-toggle="pill" data-trigger="nav-tabs-right-frame" data-width="1200px">Desktop</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="nav-tabs-right-frame" data-width="800px">Tablet</a></li>
+    
+    <li role="presentation"><a href="#" data-toggle="pill" data-trigger="nav-tabs-right-frame" data-width="380px">Phone</a></li>
+    
   </ul>
   <div class="preview">
     <div class="btn-open">
       <a href="#" data-lity="" data-lity-target="./templates/nav-tabs-right.html" data-trigger="nav-tabs-right-frame"><i class="fa fa-search-plus"></i></a>
     </div>
     <div class="preview-frame">
-      <iframe id="nav-tabs-right-frame" class="lazy" data-src="./templates/nav-tabs-right.html" width="1200px"></iframe>
+      <iframe id="nav-tabs-right-frame" class="lazy" data-src="./templates/nav-tabs-right.html" style="width:1200px"></iframe>
     </div>
   </div>
   <div class="tabs">
@@ -1478,7 +1486,7 @@ ul.nav-tabs-right </span><span class="token punctuation">{</span>
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"styleguide":{"base":"src","frame":"./tpl/frame.html","dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
+    var config = {"styleguide":{"base":"src","frame":"./tpl/frame.html","sizes":[{"title":"Desktop","width":"1200px"},{"title":"Tablet","width":"800px"},{"title":"Phone","width":"380px"}],"dest":"/Users/yannick/Code/Commission/ne-theme-framework-dev/build/styleguide"},"prism":{},"anchors":{},"search":{"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"}};
     gitbook.start(config);
 });
 </script>
