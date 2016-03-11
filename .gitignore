@@ -11,3 +11,4 @@ node_modules
 
 # Other ignored files
 npm-debug.log
+.idea/
