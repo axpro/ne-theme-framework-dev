@@ -4,8 +4,8 @@
   "license": "EUPL-1.1",
   "private": true,
   "dependencies": {
-    "jquery": "~2.2.0",
-    "bootstrap-sass": "~3.3.5",
+    "jquery": "~2.2.1",
+    "bootstrap-sass": "~3.3.6",
     "enquire": "^2.1.2",
     "html5shiv": "^3.7.3",
     "matchMedia": "^0.3.0",
@@ -14,8 +14,5 @@
     "velocity": "^1.2.3",
     "jquery-once": "~1.2.6",
     "jquery-ui": "^1.11.4"
-  },
-  "devDependencies": {
-    "iframe-resizer": "~3.5.1"
   }
 }
