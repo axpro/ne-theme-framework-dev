@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * @file
  * Library converting 'ul > li > a' list to 'select > option' list.

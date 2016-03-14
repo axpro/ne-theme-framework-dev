@@ -101,11 +101,13 @@ export function inpageNav(nodeTitle, onThisPageText, toggleNavText) {
           currentTitle($navBar, $navBarCurrent);
         });
 
+        const footerOuterHeight = jQuery('.footer').outerHeight(true);
+        const footerTopOuterHeight = jQuery('.footer-top').outerHeight(true);
         // Affix.
         $inPageBlock.affix({
           offset: {
             top: () => Math.floor($inPageBlock.parent().offset().top) - 30,
-            bottom: () => jQuery('.footer').outerHeight(true) + jQuery('.footer-top').outerHeight(true) + 20
+            bottom: () => footerOuterHeight + footerTopOuterHeight + 20,
           },
         });
 

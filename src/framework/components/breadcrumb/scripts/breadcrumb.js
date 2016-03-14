@@ -25,7 +25,7 @@ export function breadcrumb(selector, breakpoints) {
         calculations.width = $segmentsWrapper.width();
 
         calculations.itemsWidth = 0;
-        $segments.not('.is-hidden').each(i => {
+        $segments.not('.is-hidden').each(() => {
           calculations.itemsWidth += jQuery(this).outerWidth(true);
         });
 
