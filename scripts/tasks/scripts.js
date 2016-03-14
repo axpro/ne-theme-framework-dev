@@ -115,5 +115,5 @@ module.exports = {
   bundle: scriptsBundle,
   bundleVendors: scriptsBundleVendors,
   dist,
-  watch
+  watch,
 };

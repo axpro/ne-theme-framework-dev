@@ -13,5 +13,5 @@ module.exports = {
       console.log(`Clean: done (${diff}ms)`);
       done();
     });
-  }
+  },
 };

@@ -24,7 +24,7 @@ tasks.push(images.optimize);
 // Concat styles & scripts, minify, compress images, move fonts
 tasks.push(done => async.parallel([
   styles.dist,
-  scripts.dist
+  scripts.dist,
 ], done));
 
 // Optimize sprites

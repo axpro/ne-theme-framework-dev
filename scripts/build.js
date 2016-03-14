@@ -32,7 +32,7 @@ tasks.push(done => async.parallel([
   styles.compile,
   scripts.bundle,
   scripts.bundleVendors,
-  copy.build
+  copy.build,
 ], done));
 
 tasks.push(gitbook.build);
@@ -51,7 +51,7 @@ async.series(tasks, () => {
     // Start watching for changes
     styles.watch();
     gitbook.watch();
-    console.log(`Now let's make some magic!`);
-    console.log(`Files are being watched for changes...`);
+    console.log('Now let\'s make some magic!');
+    console.log('Files are being watched for changes...');
   }
 });

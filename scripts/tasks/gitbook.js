@@ -9,11 +9,14 @@ function prepare(done) {
   const startTime = Date.now();
   console.log('Generate styleguide: started');
 
-  return gulp.src(['src/*.md', 'src/framework/**/*.md', 'src/{architecture,conventions}/**'], { base: 'src' })
+  return gulp.src([
+    'src/*.md', 'src/framework/**/*.md',
+    'src/{architecture,conventions}/**',
+  ], { base: 'src' })
     .pipe(gulp.dest('.tmp'))
     .on('end', res => {
       const diff = Date.now() - startTime;
-      console.log(`Generate styleguide: done (${diff}ms)'`);
+      console.log(`Generate styleguide: done (${diff}ms)`);
       return done(res);
     });
 }
@@ -42,7 +45,7 @@ function build(done) {
 
   const book = new gitbook.Book(input, {
     logLevel: gitbook.LOG_LEVELS.INFO,
-    config: { output }
+    config: { output },
   });
 
   return book.parse()
@@ -80,5 +83,5 @@ module.exports = {
   prepare,
   prepareBase,
   build,
-  watch
+  watch,
 };

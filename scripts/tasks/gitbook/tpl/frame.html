@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="{{ staticBase }}/styles/europa.css">
 </head>
 <body>
-  {{ content | safe }}
+  <div id="auditable">
+    {{ content | safe }}
+  </div>
   <script src="{{ staticBase }}/scripts/vendors.js"></script>
   <script src="{{ staticBase }}/scripts/europa.js"></script>
   {% if js %}
@@ -16,5 +18,25 @@
   </script>
   {% endif %}
   <script src="{{ staticBase }}/gitbook/plugins/gitbook-plugin-styleguide/iframeResizer.contentWindow.js"></script>
+  <script src="{{ staticBase }}/gitbook/plugins/gitbook-plugin-styleguide/axs_testing.js"></script>
+  <script type="text/javascript">
+  function a11yAudit() {
+    var configuration = new axs.AuditConfiguration({
+      scope: document.querySelector('#auditable'),
+      showUnsupportedRulesWarning: false
+    });
+
+    var results = axs.Audit.run(configuration);
+    var message = '*** Begin accessibility audit results ***';
+    var formattedResults = axs.Audit.auditResults(results).toString();
+    if (formattedResults) {
+      message += formattedResults;
+    } else {
+      message += '\nEverything looks fine!';
+    }
+    message += '\n*** End accessibility audit results ***';
+    console.log(message);
+  }
+  </script>
 </body>
 </html>

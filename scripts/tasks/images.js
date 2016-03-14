@@ -10,7 +10,7 @@ function optimize(done) {
   return gulp.src('dist/images/**/*.{jpg,jpeg,gif,png,svg}')
     .pipe($.cache($.imagemin({
       progressive: true,
-      interlaced: true
+      interlaced: true,
     })))
     .pipe(gulp.dest('dist/images'))
     .on('end', res => {
@@ -27,7 +27,7 @@ function optimizeSprites(done) {
   return gulp.src('dist/images/**/*.sprite.{jpg,jpeg,gif,png,svg}')
     .pipe($.cache($.imagemin({
       progressive: true,
-      interlaced: true
+      interlaced: true,
     })))
     .pipe(gulp.dest('dist/images'))
     .on('end', res => {
@@ -39,5 +39,5 @@ function optimizeSprites(done) {
 
 module.exports = {
   optimize,
-  optimizeSprites
+  optimizeSprites,
 };

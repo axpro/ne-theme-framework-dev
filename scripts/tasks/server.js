@@ -11,17 +11,17 @@ function serverGenerate(done) {
     server: {
       baseDir: [
         resolve(process.cwd(), 'build/framework'),
-        resolve(process.cwd(), 'build/styleguide')
-      ]
+        resolve(process.cwd(), 'build/styleguide'),
+      ],
     },
     port: 3000,
     open: false,
-    notify: false
+    notify: false,
   }, () => {
     done();
   });
 }
 
 module.exports = {
-  generate: serverGenerate
+  generate: serverGenerate,
 };
