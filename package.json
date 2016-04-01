@@ -12,13 +12,13 @@
   "scripts": {
     "start": "npm run dev",
     "postinstall": "bower install",
-    "eslint": "eslint src/framework/ scripts/; exit 0",
+    "eslint": "eslint src/ tools/; exit 0",
     "stylelint": "stylelint src/**/*.scss --syntax scss; exit 0",
     "lint": "npm run eslint  && npm run stylelint",
     "bower": "bower",
-    "dev": "node ./scripts/build.js --server --watch",
-    "dist": "node ./scripts/build.js -- -c && node ./scripts/dist.js",
-    "gh-pages": "node ./scripts/build.js -- -c && node ./scripts/gh-pages.js",
+    "dev": "node ./tools/build.js --server --watch",
+    "dist": "node ./tools/build.js -- -c && node ./tools/dist.js",
+    "gh-pages": "node ./tools/build.js -- -c && node ./tools/gh-pages.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "devDependencies": {
@@ -54,6 +54,7 @@
     "gulp-newer": "^1.1.0",
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
